@@ -1,0 +1,17 @@
+/* Custom styles for radio buttons */
+.form-check-input {
+    border: 2px solid #E1CA94; /* Custom border color */
+    border-radius: 50%; /* Make it circular */
+    transition: transform 0.2s; /* Smooth transition for checked state */
+}
+
+.form-check-input:checked {
+    transform: scale(1.1); /* Slightly larger when checked */
+    background-color: saddlebrown; /* Custom background color for checked state */
+    border-color: saddlebrown; /* Custom border color for checked state */
+}
+
+.form-check-label {
+    display: inline-block;
+    margin-left: 10px; /* Adjust spacing between label and radio button */
+}

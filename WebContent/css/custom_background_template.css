@@ -1,0 +1,28 @@
+.background-div-header {
+    background-color: #FFF5EE; /* Set background color */
+    width: auto; /* Ensure it covers the full width */
+    height: auto; /* Ensure it covers the full height of the viewport */
+    display: flex; /* Use Flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #333; /* Optional: Set text color for better contrast */
+    padding: 20px; /* Optional: Add padding */
+}
+
+.background-div-content {
+    background-color: #B0E0E6 ; /* Set background color */
+    width: auto; /* Ensure it covers the full width */
+    height: auto; /* Ensure it covers the full height of the viewport */
+    display: flex; /* Use Flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #333; /* Optional: Set text color for better contrast */
+    padding: 10px; /* Optional: Add padding */
+    /*margin-bottom: 20px;*/
+}
+
+.logo-size {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}

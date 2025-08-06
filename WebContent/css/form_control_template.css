@@ -1,0 +1,27 @@
+.custom-form-control {
+    border: 2px solid #8FBC8F; /* Change border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Adjust padding for a better look */
+    background-color: #8FBC8F; /* Change background color */
+    color: #FFFFFF; /* Change text color */
+    transition: box-shadow 0.3s ease-in-out; /* Add transition for shadow effect */
+}
+
+.custom-form-control:focus {
+    box-shadow: 0 0 10px rgba(143, 188, 143, 0.5); /* Add shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.custom-textarea {
+    border: 2px solid #8FBC8F; /* Change border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Adjust padding for a better look */
+    background-color: #E1CA94; /* Change background color */
+    color: #333; /* Change text color */
+    transition: box-shadow 0.3s ease-in-out; /* Add transition for shadow effect */
+}
+
+.custom-textarea:focus {
+    box-shadow: 0 0 10px rgba(143, 188, 143, 0.5); /* Add shadow on focus */
+    outline: none; /* Remove default outline */
+}

@@ -1,0 +1,5 @@
+.custom-underscore {
+    display: inline-block; /* Ensure the element's width matches the text */
+    border-bottom: 2px solid white; /* Adjust color and thickness as needed */
+    padding-bottom: 2px; /* Adjust padding to control spacing */
+}

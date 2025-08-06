@@ -1,0 +1,37 @@
+.table-list-admin-custom {
+    background-color: #f9f9f9; /* Light background color for the table */
+    border: 1px solid #000000; /* Add a border to the table */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.table-list-admin-custom th,
+.table-list-admin-custom td {
+    padding: 12px 15px; /* Increase padding for better spacing */
+    text-align: center; /* Align text to the left */
+    vertical-align: middle;
+    border-top: 1px solid #000000; /* Add top border for cells */
+}
+
+.table-list-admin-custom thead th {
+    background-color: #6b926e; /* Dark background for header */
+    color: white; /* White text for header */
+    border-bottom: 2px solid #000000; /* Add a bottom border for header */
+}
+
+.table-list-admin-custom tbody tr:hover {
+    background-color: #f1f1f1; /* Add hover effect for rows */
+}
+
+.table-list-admin-custom tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Add zebra stripes for even rows */
+}
+
+.table-list-admin-custom tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /* Add zebra stripes for odd rows */
+}
+
+.table-list-admin-custom th,
+.table-list-admin-custom td {
+    font-family: 'Roboto', sans-serif; /* Custom font */
+    position: relative; /* To position icons if needed */
+}

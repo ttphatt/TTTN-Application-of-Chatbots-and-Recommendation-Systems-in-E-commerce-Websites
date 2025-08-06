@@ -1,0 +1,9 @@
+.custom-border {
+    /*border: 2px dashed #8B4513; !* Example: 2px dashed brown border *!*/
+    border-radius: 50px; /* Optional: Rounded corners */
+    padding: 15px; /* Optional: Padding inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-width: 20px;
+    height: auto;
+    background: #FFF5EE;
+}

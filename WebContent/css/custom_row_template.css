@@ -1,0 +1,29 @@
+.custom-row {
+    background-color: #E1CA94; /* Light brown color */
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    color: #FFFFFF;
+}
+
+.custom-row-1 {
+    background-color: #8FBC8F; /* Light brown color */
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    color: #FFFFFF;
+}
+
+.custom-row-footer {
+    text-align: left;
+    vertical-align: middle;
+    background-color: #8FBC8F; /* Light brown color */
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    color: #FFFFFF;
+}
+
+.custom-row p {
+    color: #333; /* Optional: Change text color for better contrast */
+}

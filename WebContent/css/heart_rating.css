@@ -1,0 +1,11 @@
+.image-heart{
+    max-width: 39px;
+    max-height: 39px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    background: none;
+    padding: 5px;
+}
