@@ -1,0 +1,546 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - introduce_self
+  - request_trend
+  - provide_start_date
+  - provide_end_date
+  - restart_analysis
+  - provide_category
+  - provide_date
+  - request_profit_revenue
+  - provide_report_amount
+  - provide_product_id
+  - provide_number
+  - provide_step
+  - provide_trend_analysis_type
+  - provide_filter_value
+
+entities:
+  - analysis_type
+  - start_date
+  - end_date
+  - category
+  - date
+  - report_type
+  - report_amount
+  - product_id
+  - number
+  - step
+  - trend_analysis_type
+  - filter_value
+  - date_period
+
+slots:
+  analysis_type:
+    type: categorical
+    values:
+      - "Shopping Trends"
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: analysis_type
+        intent: request_trend
+        conditions:
+        - active_loop: trend_form
+          requested_slot: analysis_type
+      - type: from_entity
+        entity: analysis_type
+        intent: request_trend
+        conditions:
+        - active_loop: null
+      - type: from_intent
+        value: "Shopping Trends"
+        intent: request_trend
+        conditions:
+        - active_loop: null
+      - type: from_intent
+        value: "Shopping Trends"
+        intent: request_trend
+        conditions:
+        - active_loop: trend_form
+      - type: from_intent
+        value: "Shopping Trends"
+        intent: request_trend
+        conditions:
+        - active_loop: profit_revenue_form
+          requested_slot: analysis_type
+
+  start_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: start_date
+      intent: provide_start_date
+      conditions:
+      - active_loop: trend_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: start_date
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: date
+      intent: provide_date
+      conditions:
+      - active_loop: trend_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: start_date
+      intent: request_trend
+      conditions:
+      - active_loop: trend_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: start_date
+      intent: request_trend
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: start_date
+      intent: provide_start_date
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: date
+      intent: provide_date
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: start_date
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: start_date
+    - type: from_entity
+      entity: start_date
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  end_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: end_date
+      intent: provide_end_date
+      conditions:
+      - active_loop: trend_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: end_date
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: date
+      intent: provide_date
+      conditions:
+      - active_loop: trend_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: end_date
+      intent: request_trend
+      conditions:
+      - active_loop: trend_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: end_date
+      intent: request_trend
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: end_date
+      intent: provide_end_date
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: date
+      intent: provide_date
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: end_date
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: end_date
+    - type: from_entity
+      entity: end_date
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  category:
+    type: categorical
+    values:
+      - "Shirt"
+      - "Pants"
+      - "Shoes"
+      - "Accessories"
+      - "Dresses"
+      - "Outerwear"
+      - "Swimwear"
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: category
+      intent: provide_category
+      conditions:
+      - active_loop: trend_form
+        requested_slot: category
+    - type: from_entity
+      entity: category
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: category
+      intent: provide_category
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: category
+    - type: from_entity
+      entity: category
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  report_amount:
+    type: categorical
+    values:
+      - "All"
+      - "One"
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: report_amount
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: report_amount
+    - type: from_entity
+      entity: report_amount
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: report_amount
+      intent: provide_report_amount
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: report_amount
+    - type: from_entity
+      entity: report_amount
+      intent: provide_report_amount
+      conditions:
+      - active_loop: null
+
+  report_type:
+    type: categorical
+    values:
+      - "Profit"
+      - "Revenue"
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: report_type
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: report_type
+    - type: from_entity
+      entity: report_type
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  product_id:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: product_id
+      intent: provide_product_id
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: product_id
+    - type: from_entity
+      entity: number
+      intent: provide_number
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: product_id
+    - type: from_entity
+      entity: product_id
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  step:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: step
+      intent: provide_step
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: step
+    - type: from_entity
+      entity: step
+      intent: provide_step
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: number
+      intent: provide_number
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: step
+    - type: from_entity
+      entity: step
+      intent: provide_number
+      conditions:
+      - active_loop: null
+
+  trend_analysis_type:
+    type: categorical
+    values:
+      - "Least Seller"
+      - "Best Seller"
+      - "Most View"
+      - "Least View"
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: trend_analysis_type
+      intent: request_trend
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: trend_analysis_type
+      intent: request_trend
+      conditions:
+      - active_loop: trend_form
+        requested_slot: trend_analysis_type
+    - type: from_entity
+      entity: trend_analysis_type
+      intent: provide_trend_analysis_type
+      conditions:
+      - active_loop: trend_form
+        requested_slot: trend_analysis_type
+    - type: from_entity
+      entity: trend_analysis_type
+      intent: provide_trend_analysis_type
+      conditions:
+      - active_loop: null
+
+  date_period:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: date_period
+      intent: request_trend
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: date_period
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+
+  filter_value:
+    type: categorical
+    values:
+      - "Product"
+      - "Category"
+      - "All"
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: filter_value
+      intent: request_trend
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: filter_value
+      intent: provide_filter_value
+      conditions:
+      - active_loop: trend_form
+        requested_slot: filter_value
+    - type: from_entity
+      entity: filter_value
+      intent: request_profit_revenue
+      conditions:
+      - active_loop: null
+    - type: from_entity
+      entity: filter_value
+      intent: provide_filter_value
+      conditions:
+      - active_loop: profit_revenue_form
+        requested_slot: filter_value
+    - type: from_entity
+      entity: report_amount
+      intent: provide_report_amount
+      conditions:
+      - active_loop: trend_form
+        requested_slot: filter_value
+
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#    - type: from_entity
+#      entity: category
+#      conditions:
+#      - active_loop: trend_form
+#        requested_slot: category
+#    - type: from_entity
+#      entity: category
+#      conditions:
+#      - active_loop: null
+
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your assistant chatbot. How can I help you today?"
+  - text: "Hi there! I can help you with analyze the shopping trends. What would you like to know?"
+  - text: "Welcome! I'm here to help you with shopping trend analysis. What can I do for you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a great day!"
+  - text: "See you latter! Feel free to come back anytime for trend analysis."
+  - text: "Bye! Thank you for using the shopping trend analyzer."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+#  utter_outofscope:
+#    - text: "I am sorry but apparently I cannot answer this kind of question\n
+#    Please ask me questions about:\n
+#    - Shopping trends like: Which products got searched/purchased most this week/month?\n
+#    - Calculating the profit and revenue over a period of time"
+#
+#  utter_ask_rephrase:
+#    - text: "I am sorry but I don't get what you mean. Can you rephrase it please"
+
+#  utter_default:
+#    - text: "I am sorry, I can't help you with that"
+
+#  utter_ask_start_date:
+#    - text: "Absolutely! Please provide the start date for trend analysis (format: YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY)"
+#    - text: "What's the start date for the period you want to analyze? Please use the format: YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY"
+#    - text: "From which date should I analyze the trends? Please enter the start date (format: YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY):"
+#
+#  utter_ask_end_date:
+#    - text: "Please provide the end date for your trend analysis (format: YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY):"
+#    - text: "What's the end date for the analysis period? Please use format format YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY:"
+#    - text: "Until which date should I analyze the trends? Please enter the end date (format: YYYY-MM-DD, MM/DD/YYYY, or DD-MM-YYYY):"
+#
+#  utter_ask_category:
+#    - text: "Which type of product you would like to know?"
+#    - text: "Now I need the information of product type"
+
+  utter_restart_analysis:
+    - text: "I've reset the trend analysis. Please tell me what shopping trends you'd like to see."
+    - text: "Starting fresh! What shopping trend analysis would you like me to perform ?"
+
+  utter_invalid_date:
+    - text: "I couldn't understand the date that you just provided."
+
+  utter_date_range_error:
+    - text: "The start date should be before the end date. Please provide valid dates."
+
+  utter_analyzing_trends:
+    - text: "Analyzing shopping trends for the specified period..."
+    - text: "Let me generate the shopping trend report for you..."
+
+  utter_inform_done:
+    - text: "Alright, I'll be staying here. If you need any thing just say Hi and I will be there to help you"
+
+  utter_show_calendar:
+  - custom:
+      blocks:
+      - type: section
+        text:
+          text: "This is the calendar"
+          type: mrkdwn
+        accessory:
+          type: datepicker
+          initial_date: '2025-07-22'
+          placeholder:
+            type: plain_text
+            text: Select a date
+
+forms:
+  trend_form:
+    required_slots:
+      - trend_analysis_type
+      - start_date
+      - end_date
+      - filter_value
+      - category
+      - analysis_type
+      - date_period
+
+
+  profit_revenue_form:
+    required_slots:
+      - filter_value
+      - category
+      - start_date
+      - end_date
+      - report_type
+      - report_amount
+      - product_id
+      - step
+      - date_period
+
+actions:
+  - action_greet_custom
+  - action_generate_trend_report
+  - action_reset_slots
+  - action_handle_date_range
+  - action_ask_trend_analysis_type
+  - action_ask_analysis_type
+  - action_ask_filter_value
+  - action_ask_start_date
+  - action_ask_end_date
+  - action_ask_category
+  - action_generate_profit_revenue_report
+  - action_ask_report_amount
+  - action_ask_product_id
+  - action_ask_step
+  - validate_trend_form
+  - validate_profit_revenue_form
+  - action_handle_out_of_scope
+  - action_deactivate_loop
+  - action_ask_gemini
+  - action_inform_restart
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

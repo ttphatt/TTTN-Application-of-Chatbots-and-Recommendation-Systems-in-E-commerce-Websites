@@ -1,0 +1,499 @@
+version: "3.1"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+- story: happy path - complete trend analysis
+  steps:
+  - intent: request_trend
+    entities:
+    - analysis_type: "Shopping trends"
+  - action: trend_form
+  - active_loop: trend_form
+  - slot_was_set:
+    - requested_slot: analysis_type
+  - slot_was_set:
+    - analysis_type: "Shopping trends"
+  - slot_was_set:
+    - requested_slot: trend_analysis_type
+  - intent: provide_trend_analysis_type
+    entities:
+    - trend_analysis_type: "Most View"
+  - slot_was_set:
+    - trend_analysis_type: "Most View"
+  - slot_was_set:
+    - requested_slot: filter_value
+  - intent: provide_filter_value
+    entities:
+    - filter_value: "Product"
+  - slot_was_set:
+    - filter_value: "Product"
+  - slot_was_set:
+    - requested_slot: start_date
+  - or:
+      - intent: provide_start_date
+        entities:
+        - start_date: "2025-01-01"
+      - intent: provide_date
+        entities:
+        - date: "2025-01-01"
+  - slot_was_set:
+    - start_date: "2025-01-01"
+  - slot_was_set:
+    - requested_slot: end_date
+  - or:
+      - intent: provide_end_date
+        entities:
+        - end_date: "2025-12-31"
+      - intent: provide_date
+        entities:
+        - date: "2025-12-31"
+  - slot_was_set:
+    - end_date: "2025-12-31"
+  - slot_was_set:
+      - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shirt"
+  - slot_was_set:
+    - category: "Shirt"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_trend_report
+
+#- story: Trend analysis with data range provided
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: provide_date_range
+#    entities:
+#    - start_date: "2025-01-01"
+#    - end_date: "2025-12-31"
+#    - category: "shirt"
+#  - action: action_inform_category
+#  - intent: provide_category
+#  - action: action_handle_date_range
+#  - action: trend_form
+#  - active_loop: trend_form
+#  - active_loop: null
+#  - action: action_generate_trend_report
+
+- story: Trend analysis - user provides start date first
+  steps:
+  - intent: request_trend
+  - action: trend_form
+  - active_loop: trend_form
+  - intent: provide_start_date
+    entities:
+    - start_date: "2025-01-01"
+  - action: trend_form
+  - slot_was_set:
+    - requested_slot: end_date
+  - intent: provide_end_date
+    entities:
+    - end_date: "2025-12-31"
+  - slot_was_set:
+      - requested_slot: category
+  - intent: provide_category
+    entities:
+      - category: "shirt"
+  - action: trend_form
+  - active_loop: null
+  - action: action_generate_trend_report
+
+- story: Trend analysis full information
+  steps:
+  - intent: request_trend
+    entities:
+    - analysis_type: "Shopping Trends"
+    - trend_analysis_type: "Most View"
+    - start_date: "01 1 2025"
+    - end_date: "Now"
+    - category: "Shirts"
+  - action: trend_form
+  - active_loop: trend_form
+  - slot_was_set:
+    - requested_slot: analysis_type
+  - slot_was_set:
+    - analysis_type: "Shopping Trends"
+  - slot_was_set:
+    - requested_slot: trend_analysis_type
+  - slot_was_set:
+    - trend_analysis_type: "Most View"
+  - slot_was_set:
+    - requested_slot: start_date
+  - slot_was_set:
+    - start_date: "01 1 2025"
+  - slot_was_set:
+    - requested_slot: end_date
+  - slot_was_set:
+    - end_date: "Now"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Shirts"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_trend_report
+
+- story: Trend analysis interrupted or restarted
+  steps:
+  - intent: request_trend
+  - action: trend_form
+  - active_loop: trend_form
+  - intent: restart_analysis
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+
+#- story: Deny trend analysis and say goodbye
+#  steps:
+#  - intent: request_trend
+#  - action: trend_form
+#  - active_loop: trend_form
+#  - intent: deny
+#  - action: action_deactivate_loop
+#  - active_loop: null
+#  - intent: goodbye
+#  - action: utter_goodbye
+
+#- story: Simple greeting and goodbye
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: goodbye
+#  - action: utter_goodbye
+
+#- story: trend analysis with date range in one message
+#  steps:
+#  - intent: request_trend
+#  - action: greet
+#  - intent: provide_date_range
+#    entities:
+#    - start_date: "2025-01-01"
+#    - end_date: "2025-12-31"
+#  - action: action_handle_date_range
+#  - action: action_generate_trend_report
+
+#- story: profit report - separated product
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: request_profit
+#  - action: profit_revenue_form
+#  - active_loop: profit_revenue_form
+#  - slot_was_set:
+#    - requested_slot: start_date
+#  - intent: provide_start_date
+#    entities:
+#    - start_date: "1-1-2025"
+#  - slot_was_set:
+#    - start_date: "1-1-2025"
+#  - slot_was_set:
+#    - requested_slot: end_date
+#  - intent: provide_end_date
+#    entities:
+#    - end_date: "31-12-2025"
+#  - slot_was_set:
+#    - end_date: "31-12-2025"
+
+- story: profit/revenue report - basic step by step (report_type, start_date, end_date, report_amount for all products)
+  steps:
+    - intent: request_profit_revenue
+      entities:
+      - report_type: "Profit"
+    - action: profit_revenue_form
+    - active_loop: profit_revenue_form
+    - slot_was_set:
+      - requested_slot: report_type
+    - slot_was_set:
+      - report_type: "Profit"
+    - slot_was_set:
+      - requested_slot: filter_value
+    - intent: provide_filter_value
+      entities:
+      - filter_value: "Category"
+    - slot_was_set:
+      - filter_value: "Category"
+    - slot_was_set:
+      - requested_slot: category
+    - intent: provide_category
+      entities:
+      - filter_value: "Shirts"
+    - slot_was_set:
+      - filter_value: "Shirts"
+    - slot_was_set:
+      - requested_slot: start_date
+    - intent: provide_start_date
+      entities:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - requested_slot: end_date
+    - intent: provide_end_date
+      entities:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - requested_slot: report_amount
+    - intent: provide_report_amount
+      entities:
+      - report_amount: "All"
+    - slot_was_set:
+      - report_amount: "All"
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_profit_revenue_report
+
+- story: profit/revenue report - basic step by step (report_type, start_date, end_date, report_amount for one product)
+  steps:
+    - intent: request_profit_revenue
+      entities:
+      - report_type: "Profit"
+    - action: profit_revenue_form
+    - active_loop: profit_revenue_form
+    - slot_was_set:
+      - requested_slot: report_type
+    - slot_was_set:
+      - report_type: "Profit"
+    - slot_was_set:
+      - requested_slot: filter_value
+    - intent: provide_filter_value
+      entities:
+      - filter_value: "Category"
+    - slot_was_set:
+      - filter_value: "Category"
+    - slot_was_set:
+      - requested_slot: category
+    - intent: provide_category
+      entities:
+      - category: "Pants"
+    - slot_was_set:
+      - category: "Pants"
+    - slot_was_set:
+      - requested_slot: start_date
+    - intent: provide_start_date
+      entities:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - requested_slot: end_date
+    - intent: provide_end_date
+      entities:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - requested_slot: report_amount
+    - intent: provide_report_amount
+      entities:
+      - report_amount: "One"
+    - slot_was_set:
+      - report_amount: "One"
+    - slot_was_set:
+      - requested_slot: product_id
+    - intent: provide_product_id
+      entities:
+      - product_id: 1
+    - slot_was_set:
+      - product_id: 1
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_profit_revenue_report
+
+- story: profit/revenue report - with report amount
+  steps:
+    - intent: request_profit_revenue
+      entities:
+        - report_type: "Profit"
+        - report_amount: "All"
+    - action: profit_revenue_form
+    - active_loop: profit_revenue_form
+    - slot_was_set:
+      - requested_slot: report_type
+    - slot_was_set:
+      - report_type: "Profit"
+    - slot_was_set:
+      - requested_slot: report_amount
+    - slot_was_set:
+      - report_amount: "All"
+    - slot_was_set:
+      - requested_slot: filter_value
+    - intent: provide_filter_value
+      entities:
+      - filter_value: "Category"
+    - slot_was_set:
+      - filter_value: "Category"
+    - slot_was_set:
+      - requested_slot: category
+    - intent: provide_category
+      entities:
+      - category: "Dresses"
+    - slot_was_set:
+      - category: "Dresses"
+    - slot_was_set:
+      - requested_slot: start_date
+    - intent: provide_start_date
+      entities:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - requested_slot: end_date
+    - intent: provide_end_date
+      entities:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_profit_revenue_report
+
+- story: profit/revenue report - with date range
+  steps:
+    - intent: request_profit_revenue
+      entities:
+      - report_type: "Revenue"
+      - start_date: "01/01/2025"
+      - end_date: "31/12/2025"
+    - action: profit_revenue_form
+    - active_loop: profit_revenue_form
+    - slot_was_set:
+      - requested_slot: report_type
+    - slot_was_set:
+      - report_type: "Revenue"
+    - slot_was_set:
+      - requested_slot: start_date
+    - slot_was_set:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - requested_slot: end_date
+    - slot_was_set:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - requested_slot: filter_value
+    - intent: provide_filter_value
+      entities:
+      - filter_value: "Category"
+    - slot_was_set:
+      - filter_value: "Category"
+    - slot_was_set:
+      - requested_slot: category
+    - intent: provide_category
+      entities:
+      - category: "Accessories"
+    - slot_was_set:
+      - category: "Accessories"
+    - slot_was_set:
+      - requested_slot: report_amount
+    - intent: provide_report_amount
+      entities:
+      - report_amount: "All"
+    - slot_was_set:
+      - report_amount: "All"
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_profit_revenue_report
+
+- story: profit/revenue report - enough information for one product
+  steps:
+    - intent: request_profit_revenue
+      entities:
+      - report_type: "Profit"
+      - start_date: "01/01/2025"
+      - end_date: "31/12/2025"
+      - product_id: 1
+    - action: profit_revenue_form
+    - active_loop: profit_revenue_form
+    - slot_was_set:
+      - requested_slot: report_type
+    - slot_was_set:
+      - report_type: "Profit"
+    - slot_was_set:
+      - requested_slot: start_date
+    - slot_was_set:
+      - start_date: "01/01/2025"
+    - slot_was_set:
+      - requested_slot: end_date
+    - slot_was_set:
+      - end_date: "31/12/2025"
+    - slot_was_set:
+      - requested_slot: report_amount
+    - slot_was_set:
+      - report_amount: "One"
+    - slot_was_set:
+      - requested_slot: product_id
+    - slot_was_set:
+      - product_id: 1
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_profit_revenue_report
+
+- story: Profit/revenue analysis interrupted or restarted
+  steps:
+  - intent: request_profit_revenue
+  - action: profit_revenue_form
+  - active_loop: profit_revenue_form
+  - intent: restart_analysis
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+
+- story: Out of scope while profit/revenue form is active
+  steps:
+  - intent: request_profit_revenue
+  - action: profit_revenue_form
+  - active_loop: profit_revenue_form
+  - intent: nlu_fallback
+  - action: action_handle_out_of_scope
+  - action: profit_revenue_form
+  - active_loop: profit_revenue_form
+
+#
+#- story: Out of scope while profit/revenue form is active - ask to continue - no
+#  steps:
+#  - intent: request_profit_revenue
+#  - action: profit_revenue_form
+#  - active_loop: profit_revenue_form
+#  - intent: nlu_fallback
+#  - action: action_handle_out_of_scope
+#  - intent: deny
+#  - action: utter_inform_done
+#  - action: action_deactivate_loop
+#  - active_loop: null

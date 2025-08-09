@@ -1,0 +1,1213 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I don't want
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: request_help
+  examples: |
+    - what can you do?
+    - I need help
+    - assist me
+    - help
+    - tell me what you can do
+
+- intent: introduce_self
+  examples: |
+    - hello my name is John Doe
+    - I am John Doe
+    - my name is Jones
+
+- intent: request_trend
+  examples: |
+    - Can you show me the [shopping trend]{"entity": "analysis_type", "value": "Shopping Trends"} from [01/01/2025]{"entity": "start_date"} to [31/12/2025]{"entity": "end_date"} for [accessories]{"entity": "category", "value": "Accessories"}?
+    - Tell me the [trend of shopping]{"entity": "analysis_type", "value": "Shopping Trends"} of [accessory]{"entity": "category", "value": "Accessories"} begins from [10/02/2025]{"entity": "start_date"} to [10/30/2025]{"entity": "end_date"}?
+    - Help me with the [trends of shopping]{"entity": "analysis_type", "value": "Shopping Trends"} with start date is [12 01 2025]{"entity": "start_date"}  and end date is [31 01 2025]{"entity": "end_date"} of [dresses]{"entity": "category", "value": "Dresses"}
+    - Help me with the [trend of buying]{"entity": "analysis_type", "value": "Shopping Trends"} between [01 10 2025]{"entity": "start_date"} and [03 30 2025]{"entity": "end_date"} for [outerwear]{"entity": "category", "value": "Outerwear"}
+    - I want you to show me the [trends of buying]{"entity": "analysis_type", "value": "Shopping Trends"} starting from [20-01-2025]{"entity": "start_date"} and ending on [15-03-2025]{"entity": "end_date"} for [outer wear]{"entity": "category", "value": "Outerwear"}
+    - Show me the [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [outer-wear]{"entity": "category", "value": "Outerwear"} from [January 1st 2025]{"entity": "start_date"} till [April 2nd 2025]{"entity": "end_date"}
+    - Give me the information about the [trend]{"entity": "analysis_type", "value": "Shopping Trends"} report starting from [1st February 2025]{"entity": "start_date"} until [23rd April 2025]{"entity": "end_date"} of [outterwear]{"entity": "category", "value": "Outerwear"}
+    - Generate for me the [buying trends]{"entity": "analysis_type", "value": "Shopping Trends"} report from [May 10 2025]{"entity": "start_date"} to [Aug 18 2025]{"entity": "end_date"} of [outter wear]{"entity": "category", "value": "Outerwear"}
+    - I want the [buying trend]{"entity": "analysis_type", "value": "Shopping Trends"} report begins from [25 Sept 2025]{"entity": "start_date"} to [30 Dec 2025]{"entity": "end_date"} for [outter-wear]{"entity": "category", "value": "Outerwear"}
+    - Generate the [trend]{"entity": "analysis_type", "value": "Shopping Trends"} report for me from [14 Sep 2025]{"entity": "start_date"} to [30 Sept 2025]{"entity": "end_date"} about [swimwear]{"entity": "category", "value": "Swimwear"}
+    - Can you help me with the [trends]{"entity": "analysis_type", "value": "Shopping Trends"} report between [30 August 2025]{"entity": "start_date"} to [12 October 2025]{"entity": "end_date"} for [swim wear]{"entity": "category", "value": "Swimwear"}?
+    - I need information of the [shopping trends]{"entity": "analysis_type", "value": "Shopping Trends"} from [2024-01-01]{"entity": "start_date"} to [2024-12-31]{"entity": "end_date"} for [shirt]{"entity": "category", "value": "Shirts"}
+    - Please show me the information of the [buying trends]{"entity": "analysis_type", "value": "Shopping Trends"} between [2024-01-01]{"entity": "start_date"} and [2024-12-31]{"entity": "end_date"} about [pant]{"entity": "category", "value": "Pants"}
+    - show me [trends of shopping]{"entity": "analysis_type", "value": "Shopping Trends"} from [01/01/2024]{"entity": "start_date"} to [12/31/2024]{"entity": "end_date"} regarding [shirts]{"entity": "category", "value": "Shirts"}
+    - I want to see [trend of buying]{"entity": "analysis_type", "value": "Shopping Trends"} start [2024-01-01]{"entity": "start_date"} end [2024-12-31]{"entity": "end_date"} of [trousers]{"entity": "category", "value": "Pants"}
+    - display [buying trends]{"entity": "analysis_type", "value": "Shopping Trends"} from [15-01-2024]{"entity": "start_date"} until [31-12-2024]{"entity": "end_date"} for [shirt]{"entity": "category", "value": "Shirts"}
+    - can you show [trend]{"entity": "analysis_type", "value": "Shopping Trends"} between [2024-06-01]{"entity": "start_date"} to [2024-06-30]{"entity": "end_date"} with type [trouser]{"entity": "category", "value": "Pants"}
+    - shopping [trends]{"entity": "analysis_type", "value": "Shopping Trends"} analysis of [shirt]{"entity": "category", "value": "Shirts"} from [01/01/2025]{"entity": "start_date"} to [31/12/2025]
+    - show [trends of buying]{"entity": "analysis_type", "value": "Shopping Trends"} about type [trousers]{"entity": "category", "value": "Pants"} starting from [01-01-2025]{"entity": "start_date"} ending on [12-31-2025]{"entity": "end_date"}
+    - I need [shopping trends]{"entity": "analysis_type", "value": "Shopping Trends"} for [trousers]{"entity": "category", "value": "Pants"} between [2025-01-01]{"entity": "start_date"} and [2025-12-31]{"entity": "end_date"}
+    - display [trends]{"entity": "analysis_type", "value": "Shopping Trends"} from [2025/01/01]{"entity": "start_date"} to [2025/12/31]{"entity": "end_date"} for product type [shirt]{"entity": "category", "value": "Shirts"}
+    - get [buying trends]{"entity": "analysis_type", "value": "Shopping Trends"} regarding [shirt]{"entity": "category", "value": "Shirts"} type, between [01-01-2025]{"entity": "start_date"} and [12-31-2025]{"entity": "end_date"}
+    - show me the [trends of buying]{"entity": "analysis_type", "value": "Shopping Trends"} report for [pants]{"entity": "category", "value": "Pants"} from [01/01/2025]{"entity": "start_date"} until [31/12/2025]{"entity": "end_date"}
+    - analyze [shopping trend]{"entity": "analysis_type", "value": "Shopping Trends"} for [shirt]{"entity": "category", "value": "Shirts"} between [01-01-2025] and [31-12-2025]
+    - [shopping]{"entity": "analysis_type", "value": "Shopping Trends"} analysis starting from [01/01/2025]{"entity": "start_date"} until [12/31/2025]{"entity": "end_date"} of type [pants]{"entity": "category", "value": "Pants"}
+    - [trend]{"entity": "analysis_type", "value": "Shopping Trends"} report from [Jan 1 2024]{"entity": "start_date"} to [Dec 31 2024]{"entity": "end_date"} about [shirt]{"entity": "category", "value": "Shirts"}
+    - generate for me an analysis for [shopping trends]{"entity": "analysis_type", "value": "Shopping Trends"} from [01.01.2024]{"entity": "start_date"} until [31.12.2024]{"entity": "end_date"} for [pant]{"entity": "category", "value": "Pants"}
+    - show me [fashion]{"entity": "analysis_type", "value": "Shopping Trends"} data regarding product type [pant]{"entity": "category", "value": "Pants"} from [1 Jan 2024]{"entity": "start_date"} to [31 Dec 2024]{"entity": "end_date"}
+    - [trends of buying]{"entity": "analysis_type", "value": "Shopping Trends"} for [shirt]{"entity": "category", "value": "Shirts"} between [01-01-2025]{"entity": "start_date"} and [31-12-2025]{"entity": "end_date"}
+    - [trends of shopping]{"entity": "analysis_type", "value": "Shopping Trends"} for [trousers]{"entity": "category", "value": "Pants"} starting from [01 01 2025]{"entity": "start_date"} until [31 12 2025]{"entity": "end_date"}
+    - [trend of buying]{"entity": "analysis_type", "value": "Shopping Trends"} of [shirt]{"entity": "category", "value": "Shirts"} between [10 12 2025]{"entity": "start_date"} and [10 30 2025]{"entity": "end_date"}
+    - [trend of shopping]{"entity": "analysis_type", "value": "Shopping Trends"} for [pant]{"entity": "category", "value": "Pants"} starting from [January 10 2025]{"entity": "start_date"} until [December 12 2025]{"entity": "end_date"}
+    - [trends]{"entity": "analysis_type", "value": "Shopping Trends"} from [28th Jan 2025]{"entity": "start_date"} to [30th May 2025]{"entity": "end_date"} for product type [shirt]{"entity": "category", "value": "Shirts"}
+    - [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} starting on [Jan 30th 2025]{"entity": "start_date"} and ending on [April 20th 2025]{"entity": "end_date"} for product type [trouser]{"entity": "category", "value": "Pants"}
+    - [buying trends]{"entity": "analysis_type", "value": "Shopping Trends"} starting from [Jan 30th 2025]{"entity": "start_date"} till [April 20th 2025]{"entity": "end_date"} for product type [swim-wear]{"entity": "category", "value": "Swimwear"}
+    - [buying trend]{"entity": "analysis_type", "value": "Shopping Trends"} with start date is [21 Feb 2025]{"entity": "start_date"} till [30 March 2025]{"entity": "end_date"} for product type [pants]{"entity": "category", "value": "Pants"}
+    - I want to see [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [pant]{"entity": "category", "value": "Pants"} from [12 08 2025]{"entity": "start_date"} to [20 08 2025]{"entity": "end_date"}
+    - I want to check the [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} from [12/10/2025]{"entity": "start_date"} to [30/11/2025]{"entity": "end_date"} of [swimwear]{"entity": "category", "value": "Swimwear"}
+    - can you show me the [best seller]{"entity": "trend_analysis_type", "value": "Best Seller"} product of our shop
+    - I want to see the [top-selling product]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time.
+    - I want to see the [top-selling item]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time.
+    - I want to see the [top selling item]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time.
+    - I want to see the [top-selling product]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time.
+    - Show me the [most popular item]{"entity": "trend_analysis_type", "value": "Best Seller"} ever sold of [trouser]{"entity": "category", "value": "Pants"}.
+    - Display for me the [most popular product]{"entity": "trend_analysis_type", "value": "Best Seller"} of [outer wear]{"entity": "category", "value": "Outerwear"} ever sold.
+    - Which one is your [leading products]{"entity": "trend_analysis_type", "value": "Best Seller"} for [outerwear]{"entity": "category", "value": "Outerwear"} right now ?
+    - Which one is your [leading items]{"entity": "trend_analysis_type", "value": "Best Seller"} for [swim-wear]{"entity": "category", "value": "Swimwear"} right now ?
+    - Which one is your [leading product]{"entity": "trend_analysis_type", "value": "Best Seller"} of [swim wear]{"entity": "category", "value": "Swimwear"} right now ?
+    - Which one is your [leading item]{"entity": "trend_analysis_type", "value": "Best Seller"} for [swimwear]{"entity": "category", "value": "Swimwear"} right now ?
+    - What's the [hot item]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time for [shirt]{"entity": "category", "value": "Shirts"}?
+    - What's the [hot product]{"entity": "trend_analysis_type", "value": "Best Seller"} of all time for [dresses]{"entity": "category", "value": "Dresses"} ?
+    - Which product is the [sale champion]{"entity": "trend_analysis_type", "value": "Best Seller"} [from yesterday]{"entity": "start_date", "value": "Yesterday"} [to now]{"entity": "end_date"} of [trousers]{"entity": "category", "value": "Pants"}?
+    - Give me the [top performer in sale]{"entity": "trend_analysis_type", "value": "Best Seller"} [from now]{"entity": "start_date", "value": "Now"} [to tomorrow]{"entity": "end_date", "value": "Tomorrow"} for [trouser]{"entity": "category", "value": "Pants"} ?
+    - I'd like to know the [most purchased product]{"entity": "trend_analysis_type", "value": "Best Seller"} of [pant]{"entity": "category", "value": "Pants"}
+    - I want to see the [most purchased item]{"entity": "trend_analysis_type", "value": "Best Seller"} [from tomorrow]{"entity": "start_date", "value": "Tomorrow"} [until yesterday]{"entity": "end_date", "value": "Yesterday"} of [shoe]{"entity": "category", "value": "Shoes"}
+    - I am looking for the [most purchased item]{"entity": "trend_analysis_type", "value": "Best Seller"} of [outer-wear]{"entity": "category", "value": "Outerwear"} [from yesterday]{"entity": "start_date", "value": "Yesterday"} [till tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - what is the [least seller]{"entity": "trend_analysis_type", "value": "Least Seller"} product of [pant]{"entity": "category", "value": "Pants"} from [12 10]{"entity": "start_date"} to [30 11]{"entity": "end_date"}
+    - what’s the [lowest-selling item]{"entity": "trend_analysis_type", "value": "Least Seller"} in your store's [til now]{"entity": "end_date", "value": "Now"}?
+    - can you tell me about the [lowest-selling product]{"entity": "trend_analysis_type", "value": "Least Seller"} of [pant]{"entity": "category", "value": "Pants"} [last month]{"entity": "date_period"}
+    - I want to know the [lowest selling item]{"entity": "trend_analysis_type", "value": "Least Seller"} of [outter wear]{"entity": "category", "value": "Outerwear"} [the last 2 months]{"entity": "date_period"}
+    - I need information about the [lowest selling product]{"entity": "trend_analysis_type", "value": "Least Seller"} of [outterwear]{"entity": "category", "value": "Outerwear"} [last week]{"entity": "date_period"}
+    - which one is your [least popular product]{"entity": "trend_analysis_type", "value": "Least Seller"} [right now]{"entity": "end_date", "value": "Now"}?
+    - which one is the [least popular item]{"entity": "trend_analysis_type", "value": "Least Seller"} of [2 weeks]{"entity": "date_period"} ago for [outer-wear]{"entity": "category", "value": "Outerwear"}
+    - I want to see the [least-popular product]{"entity": "trend_analysis_type", "value": "Least Seller"} of [outter-wear]{"entity": "category", "value": "Outerwear"} [one day ago]{"entity": "date_period"}
+    - looking for the [least-popular item]{"entity": "trend_analysis_type", "value": "Least Seller"} of [shirts]{"entity": "category", "value": "Shirts"} [5 days ago]{"entity": "date_period"}
+    - can you point out the product that’s been a [poor performer]{"entity": "trend_analysis_type", "value": "Least Seller"} in sales lately for [dress]{"entity": "category", "value": "Dresses"}?
+    - tell me the product that had [poor performance in sale]{"entity": "trend_analysis_type", "value": "Least Seller"} [one year ago]{"entity": "date_period"}
+    - what is the [bottom-ranked]{"entity": "trend_analysis_type", "value": "Least Seller"} based on our sale data [at this time]{"entity": "end_date", "value": "Now"}?
+    - I would like to see the [bottom-ranked item]{"entity": "trend_analysis_type", "value": "Least Seller"} last [year] of [trouser]{"entity": "category", "value": "Pants"}
+    - looking for the [bottom-ranked product]{"entity": "trend_analysis_type", "value": "Least Seller"} of [trousers]{"entity": "category", "value": "Pants"} of [2 years ago]{"entity": "date_period"}
+    - give me the [underperforming item]{"entity": "trend_analysis_type", "value": "Least Seller"} at [present]{"entity": "end_date", "value": "Now"}?
+    - give me the [underperforming product]{"entity": "trend_analysis_type", "value": "Least Seller"} [currently]{"entity": "end_date", "value": "Now"}?
+    - I'd like to know the [weakest in sale]{"entity": "trend_analysis_type", "value": "Least Seller"} item of [this month]{"entity": "date_period"} for [accessories]{"entity": "category", "value": "Accessories"}
+    - what is our [lowest demand item]{"entity": "trend_analysis_type", "value": "Least Seller"} [at the moment]{"entity": "end_date", "value": "Now"} for [accessory]{"entity": "category", "value": "Accessories"}?
+    - tell me the [lowest demand product]{"entity": "trend_analysis_type", "value": "Least Seller"} [last week]{"entity": "date_period"}
+    - give me the [least purchased product]{"entity": "trend_analysis_type", "value": "Least Seller"} [until now]{"entity": "end_date", "value": "Now"} of [shirt]{"entity": "category", "value": "Shirts"} for [one cate gory]{"entity": "filter_value", "value": "Category"}
+    - give me the [least purchased item]{"entity": "trend_analysis_type", "value": "Least Seller"} [at this time]{"entity": "end_date", "value": "Now"} of [pant]{"entity": "category", "value": "Pants"} for [category]{"entity": "filter_value", "value": "Category"}
+    - I want to see the [under-performing item]{"entity": "trend_analysis_type", "value": "Least Seller"} of [outer-wear]{"entity": "category", "value": "Outerwear"} [from today]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"}
+    - which product is the [under-performing product]{"entity": "trend_analysis_type", "value": "Least Seller"} of [swim wear]{"entity": "category", "value": "Swimwear"} [from yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"}
+    - I want to see the [least viewed]{"entity": "trend_analysis_type", "value": "Least View"} product of [swim-wear]{"entity": "category", "value": "Swimwear"} from [20 01 2025]{"entity": "start_date"} [to now]{"entity": "end_date", "value": "Now"}
+    - of [all products]{"entity": "filter_value", "value": "Product"} give me the [most poor-performing product in terms of view]{"entity": "trend_analysis_type", "value": "Least View"} for [trouser]{"entity": "category", "value": "Pants"} [from today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"}
+    - product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} from [yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"}
+    - I need product that got [viewed most]{"entity": "trend_analysis_type", "value": "Most View"} of [shoes]{"entity": "category", "value": "Shoes"} [from tomorrow]{"entity": "start_date", "value": "Tomorrow"} [until today]{"entity": "end_date", "value": "Now"}
+    - product with [least view]{"entity": "trend_analysis_type", "value": "Least View"} from [12 07]{"entity": "start_date"} to [10 08]{"entity": "end_date"} for [one category]{"entity": "filter_value", "value": "Category"}
+    - product with [most attention]{"entity": "trend_analysis_type", "value": "Most View"} from [17 09]{"entity": "start_date"} till [20 10]{"entity": "end_date"} for [cate gory]{"entity": "filter_value", "value": "Category"}
+    - looking for [least attention]{"entity": "trend_analysis_type", "value": "Least View"} of [acessories]{"entity": "category", "value": "Accessories"} from [10 09]{"entity": "start_date"} [until tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - [most view]{"entity": "trend_analysis_type", "value": "Most View"} product of [accesories]{"entity": "category", "value": "Accessories"} from [1st April]{"entity": "start_date"} until [31st July]{"entity": "end_date"} from [all product]{"entity": "filter_value", "value": "Product"}
+    - I am looking for product that got [viewed least]{"entity": "trend_analysis_type", "value": "Least View"} [from yesterday]{"entity": "start_date", "value": "Yesterday"}
+    - searching for product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} [from today]{"entity": "start_date", "value": "Now"}
+    - looking for product with [least amount of view]{"entity": "trend_analysis_type", "value": "Least View"} [until now]{"entity": "end_date", "value": "Now"}
+    - looking for product with [most amount of view]{"entity": "trend_analysis_type", "value": "Most View"} [til now]{"entity": "end_date", "value": "Now"}
+    - looking for product with [the least views]{"entity": "trend_analysis_type", "value": "Least View"} [till now]{"entity": "end_date", "value": "Now"}
+    - I want to see the [most view]{"entity": "trend_analysis_type", "value": "Most View"} product of [shirts]{"entity": "category", "value": "Shirts"} of [last 2 weeks]{"entity": "date_period"}
+    - can I ask for the [least view]{"entity": "trend_analysis_type", "value": "Least View"} product of [outerwear]{"entity": "category", "value": "outerwear"} of [last 4 week]{"entity": "date_period"}
+    - can I ask for the [least amount of view]{"entity": "trend_analysis_type", "value": "Least View"} product of [outerwear]{"entity": "category", "value": "outerwear"} of [last 2 months]{"entity": "date_period"}
+    - can I know the information for the [most amount of view]{"entity": "trend_analysis_type", "value": "Most View"} product of [outerwear]{"entity": "category", "value": "outerwear"} of [last 4 month]{"entity": "date_period"}
+    - I am looking for the [most views]{"entity": "trend_analysis_type", "value": "Most View"} product of [shirts]{"entity": "category", "value": "Shirts"} of [last 2 weeks]{"entity": "date_period"}
+    - I want to know the [least views]{"entity": "trend_analysis_type", "value": "Least View"} of [swimwear]{"entity": "category", "value": "Swimwear"} [last year]{"entity": "date_period"}
+    - I am trying to find for the [least amount of views]{"entity": "trend_analysis_type", "value": "Least View"} for [outer-wear]{"entity": "category", "value": "Outerwear"} [last 2 years]{"entity": "date_period"}
+    - information for the [most amount of views]{"entity": "trend_analysis_type", "value": "Most View"} for [outer wear]{"entity": "category", "value": "Outerwear"} [last 3 year]{"entity": "date_period"}
+    - give me the information for the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [outterwear]{"entity": "category", "value": "Outerwear"} [this year]{"entity": "date_period"}
+    - give me the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [outter-wear]{"entity": "category", "value": "Outerwear"} [this week]{"entity": "date_period"}
+    - give me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [this month]{"entity": "date_period"}
+    - I am trying to find for the [least amount of views]{"entity": "trend_analysis_type", "value": "Least View"} for [swimwear]{"entity": "category", "value": "Swimwear"} [last 2 quarters]{"entity": "date_period"}
+    - information for the [most amount of views]{"entity": "trend_analysis_type", "value": "Most View"} for [swim wear]{"entity": "category", "value": "Swimwear"} [last quarter]{"entity": "date_period"}
+    - give me the information for the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [swim-wear]{"entity": "category", "value": "Swimwear"} [last 3 quarters]{"entity": "date_period"}
+    - give me the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [pants]{"entity": "category", "value": "Pants"} [this quarter]{"entity": "date_period"}
+    - give me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [a quarter ago]{"entity": "date_period"}
+    - I am trying to find for the [least amount of views]{"entity": "trend_analysis_type", "value": "Least View"} for [swimwear]{"entity": "category", "value": "Swimwear"} [2 quarters ago]{"entity": "date_period"}
+    - information for the [most amount of views]{"entity": "trend_analysis_type", "value": "Most View"} for [swim wear]{"entity": "category", "value": "Swimwear"} [3 quarter ago]{"entity": "date_period"}
+    - give me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [the previous quarter]{"entity": "date_period"}
+    - I am trying to find for the [least amount of views]{"entity": "trend_analysis_type", "value": "Least View"} for [swimwear]{"entity": "category", "value": "Swimwear"} [previous 2 quarters]{"entity": "date_period"}
+    - information for the [most amount of views]{"entity": "trend_analysis_type", "value": "Most View"} for [swim wear]{"entity": "category", "value": "Swimwear"} [previous 3 quarter]{"entity": "date_period"}
+    - give me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [2 previous quarters]{"entity": "date_period"}
+    - I am trying to find for the [least amount of views]{"entity": "trend_analysis_type", "value": "Least View"} for [swimwear]{"entity": "category", "value": "Swimwear"} [3 previous quarter]{"entity": "date_period"}
+    - information for the [most amount of views]{"entity": "trend_analysis_type", "value": "Most View"} for [swim wear]{"entity": "category", "value": "Swimwear"} [past 4 quarters]{"entity": "date_period"}
+    - give me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [past 2 quarter]{"entity": "date_period"}
+    - information for the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [pant]{"entity": "category", "value": "Pants"} [a week ago]{"entity": "date_period"}
+    - display the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [trouser]{"entity": "category", "value": "Pants"} [2 weeks ago]{"entity": "date_period"}
+    - tell me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [trousers]{"entity": "category", "value": "Pants"} [3 week ago]{"entity": "date_period"}
+    - information for the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [pant]{"entity": "category", "value": "Pants"} [the previous week]{"entity": "date_period"}
+    - display the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [trouser]{"entity": "category", "value": "Pants"} [previous 2 weeks]{"entity": "date_period"}
+    - tell me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [trousers]{"entity": "category", "value": "Pants"} [previous 3 week]{"entity": "date_period"}
+    - display the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [trouser]{"entity": "category", "value": "Pants"} [2 previous weeks]{"entity": "date_period"}
+    - tell me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [trousers]{"entity": "category", "value": "Pants"} [3 previous week]{"entity": "date_period"}
+    - information for the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [pant]{"entity": "category", "value": "Pants"} [past 2 weeks]{"entity": "date_period"}
+    - display the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [trouser]{"entity": "category", "value": "Pants"} [past 3 week]{"entity": "date_period"}
+    - tell me the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [trousers]{"entity": "category", "value": "Pants"} [past 4 weeks]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [a month ago]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [2 months ago]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [3 month ago]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [the previous month]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [previous 2 months]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [previous 3 month]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [2 previous months]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [3 previous month]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [past 2 months]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [past 3 month]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [a year ago]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [2 years ago]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [3 year ago]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [the previous year]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [previous 2 years]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [previous 3 year]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [2 previous years]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [3 previous year]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [past 2 years]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [past 3 year]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [a day ago]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [2 days ago]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [3 day ago]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [the previous day]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [previous 2 days]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [previous 3 day]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [2 previous days]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [3 previous day]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [past 3 days]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [past 2 day]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [last 2 quarters]{"entity": "date_period"}
+    - I want to know the information for the product with [most views]{"entity": "trend_analysis_type", "value": "Most View"} for [outter wear]{"entity": "category", "value": "Outerwear"} [last 3 quarter]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [last 2 years]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [last 3 year]{"entity": "date_period"}
+    - I want to see the product with [most view]{"entity": "trend_analysis_type", "value": "Most View"} for [accesories]{"entity": "category", "value": "Accessories"} [previous 4 quarters]{"entity": "date_period"}
+    - I am searching for the information for the product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"} for [accesory]{"entity": "category", "value": "Accessories"} [last 3 year]{"entity": "date_period"}
+    - I want to see [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 3 weeks]{"entity": "date_period"}
+    - can I see [fashion]{"entity": "analysis_type", "value": "Shopping Trends"} of [3 previous weeks]{"entity": "date_period"}
+    - looking for [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 6 week]{"entity": "date_period"}
+    - searching for [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 3 months]{"entity": "date_period"}
+    - display [fashion]{"entity": "analysis_type", "value": "Shopping Trends"} of [4 previous months]{"entity": "date_period"}
+    - show [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 7 month]{"entity": "date_period"}
+    - seeking for [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 3 quarters]{"entity": "date_period"}
+    - show me the [fashion]{"entity": "analysis_type", "value": "Shopping Trends"} of [3 previous quarters]{"entity": "date_period"}
+    - display for me the [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 6 quarter]{"entity": "date_period"}
+    - I want to know the [trends]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 3 years]{"entity": "date_period"}
+    - I am looking for the [fashion]{"entity": "analysis_type", "value": "Shopping Trends"} of [3 previous years]{"entity": "date_period"}
+    - I want to see [tendency]{"entity": "analysis_type", "value": "Shopping Trends"} of [previous 6 year]{"entity": "date_period"}
+
+- intent: provide_trend_analysis_type
+  examples: |
+    - [most view]{"entity": "trend_analysis_type", "value": "Most View"}
+    - [least view]{"entity": "trend_analysis_type", "value": "Least View"}
+    - I want to see the [least viewed]{"entity": "trend_analysis_type", "value": "Least View"} product
+    - give me the [most poor-performing product in terms of view]{"entity": "trend_analysis_type", "value": "Least View"}
+    - product with [most viewed]{"entity": "trend_analysis_type", "value": "Most View"}
+    - I need product that got [viewed most]{"entity": "trend_analysis_type", "value": "Most View"}
+    - product with [most attention]{"entity": "trend_analysis_type", "value": "Most View"}
+    - [least attention]{"entity": "trend_analysis_type", "value": "Least View"}
+    - [best seller]{"entity": "trend_analysis_type", "value": "Best Seller"} product
+    - [top-selling product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [top-selling item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [top selling item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [top-selling product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [most popular item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [most popular product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [leading products]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [leading items]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [leading product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [leading item]{"entity": "trend_analysis_type", "value": "Best Seller"} 
+    - [hot item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [hot product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [sale champion]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [top performer in sale]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [most purchased product]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [most purchased item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [most purchased item]{"entity": "trend_analysis_type", "value": "Best Seller"}
+    - [lowest-selling item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [lowest-selling product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [lowest selling item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [lowest selling product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least popular product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least popular item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least-popular product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least-popular item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [poor performer]{"entity": "trend_analysis_type", "value": "Least Seller"} 
+    - [poor performance in sale]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [bottom-ranked]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [bottom-ranked item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [bottom-ranked product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [underperforming item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [underperforming product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [weakest in sale]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [lowest demand item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [lowest demand product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least purchased product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least purchased item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [under-performing item]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [under-performing product]{"entity": "trend_analysis_type", "value": "Least Seller"}
+    - [least seller]{"entity": "trend_analysis_type", "value": "Least Seller"}
+
+- intent: provide_start_date
+  examples: |
+    - start date is [2024-01-01]{"entity": "start_date"}
+    - from [2024-01-15]{"entity": "start_date"}
+    - starting from [2024-02-01]{"entity": "start_date"}
+    - begin from [2024-03-10]{"entity": "start_date"}
+    - start from [01/01/2024]{"entity": "start_date"}
+    - from [15-01-2024]{"entity": "start_date"}
+    - starting date [2024-01-01]{"entity": "start_date"}
+    - start [2024-12-01]{"entity": "start_date"}
+    - start date is [15/03/2025]{"entity": "start_date"}
+    - start date [03/15/2025]{"entity": "start_date"}
+    - The start date is [15-03-2025]{"entity": "start_date"}
+    - The start date is [03-15-2025]{"entity": "start_date"}
+    - Start at [2025-06-10]{"entity": "start_date"}
+    - from [January 1, 2024]{"entity": "start_date"}
+    - starting [Jan 15 2024]{"entity": "start_date"}
+    - begin [Jan 15th 2024]{"entity": "start_date"}
+    - from [Jan 15th, 2024]{"entity": "start_date"}
+    - begin [1/1/2024]{"entity": "start_date"}
+    - from [01.01.2024]{"entity": "start_date"}
+    - start [1 Jan 2024]{"entity": "start_date"}
+    - starting from [15 March 2024]{"entity": "start_date"}
+    - begin [January 1, 2024]{"entity": "start_date"}
+    - start from [Jan 15 2024]{"entity": "start_date"}
+    - start date [1/1/2024]{"entity": "start_date"}
+    - begin from [01.01.2024]{"entity": "start_date"}
+    - from [1 Jan 2024]{"entity": "start_date"}
+    - starting [15 March 2024]{"entity": "start_date"}
+    - from [January 1st 2024]{"entity": "start_date"}
+    - begin [May 23rd 2025]{"entity": "start_date"}
+    - start date [January 1st, 2024]{"entity": "start_date"}
+    - starting on [May 23rd, 2025]{"entity": "start_date"}
+    - [from yesterday]{"entity": "start_date", "value": "Yesterday"}
+    - [begin yesterday]{"entity": "start_date", "value": "Yesterday"}
+    - [starting yesterday]{"entity": "start_date", "value": "Yesterday"}
+    - [from now]{"entity": "start_date", "value": "Now"}
+    - [begin now]{"entity": "start_date", "value": "Now"}
+    - [starting now]{"entity": "start_date", "value": "Now"}
+    - [from today]{"entity": "start_date", "value": "Now"}
+    - [begin today]{"entity": "start_date", "value": "Now"}
+    - [starting today]{"entity": "start_date", "value": "Now"}
+    - [from tomorrow]{"entity": "start_date", "value": "Tomorrow"}
+    - [begin tomorrow]{"entity": "start_date", "value": "Tomorrow"}
+    - [starting tomorrow]{"entity": "start_date", "value": "Tomorrow"}
+
+- intent: provide_end_date
+  examples: |
+    - end date is [2024-12-31]{"entity": "end_date"}
+    - until [2024-12-31]{"entity": "end_date"}
+    - ending on [2024-03-31]{"entity": "end_date"}
+    - end on [2024-06-30]{"entity": "end_date"}
+    - to [31/12/2024]{"entity": "end_date"}
+    - until [31-12-2024]{"entity": "end_date"}
+    - ending date [2024-12-31]{"entity": "end_date"}
+    - end [2024-12-31]{"entity": "end_date"}
+    - end date is [15-10-2025]{"entity": "end_date"}
+    - The end date is [10-15-2025]{"entity": "end_date"}
+    - end date [15/10/2025]{"entity": "end_date"}
+    - end date is [10/15/2025]{"entity": "end_date"}
+    - until [December 31, 2024]{"entity": "end_date"}
+    - ending [Dec 31 2024]{"entity": "end_date"}
+    - to [12/31/2024]{"entity": "end_date"}
+    - until [31.12.2024]{"entity": "end_date"}
+    - end [31 Dec 2024]{"entity": "end_date"}
+    - ending on [31 December 2024]{"entity": "end_date"}
+    - to [December 31, 2024]{"entity": "end_date"}
+    - to [Aug 2nd, 2024]{"entity": "end_date"}
+    - end on [Dec 31 2024]{"entity": "end_date"}
+    - end [31.12.2024]{"entity": "end_date"}
+    - to [31 Aug 2024]{"entity": "end_date"}
+    - until [31 August 2024]{"entity": "end_date"}
+    - to [1st Aug 2024]{"entity": "end_date"}
+    - until [3rd August 2024]{"entity": "end_date"}
+    - till [12th December 2025]{"entity": "end_date"}
+    - [to yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [till yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [til yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [until yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [end on yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [to today]{"entity": "end_date", "value": "Now"}
+    - [till today]{"entity": "end_date", "value": "Now"}
+    - [til today]{"entity": "end_date", "value": "Now"}
+    - [until today]{"entity": "end_date", "value": "Now"}
+    - [end on today]{"entity": "end_date", "value": "Now"}
+    - [to now]{"entity": "end_date", "value": "Now"}
+    - [till now]{"entity": "end_date", "value": "Now"}
+    - [til now]{"entity": "end_date", "value": "Now"}
+    - [until now]{"entity": "end_date", "value": "Now"}
+    - [end on now]{"entity": "end_date", "value": "Now"}
+    - [to tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - [till tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - [til tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - [until tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+    - [end on tomorrow]{"entity": "end_date", "value": "Tomorrow"}
+
+#    - to [now]{"entity": "end_date"}
+#    - ending on [today]{"entity": "end_date"}
+#    - to [yesterday]{"entity": "end_date"}
+#    - [yesterday]{"entity": "end_date"}
+#    - [now]{"entity": "end_date"}
+#    - until [now]{"entity": "end_date"}
+#    - until [today]{"entity": "end_date"}
+
+#- intent: provide_date_range
+#  examples: |
+#    - from [2024-01-01]{"entity": "start_date"} to [2024-12-31]{"entity": "end_date"} for [shirt]{"entity": "product_type", "value": "Shirts"}
+#    - between [2024-01-01]{"entity": "start_date"} and [2024-12-31]{"entity": "end_date"} about [pant]{"entity": "product_type", "value": "Pants"}
+#    - from [01/01/2024]{"entity": "start_date"} to [12/31/2024]{"entity": "end_date"} regarding [shirts]{"entity": "product_type", "value": "Shirts"}
+#    - [2024-01-01]{"entity": "start_date"} to [2024-12-31]{"entity": "end_date"}, [shirt]{"entity": "product_type", "value": "Shirts"}
+#    - start [2024-01-01]{"entity": "start_date"} end [2024-12-31]{"entity": "end_date"} of [trousers]{"entity": "product_type", "value": "Pants"}
+#    - from [15-01-2024]{"entity": "start_date"} until [31-12-2024]{"entity": "end_date"} for [shirt]{"entity": "product_type", "value": "Shirts"}
+#    - between [2024-06-01]{"entity": "start_date"} to [2024-06-30]{"entity": "end_date"} with type [trouser]{{"entity": "product_type", "value": "Pants"}
+#    - Shopping trends of [shirt]{"entity": "product_type", "value": "Shirts"} from [01/01/2025]{"entity": "start_date"} to [31/12/2025]
+#    - Show me the trends about type [trousers]{"entity": "product_type", "value": "Pants"} starting from [01-01-2025]{"entity": "start_date"} ending on [12-31-2025]{"entity": "end_date"}
+#    - I want trends for [trousers]{"entity": "product_type", "value": "Pants"} between [2025-01-01]{"entity": "start_date"} and [2025-12-31]{"entity": "end_date"}
+#    - Give me sales trends from [2025/01/01]{"entity": "start_date"} to [2025/12/31]{"entity": "end_date"} for product type [shirt]{"entity": "product_type", "value": "Shirts"}
+#    - Trend analysis regarding [shirt]{"entity": "product_type", "value": "Shirts"} type, between [01-01-2025]{"entity": "start_date"} and [12-31-2025]{"entity": "end_date"}
+#    - I need trends report for [pants]{"entity": "product_type", "value": "Pants"} from [01/01/2025]{"entity": "start_date"} until [31/12/2025]{"entity": "end_date"}
+#    - Trend data for [shirt]{"entity": "product_type", "value": "Shirts"} between [01-01-2025] and [31-12-2025]
+#    - Shopping trend analysis starting from [01/01/2025]{"entity": "start_date"} until [12/31/2025]{"entity": "end_date"} of type [pants]{"entity": "product_type", "value": "Pants"}
+#    - Trends starting from [Jan 1 2024]{"entity": "start_date"} to [Dec 31 2024]{"entity": "end_date"} about [shirt]{"entity": "product_type", "value": "Shirts"}
+#    - Sales trend information of [pants]{"entity": "product_type", "value": "Pants"} between [1/1/2024]{"entity": "start_date"} and [12/31/2024]{"entity": "end_date"}
+#    - I want trend analysis from [01.01.2024]{"entity": "start_date"} until [31.12.2024]{"entity": "end_date"} for [pant]{"entity": "product_type", "value": "Pants"}
+#    - I need information about shopping trend regarding product type [pant]{"entity": "product_type", "value": "Pants"} from [1 Jan 2024]{"entity": "start_date"} to [31 Dec 2024]{"entity": "end_date"}
+#    - sales analysis for [shirt]{"entity": "product_type", "value": "Shirts"}between [01-01-2025]{"entity": "start_date"} and [31-12-2025]{"entity": "end_date"}
+#    - [pant]{"entity": "product_type", "value": "Pants"} from [January 1st 2025]{"entity": "start_date"} to [December 31st 2025]{"entity": "end_date"}
+
+- intent: provide_date
+  examples: |
+    - [2025-12-31]{"entity": "date"}
+    - [2025/04/30]{"entity": "date"}
+    - [2025 05 31]{"entity": "date"}
+    - [2025.05.31]{"entity": "date"}
+    - [12/31/2025]{"entity": "date"}
+    - [03-28-2025]{"entity": "date"}
+    - [09 30 2025]{"entity": "date"}
+    - [10.30.2025]{"entity": "date"}
+    - [31-12-2025]{"entity": "date"}
+    - [17/10/2025]{"entity": "date"}
+    - [20 09 2025]{"entity": "date"}
+    - [19.10.2025]{"entity": "date"}
+    - [today]{"entity": "date"}
+    - [now]{"entity": "date"}
+    - [yesterday]{"entity": "date"}
+    - [tomorrow]{"entity": "date"}
+    - [January 1st 2025]{"entity": "date"}
+    - [February 2nd 2021]{"entity": "date"}
+    - [March 3rd 2022]{"entity": "date"}
+    - [April 4th 2023]{"entity": "date"}
+    - [May 15th 2018]{"entity": "date"}
+    - [June 26th 2020]{"entity": "date"}
+    - [July 17th 2019]{"entity": "date"}
+    - [August 8th 2025]{"entity": "date"}
+    - [September 21st 2025]{"entity": "date"}
+    - [October 31st 2025]{"entity": "date"}
+    - [November 12th 2025]{"entity": "date"}
+    - [December 22nd 2025]{"entity": "date"}
+    - [January 1st, 2025]{"entity": "date"}
+    - [February 2nd, 2021]{"entity": "date"}
+    - [March 3rd, 2022]{"entity": "date"}
+    - [April 4th, 2023]{"entity": "date"}
+    - [May 23rd, 2018]{"entity": "date"}
+    - [June 26th, 2020]{"entity": "date"}
+    - [July 17th, 2019]{"entity": "date"}
+    - [August 8th, 2025]{"entity": "date"}
+    - [September 21st, 2025]{"entity": "date"}
+    - [October 31st, 2025]{"entity": "date"}
+    - [November 12th, 2025]{"entity": "date"}
+    - [December 13th, 2025]{"entity": "date"}
+    - [January 1 2025]{"entity": "date"}
+    - [February 2 2021]{"entity": "date"}
+    - [March 03 2022]{"entity": "date"}
+    - [April 04 2023]{"entity": "date"}
+    - [May 15 2018]{"entity": "date"}
+    - [June 26 2020]{"entity": "date"}
+    - [July 17 2019]{"entity": "date"}
+    - [August 19 2025]{"entity": "date"}
+    - [September 21 2025]{"entity": "date"}
+    - [October 31 2025]{"entity": "date"}
+    - [November 12 2025]{"entity": "date"}
+    - [December 01 2024]{"entity": "date"}
+    - [January 1, 2025]{"entity": "date"}
+    - [February 2, 2021]{"entity": "date"}
+    - [March 3, 2022]{"entity": "date"}
+    - [April 4, 2023]{"entity": "date"}
+    - [May 23, 2018]{"entity": "date"}
+    - [June 26, 2020]{"entity": "date"}
+    - [July 17, 2019]{"entity": "date"}
+    - [August 8, 2025]{"entity": "date"}
+    - [September 21, 2025]{"entity": "date"}
+    - [October 31, 2025]{"entity": "date"}
+    - [November 12, 2025]{"entity": "date"}
+    - [December 13, 2025]{"entity": "date"} 
+    - [Jan 1st 2025]{"entity": "date"}
+    - [Feb 2nd 2021]{"entity": "date"}
+    - [March 3rd 2022]{"entity": "date"}
+    - [Apr 4th 2023]{"entity": "date"}
+    - [Apr 23rd 2023]{"entity": "date"}
+    - [May 15th 2018]{"entity": "date"}
+    - [June 26th 2020]{"entity": "date"}
+    - [July 17th 2019]{"entity": "date"}
+    - [Aug 8th 2025]{"entity": "date"}
+    - [Sept 21st 2025]{"entity": "date"}
+    - [Sep 19th 2025]{"entity": "date"}
+    - [Oct 31st 2025]{"entity": "date"}
+    - [Nov 12th 2025]{"entity": "date"}
+    - [Dec 22nd 2025]{"entity": "date"}
+    - [Jan 1st, 2025]{"entity": "date"}
+    - [Feb 2nd, 2021]{"entity": "date"}
+    - [March 3rd, 2022]{"entity": "date"}
+    - [Apr 4th, 2023]{"entity": "date"}
+    - [April 24th, 2023]{"entity": "date"}
+    - [May 23rd, 2018]{"entity": "date"}
+    - [June 26th, 2020]{"entity": "date"}
+    - [July 17th, 2019]{"entity": "date"}
+    - [Aug 8th, 2025]{"entity": "date"}
+    - [Sept 21st, 2025]{"entity": "date"}
+    - [Sep 5th, 2025]{"entity": "date"}
+    - [Oct 31st, 2025]{"entity": "date"}
+    - [Nov 12th, 2025]{"entity": "date"}
+    - [Dec 13th, 2025]{"entity": "date"} 
+    - [Jan 4 2025]{"entity": "date"}
+    - [Feb 2 2021]{"entity": "date"}
+    - [March 03 2022]{"entity": "date"}
+    - [Apr 04 2023]{"entity": "date"}
+    - [April 9 2023]{"entity": "date"}
+    - [May 15 2018]{"entity": "date"}
+    - [June 26 2020]{"entity": "date"}
+    - [July 17 2019]{"entity": "date"}
+    - [Aug 19 2025]{"entity": "date"}
+    - [Sept 21 2025]{"entity": "date"}
+    - [Sep 28 2025]{"entity": "date"}
+    - [Oct 31 2025]{"entity": "date"}
+    - [Nov 12 2025]{"entity": "date"}
+    - [Dec 01 2024]{"entity": "date"}
+    - [Jan 1, 2025]{"entity": "date"}
+    - [Feb 2, 2021]{"entity": "date"}
+    - [March 3, 2022]{"entity": "date"}
+    - [Apr 4, 2023]{"entity": "date"}
+    - [April 18, 2023]{"entity": "date"}
+    - [May 23, 2018]{"entity": "date"}
+    - [June 26, 2020]{"entity": "date"}
+    - [July 17, 2019]{"entity": "date"}
+    - [Aug 8, 2025]{"entity": "date"}
+    - [Sept 21, 2025]{"entity": "date"}
+    - [Sep 29, 2025]{"entity": "date"}
+    - [Oct 31, 2025]{"entity": "date"}
+    - [Nov 12, 2025]{"entity": "date"}
+    - [Dec 13, 2025]{"entity": "date"} 
+    - [1st January 2024]{"entity": "date"}
+    - [22nd February 2027]{"entity": "date"}
+    - [13th March 2025]{"entity": "date"}
+    - [4th April 2022]{"entity": "date"}
+    - [25th May 2020]{"entity": "date"}
+    - [30th June 2021]{"entity": "date"}
+    - [31st July 2020]{"entity": "date"}
+    - [11th August 2025]{"entity": "date"}
+    - [20th September 2024]{"entity": "date"}
+    - [2nd October 2023]{"entity": "date"}
+    - [3rd November 2025]{"entity": "date"}
+    - [7th December 2025]{"entity": "date"}
+    - [1st January, 2024]{"entity": "date"}
+    - [22nd February, 2027]{"entity": "date"}
+    - [13th March, 2025]{"entity": "date"}
+    - [4th April, 2022]{"entity": "date"}
+    - [25th May, 2020]{"entity": "date"}
+    - [30th June, 2021]{"entity": "date"}
+    - [31st July, 2020]{"entity": "date"}
+    - [11th August, 2025]{"entity": "date"}
+    - [20th September, 2024]{"entity": "date"}
+    - [2nd October, 2023]{"entity": "date"}
+    - [3rd November, 2025]{"entity": "date"}
+    - [7th December, 2025]{"entity": "date"}
+    - [01 January 2021]{"entity": "date"}
+    - [19 February 2027]{"entity": "date"}
+    - [23 March 2025]{"entity": "date"}
+    - [6 April 2022]{"entity": "date"}
+    - [9 May 2020]{"entity": "date"}
+    - [29 June 2021]{"entity": "date"}
+    - [30 July 2020]{"entity": "date"}
+    - [31 August 2025]{"entity": "date"}
+    - [10 September 2024]{"entity": "date"}
+    - [4 October 2023]{"entity": "date"}
+    - [5 November 2025]{"entity": "date"}
+    - [9 December 2025]{"entity": "date"}
+    - [2 January, 2024]{"entity": "date"}
+    - [30 February, 2027]{"entity": "date"}
+    - [10 March, 2025]{"entity": "date"}
+    - [20 April, 2022]{"entity": "date"}
+    - [29 May, 2020]{"entity": "date"}
+    - [7 June, 2021]{"entity": "date"}
+    - [01 July, 2020]{"entity": "date"}
+    - [22 August, 2025]{"entity": "date"}
+    - [20 September, 2024]{"entity": "date"}
+    - [31 October, 2023]{"entity": "date"}
+    - [29 November, 2025]{"entity": "date"}
+    - [14 December, 2025]{"entity": "date"}
+    - [01st Jan 2024]{"entity": "date"}
+    - [22nd Feb 2027]{"entity": "date"}
+    - [13th March 2025]{"entity": "date"}
+    - [4th Apr 2022]{"entity": "date"}
+    - [28th April 2022]{"entity": "date"}
+    - [25th May 2020]{"entity": "date"}
+    - [30th June 2021]{"entity": "date"}
+    - [31st July 2020]{"entity": "date"}
+    - [11th Aug 2025]{"entity": "date"}
+    - [20th Sept 2024]{"entity": "date"}
+    - [20th Sep 2024]{"entity": "date"}
+    - [22nd Oct 2023]{"entity": "date"}
+    - [23rd Nov 2025]{"entity": "date"}
+    - [3rd Dec 2025]{"entity": "date"}
+    - [12th Jan, 2024]{"entity": "date"}
+    - [25th Feb, 2027]{"entity": "date"}
+    - [19th March, 2025]{"entity": "date"}
+    - [4th Apr, 2022]{"entity": "date"}
+    - [3rd April, 2022]{"entity": "date"}
+    - [2nd May, 2020]{"entity": "date"}
+    - [22nd June, 2021]{"entity": "date"}
+    - [23rd July, 2020]{"entity": "date"}
+    - [31st Aug, 2025]{"entity": "date"}
+    - [21st Sept, 2024]{"entity": "date"}
+    - [21st Sep, 2024]{"entity": "date"}
+    - [9th Oct, 2023]{"entity": "date"}
+    - [2nd Nov, 2025]{"entity": "date"}
+    - [1st Dec, 2025]{"entity": "date"}
+    - [14 Jan 2021]{"entity": "date"}
+    - [1 Feb 2027]{"entity": "date"}
+    - [3 March 2025]{"entity": "date"}
+    - [17 April 2022]{"entity": "date"}
+    - [7 Apr 2022]{"entity": "date"}
+    - [10 May 2020]{"entity": "date"}
+    - [23 June 2021]{"entity": "date"}
+    - [26 July 2020]{"entity": "date"}
+    - [24 Aug 2025]{"entity": "date"}
+    - [20 Sept 2024]{"entity": "date"}
+    - [19 Sep 2024]{"entity": "date"}
+    - [10 Oct 2023]{"entity": "date"}
+    - [30 Nov 2025]{"entity": "date"}
+    - [31 Dec 2025]{"entity": "date"}
+    - [31 Jan, 2024]{"entity": "date"}
+    - [28 Feb, 2027]{"entity": "date"}
+    - [1 March, 2025]{"entity": "date"}
+    - [04 April, 2022]{"entity": "date"}
+    - [27 Apr, 2022]{"entity": "date"}
+    - [35 May, 2020]{"entity": "date"}
+    - [07 June, 2021]{"entity": "date"}
+    - [20 July, 2020]{"entity": "date"}
+    - [19 Aug, 2025]{"entity": "date"}
+    - [22 Sept, 2024]{"entity": "date"}
+    - [29 Oct, 2023]{"entity": "date"}
+    - [01 Nov, 2025]{"entity": "date"}
+    - [20 Dec, 2025]{"entity": "date"}
+    - [May.2nd 2025]{"entity": "date"}
+    - [April.3rd.2025]{"entity": "date"}
+    - [21st January]{"entity": "date"}
+    - [22nd February]{"entity": "date"}
+    - [23rd March]{"entity": "date"}
+    - [1st April]{"entity": "date"}
+    - [2nd May]{"entity": "date"}
+    - [3rd June]{"entity": "date"}
+    - [15th July]{"entity": "date"}
+    - [20th August]{"entity": "date"}
+    - [26th September]{"entity": "date"}
+    - [31st October]{"entity": "date"}
+    - [30th November]{"entity": "date"}
+    - [4th December]{"entity": "date"} 
+    - [21st Jan]{"entity": "date"}
+    - [22nd Feb]{"entity": "date"}
+    - [22nd Febr]{"entity": "date"}
+    - [23rd Mar]{"entity": "date"}
+    - [1st Apr]{"entity": "date"}
+    - [2nd May]{"entity": "date"}
+    - [3rd June]{"entity": "date"}
+    - [15th July]{"entity": "date"}
+    - [20th Aug]{"entity": "date"}
+    - [26th Sep]{"entity": "date"}
+    - [26th Sept]{"entity": "date"}
+    - [31st Oct]{"entity": "date"}
+    - [30th Nov]{"entity": "date"}
+    - [4th Dec]{"entity": "date"}
+
+- intent: provide_category
+  examples: |
+    - I want [shirt]{"entity":"category", "value": "Shirts"}
+    - I am looking for [pants]{"entity":"category", "value": "Pants"}
+    - category [shoes]{"entity":"category", "value": "Shoes"}
+    - [shoe]{"entity":"category", "value": "Shoes"} category
+    - looking for [trousers]{"entity":"category", "value": "Pants"} category
+    - I need [trouser]{"entity":"category", "value": "Pants"}
+    - need [shoe]{"entity":"category", "value": "Shoes"}
+    - [shirts]{"entity":"category", "value": "Shirts"}
+    - [pant]{"entity":"category", "value": "Pants"}
+    - [pants]{"entity":"category", "value": "Pants"}
+    - [shoes]{"entity":"category", "value": "Shoes"}
+    - [accessories]{"entity": "category", "value": "Accessories"}
+    - [accessory]{"entity": "category", "value": "Accessories"}
+    - [dresses]{"entity": "category", "value": "Dresses"}
+    - [outerwear]{"entity": "category", "value": "Outerwear"}
+    - [trouser]{"entity": "category", "value": "Pants"}
+    - [trousers]{"entity": "category", "value": "Pants"}
+    - [pant]{"entity": "category", "value": "Pants"}
+    - [swimwear]{"entity": "category", "value": "Swimwear"}
+    - [swim-wear]{"entity": "category", "value": "Swimwear"}
+    - [swim wear]{"entity": "category", "value": "Swimwear"}
+
+- intent: request_profit_revenue
+  examples: |
+    - I want [profit]{"entity":"report_type"} information from [2nd Feb 2025]{"entity": "start_date"} to [3rd May 2025]{"entity": "end_date"}
+    - [net income]{"entity":"report_type", "value": "Profit"} for [all]{"entity": "report_amount", "value": "All"} products starting from [20th February 2025]{"entity": "start_date"} until [30th March 2025]{"entity": "end_date"}
+    - I need information of [profit]{"entity":"report_type"} for a [single]{"entity": "report_amount", "value": "One"} product with id [01]{"entity": "product_id"} begins on [April 10th 2023]{"entity": "start_date"} and ends on [August 12th 2024]{"entity": "end_date"}
+    - show me [profits]{"entity":"report_type", "value": "Profit"} report for [everything]{"entity": "report_amount", "value": "All"}
+    - give me [gain]{"entity":"report_type", "value": "Profit"} analysis for [only one]{"entity": "report_amount", "value": "One"} product and the id is [02]{"entity": "product_id"}
+    - report about [earning]{"entity":"report_type", "value": "Profit"} for every{"entity": "report_amount"} product
+    - analyzing [earnings]{"entity":"report_type", "value": "Profit"} for me about [every thing]{"entity": "report_amount", "value": "All"}
+    - [gains]{"entity":"report_type", "value": "Profit"} info of [one]{"entity": "report_amount", "value": "One"} product and its id [3]{"entity": "product_id"}
+    - can you generate for me [profits]{"entity":"report_type", "value": "Profit"} analysis from [12 09]{"entity":"start_date"} of [category]{"entity":"filter_value", "value": "Category"}?
+    - I need you to generate for me a report about [earning]{"entity":"report_type", "value": "Profit"} of the store starting from [01-30-2025]{"entity":"start_date"} till [10-28-2025]{"entity":"end_date"}
+    - tell me about the [earning]{"entity":"report_type", "value": "Profit"} information starts from [20-01-2025]{"entity":"start_date"} till [30-01-2025]{"entity":"end_date"}
+    - tell me the [gain]{"entity":"report_type", "value": "Profit"} for [all]{"entity": "report_amount", "value": "All"} products
+    - give me the [profits]{"entity":"report_type", "value": "Profit"} report of a [single]{"entity": "report_amount", "value": "One"} product with id [10]{"entity": "product_id"}
+    - analyze [profit]{"entity":"report_type"} for [all of them]{"entity": "report_amount", "value": "All"}
+    - I want [revenues]{"entity":"report_type", "value": "Revenue"} analysis for [just one]{"entity": "report_amount", "value": "One"} product with the id [01]{"entity": "product_id"}
+    - give me the [proceeds]{"entity":"report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products
+    - I want [turnover]{"entity":"report_type", "value": "Revenue"} from [01/01/2025]{"entity":"start_date"} to [31/12/2025]{"entity":"end_date"}
+    - report of [revenues]{"entity":"report_type", "value": "Revenue"} with date range between [Jan 1st 2025]{"entity":"start_date"} and [Dec 31st 2025]{"entity":"end_date"}
+    - analysis for [revenue]{"entity":"report_type"} between [1 January 2025]{"entity":"start_date"} and [31 December 2025]{"entity":"end_date"}
+    - [revenue]{"entity":"report_type"} info begin from [20 March 2025]{"entity":"start_date"} until [19 July 2025]{"entity":"end_date"}
+    - generate for me a [revenue]{"entity":"report_type"} report for [all]{"entity": "report_amount", "value": "All"} the products begins on [1st January 2025]{"entity":"start_date"} and ends on [31st December 2025]{"entity":"end_date"}
+    - tell me the [revenue]{"entity":"report_type"} of [one]{"entity": "report_amount", "value": "One"} product with start date [1 January 2025]{"entity":"start_date"} and end date [31 December 2025]{"entity":"end_date"}
+    - analyze [revenues]{"entity":"report_type", "value": "Revenue"} for [all]{"entity": "report_amount", "value": "All"} products from [1st Jan 2025]{"entity":"start_date"} till [20th Sept 2025]{"entity":"end_date"}
+    - [revenue]{"entity":"report_type"} analyzing for [just one]{"entity":"report_amount", "value": "One"} product start from [11-07-2025]{"entity":"start_date"} end one [30-07-2025]{"entity":"end_date"} 
+    - I need report for [proceed]{"entity":"report_type", "value": "Revenue"} starts from [20 Jan 2025]{"entity": "start_date"}
+    - [proceeds]{"entity":"report_type", "value": "Revenue"} analysis for [every single one of them]{"entity": "report_amount", "value": "All"} starts from [Jan 1 2025]{"entity": "start_date"}
+    - [income]{"entity":"report_type", "value": "Revenue"} report for [everything]{"entity":"report_amount", "value": "All"} start on [12-10-2025]{"entity": "start_date"} and end on [12-30-2025]{"entity": "end_date"}
+    - information for [revenue]{"entity":"report_type"} with start date from [1 January 2025]{"entity": "start_date"}
+    - [turnovers]{"entity": "report_type", "value": "Revenue"} report begins from [January 1 2025]{"entity": "start_date"} for a [single]{"entity": "report_amount", "value": "One"} product
+    - [profits]{"entity": "report_type", "value": "Profit"} of [every thing]{"entity": "report_amount", "value": "All"} with start date [1st December 2025]
+    - report for [profits]{"entity": "report_type", "value": "Profit"} from [October 10th 2025]{"entity": "start_date"}
+    - with start date is [01 01 2025]{"entity": "start_date"} and end date is [31 12 2025]{"entity": "end_date"} I need you to generate for me the [profit]{"entity": "report_type"} report of [all]{"entity": "report_amount", "value": "All"} products
+    - starts from [01/30/2025]{"entity": "start_date"} and ends on [09/22/2025]{"entity": "end_date"} analyze for me the [profits]{"entity": "report_type", "value": "Profit"} of [just one]{"entity": "report_amount", "value": "One"} product
+    - I want a [revenues]{"entity": "report_type", "value": "Revenue"} report for [everything]{"entity": "report_amount", "value": "All"} from [10 20 2025]{"entity": "start_date"} to [11 20 2025]{"entity": "end_date"}
+    - tell me the [revenues]{"entity": "report_type", "value": "Revenue"} analysis from [2nd April]{"entity": "start_date"} until [1st March]{"entity": "end_date"} 
+    - [Profits]{"entity": "report_type", "value": "Profit"} from [3 Jan]{"entity": "start_date"} until [14 Febr]{"entity": "end_date"} for [only one]{"entity": "report_amount", "value": "One"} product
+    - [Turnovers]{"entity": "report_type", "value": "Revenue"} report from [January-1st-2025] till [September-10th-2025] for [just one]{"entity": "report_amount", "value": "One"} product
+    - [Revenue]{"entity": "report_type"} analysis with start date is [1st-January-2025]{"entity": "start_date"} till [20th-April-2025]{"entity": "end_date"} for [all]{"entity": "report_amount", "value": "All"} products
+    - generate for me a [profit]{"entity": "report_type", "value": "Profit"} report for [a]{"entity": "report_amount", "value": "One"} product with id [1]{"entity": "product_id"} from [Jan 1st 2025]{"entity": "start_date"} until [Aug 20th 2025]{"entity": "end_date"}
+    - analyzing for me the [revenues]{"entity": "report_type", "value": "Revenue"} for product's id [1]{"entity": "product_id"} starting on [Aug 19 2025]{"entity": "start_date"} ending on [Sept 19 2025]{"entity": "end_date"} of [one category]{"entity": "filter_value", "value": "Category"}
+    - I need report about [profits]{"entity": "report_type", "value": "Profit"} with product id [4]{"entity": "product_id"} starting [from today]{"entity": "start_date", "value": "Now"} of [all products]{"entity": "filter_value", "value": "Product"}
+    - [profit]{"entity": "report_type", "value": "Profit"} analysis of [all]{"entity": "report_amount", "value": "All"} products [from now]{"entity": "start_date", "value": "Now"} [until yesterday]{"entity": "end_date", "value": "Yesterday"}
+    - [income]{"entity": "report_type", "value": "Revenue"} report of [all]{"entity": "report_amount", "value": "All"} products [from yesterday]{"entity": "start_date", "value": "Yesterday"} [til yesterday]{"entity": "end_date", "value": "Yesterday"} in [a category]{"entity": "filter_value", "value": "Category"}
+    - [turnover]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} products [from tomorrow]{"entity": "start_date", "value": "Tomorrow"} [till yesterday]{"entity": "end_date", "value": "Yesterday"} in [one category]{"entity": "filter_value", "value": "Category"}
+    - [earnings]{"entity": "report_type", "value": "Profit"} analysis of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [one cate gory]{"entity": "filter_value", "value": "Category"}
+    - [income]{"entity": "report_type", "value": "Revenue"} report of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [a category]{"entity": "filter_value", "value": "Category"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [one product]{"entity": "report_amount", "value": "One"} [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"}
+    - [gain]{"entity": "report_type", "value": "Profit"} analysis of [a product]{"entity": "report_amount", "value": "One"} [begin tomorrow]{"entity": "start_date", "value": "Tomorrow"} [until now]{"entity": "end_date", "value": "Now"} based on [all products]{"entity": "filter_value", "value": "Product"}
+    - [trading]{"entity": "report_type", "value": "Revenue"} report of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til now]{"entity": "end_date", "value": "Now"} based on [all products]{"entity": "filter_value", "value": "Product"}
+    - [tradings]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} products [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till now]{"entity": "end_date", "value": "Now"} in a single [category]{"entity": "filter_value", "value": "Category"}
+    - [gains]{"entity": "report_type", "value": "Profit"} analysis of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until tomorrow]{"entity": "end_date", "value": "Tomorrow"} based on [all products]{"entity": "filter_value", "value": "Product"}
+    - [tradings]{"entity": "report_type", "value": "Revenue"} report of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til tomorrow]{"entity": "end_date", "value": "Tomorrow"} based on [all products]{"entity": "filter_value", "value": "Product"}
+    - [trading]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} products [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till tomorrow]{"entity": "end_date", "value": "Tomorrow"} in [one category]{"entity": "filter_value", "value": "Category"}
+    - [net income]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [shirts]{"entity": "category", "value": "Shirts"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [shirt]{"entity": "category", "value": "Shirts"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [pants]{"entity": "category", "value": "Pants"}
+    - [net incomes]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [pant]{"entity": "category", "value": "Pants"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [trousers]{"entity": "category", "value": "Pants"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [trouser]{"entity": "category", "value": "Pants"}
+    - [profit]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [shoes]{"entity": "category", "value": "Shoes"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [shoe]{"entity": "category", "value": "Shoes"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [accessories]{"entity": "category", "value": "Accessories"}
+    - [profit]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [accessory]{"entity": "category", "value": "Accessories"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [acessories]{"entity": "category", "value": "Accessories"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [acessory]{"entity": "category", "value": "Accessories"}
+    - [profit]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [dresses]{"entity": "category", "value": "Dresses"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} informat1ion of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [dress]{"entity": "category", "value": "Dresses"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [outerwear]{"entity": "category", "value": "Outerwear"}
+    - [profit]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [outer-wear]{"entity": "category", "value": "Outerwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [outer wear]{"entity": "category", "value": "Outerwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [outterwear]{"entity": "category", "value": "Outerwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [outter wear]{"entity": "category", "value": "Outerwear"}
+    - [profit]{"entity": "report_type", "value": "Profit"} report of [all]{"entity": "report_amount", "value": "All"} products [begin now]{"entity": "start_date", "value": "Now"} [until today]{"entity": "end_date", "value": "Now"} of [outter-wear]{"entity": "category", "value": "Outerwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begin today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [swimwear]{"entity": "category", "value": "Swimwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} analysis of [all]{"entity": "report_amount", "value": "All"} product [begin yesterday]{"entity": "start_date", "value": "Yesterday"} [till today]{"entity": "end_date", "value": "Now"} of [swim wear]{"entity": "category", "value": "Swimwear"}
+    - [revenue]{"entity": "report_type", "value": "Revenue"} information of [all]{"entity": "report_amount", "value": "All"} products [begins today]{"entity": "start_date", "value": "Now"} [til today]{"entity": "end_date", "value": "Now"} of [swim-wear]{"entity": "category", "value": "Swimwear"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [this day]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [1 day ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 2 days]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 3 day]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 days ago]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [3 day ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [the previous day]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [previous 4 days]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [previous 2 day]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [4 previous days]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 previous day]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 days ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 past days]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [4 past day]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [this week]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [1 week ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last week]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 2 weeks]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 3 week]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 weeks ago]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [3 week ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [the previous week]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [previous 4 weeks]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [previous 2 week]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [4 previous weeks]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 previous week]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 weeks ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 past weeks]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [4 past week]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [this month]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [1 month ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last month]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 2 months]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 3 month]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 months ago]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [3 month ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [the previous month]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [previous 4 months]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [previous 2 month]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [4 previous months]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 previous month]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 months ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 past months]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [4 past month]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [this quarter]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [1 quarter ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last quarter]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 2 quarters]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 3 quarter]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 quarters ago]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [3 quarters ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [the previous quarter]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [previous 4 quarters]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [previous 2 quarter]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [4 previous quarters]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 previous quarter]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 quarters ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 past quarters]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [4 past quarter]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [this year]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [1 year ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last year]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 2 years]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [last 3 year]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 years ago]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} report for [all]{"entity": "report_amount", "value": "All"} products of [shirts]{"entity": "category", "value": "Shirts"} [3 year ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [the previous year]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [previous 4 years]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [previous 2 year]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} report for [all]{"entity": "report_amount", "value": "All"} products of [pants]{"entity": "category", "value": "Pants"} [4 previous years]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 previous year]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [2 years ago]{"entity": "date_period"}
+    - I need [revenue]{"entity": "report_type", "value": "Revenue"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [dresses]{"entity": "category", "value": "Dresses"} [2 past years]{"entity": "date_period"}
+    - I need [profit]{"entity": "report_type", "value": "Profit"} analysis for [all]{"entity": "report_amount", "value": "All"} products of [trousers]{"entity": "category", "value": "Pants"} [4 past year]{"entity": "date_period"}
+    - display for me the [profits]{"entity": "report_type", "value": "Profit"} of [last week]{"entity": "date_period"}
+    - I want to see [earnings]{"entity": "report_type", "value": "Profit"} of [last 2 weeks]{"entity": "date_period"}
+    - show me the [net income]{"entity": "report_type", "value": "Profit"} of [previous 3 weeks]{"entity": "date_period"}
+    - seeking the information of [gain]{"entity": "report_type", "value": "Profit"} [2 previous weeks]{"entity": "date_period"}
+    - seeking the information of [gain]{"entity": "report_type", "value": "Profit"} [past 2 weeks]{"entity": "date_period"}
+    - display for me the [turnover]{"entity": "report_type", "value": "Revenue"} of [last month]{"entity": "date_period"}
+    - I want to see [turnovers]{"entity": "report_type", "value": "Revenue"} of [last 2 months]{"entity": "date_period"}
+    - show me the [proceeds]{"entity": "report_type", "value": "Revenue"} of [previous 3 months]{"entity": "date_period"}
+    - seeking the information of [income]{"entity": "report_type", "value": "Revenue"} [2 previous months]{"entity": "date_period"}
+    - seeking the information of [trading]{"entity": "report_type", "value": "Revenue"} [past 2 months]{"entity": "date_period"}
+    - display for me the [tradings]{"entity": "report_type", "value": "Revenue"} of [last quarter]{"entity": "date_period"}
+    - I want to see [incomes]{"entity": "report_type", "value": "Revenue"} of [last 2 quarters]{"entity": "date_period"}
+    - show me the [proceed]{"entity": "report_type", "value": "Revenue"} of [previous 3 quarters]{"entity": "date_period"}
+    - seeking the information of [income]{"entity": "report_type", "value": "Revenue"} [2 previous quarters]{"entity": "date_period"}
+    - seeking the information of [trading]{"entity": "report_type", "value": "Revenue"} [past 2 quarters]{"entity": "date_period"}   
+    - display for me the [profits]{"entity": "report_type", "value": "Profit"} of [last year]{"entity": "date_period"}
+    - I want to see [earnings]{"entity": "report_type", "value": "Profit"} of [last 2 years]{"entity": "date_period"}
+    - show me the [net income]{"entity": "report_type", "value": "Profit"} of [previous 3 years]{"entity": "date_period"}
+    - seeking the information of [gain]{"entity": "report_type", "value": "Profit"} [2 previous years]{"entity": "date_period"}
+    - seeking the information of [gain]{"entity": "report_type", "value": "Profit"} [past 2 years]{"entity": "date_period"}
+
+- intent: provide_report_amount
+  examples: |
+    - I want [all]{"entity":"report_amount","value":"All"} products
+    - give me [every]{"entity":"report_amount","value":"All"} product
+    - [all of them]{"entity":"report_amount","value":"All"} please
+    - [Every single one of them]{"entity":"report_amount","value":"All"}
+    - I need [every single one of them]{"entity":"report_amount","value":"All"}
+    - I want to see [everything]{"entity":"report_amount","value":"All"}
+    - [All]{"entity":"report_amount"} products
+    - report [all]{"entity":"report_amount","value":"All"}
+    - report for me [only one]{"entity":"report_amount","value":"One"}
+    - I only need [one]{"entity":"report_amount","value":"One"}
+    - [just one]{"entity":"report_amount","value":"One"}
+    - [only one]{"entity":"report_amount","value":"One"}
+    - [one]{"entity":"report_amount","value":"One"} is enough
+    - [all]{"entity":"report_amount","value":"All"} products
+    - [one product]{"entity":"report_amount","value":"One"}
+
+- intent: provide_filter_value
+  examples: |
+    - [category]{"entity": "filter_value", "value": "Category"}
+    - [cate gory]{"entity": "filter_value", "value": "Category"}
+    - [one category]{"entity": "filter_value", "value": "Category"}
+    - [one cate gory]{"entity": "filter_value", "value": "Category"}
+    - [product]{"entity": "filter_value", "value": "Product"}
+    - [products]{"entity": "filter_value", "value": "Product"}
+    - [item]{"entity": "filter_value", "value": "Product"}
+    - [items]{"entity": "filter_value", "value": "Product"}
+#    - [all products]{"entity": "filter_value", "value": "Product"}
+#    - [all product]{"entity": "filter_value", "value": "Product"}
+
+#- intent: request_profit
+#  examples: |
+#    - I want [profit]{"entity":"report_type"} information
+#    - [profit]{"entity":"report_type"}
+#    - I need information of [profit]{"entity":"report_type"}
+#    - show me [profit]{"entity":"report_type"} report
+#    - give me [profit]{"entity":"report_type"} analysis
+#    - report about [profit]{"entity":"report_type"}
+#    - analyzing [profit]{"entity":"report_type"} for me
+#    - [profit]{"entity":"report_type"} info
+#    - can you generate for me [profit]{"entity":"report_type"} analysis?
+#    - I need you to generate for me a report about [profit]{"entity":"report_type"} of the store
+#    - tell me about the [profit]{"entity":"report_type"} information
+#    - tell me the [profit]{"entity":"report_type"}
+#    - give me the [profit]{"entity":"report_type"} report
+#    - analyze [profit]{"entity":"report_type"}
+#
+#- intent: request_revenue
+#  examples: |
+#    - I want [revenue]{"entity":"report_type"} analysis
+#    - give me the [revenue]{"entity":"report_type"} report
+#    - I want [revenue]{"entity":"report_type"}
+#    - report of [revenue]{"entity":"report_type"}
+#    - analysis for [revenue]{"entity":"report_type"}
+#    - [revenue]{"entity":"report_type"} info
+#    - generate for the [revenue]{"entity":"report_type"} report
+#    - tell me the [revenue]{"entity":"report_type"}
+#    - analyze [revenue]{"entity":"report_type"}
+#    - [revenue]{"entity":"report_type"} analyzing
+#    - I need report for [revenue]{"entity":"report_type"}
+#    - [revenue]{"entity":"report_type"} analysis
+#    - [revenue]{"entity":"report_type"} report
+#    - information for [revenue]{"entity":"report_type"}
+
+- intent: provide_report_amount
+  examples: |
+    - I want [all]{"entity": "report_amount", "value": "All"} products
+    - I need [all of them]{"entity": "report_amount", "value": "All"}
+    - give me [every single of them]{"entity": "report_amount", "value": "All"}
+    - I want to see [everything]{"entity": "report_amount", "value": "All"}
+    - provide [every thing]{"entity": "report_amount", "value": "All"}
+    - give me [one]{"entity": "report_amount", "value": "One"} product
+    - I need [just one]{"entity": "report_amount", "value": "One"} product
+    - [only one]{"entity": "report_amount", "value": "One"} is all I need
+    - [one product]{"entity": "report_amount", "value": "One"}
+    - [all]{"entity": "report_amount", "value": "All"} products
+
+- intent: provide_product_id
+  examples: |
+    - the product's id is [1]{"entity": "product_id"}
+    - the id of the product is [14]{"entity": "product_id"}
+    - product id [09]{"entity": "product_id"}
+    - I want the product with id [20]{"entity": "product_id"}
+    - the product I want has id [30]{"entity": "product_id"}
+    - id [15]{"entity": "product_id"}
+    - ID is [20]{"entity": "product_id"}
+
+- intent: provide_step
+  examples: |
+    - the step is [1 day]{"entity": "step", "value": "1"}
+    - [one day]{"entity": "step", "value": "1"} step
+    - [a day]{"entity": "step", "value": "1"}
+    - I want the step to be [one week]{"entity": "step", "value": "7"}
+    - [seven days]{"entity": "step", "value": "7"}
+    - [7 days]{"entity": "step", "value": "7"}
+    - step is [1 week]{"entity": "step", "value": "7"}
+    - the step I want is [a week]{"entity": "step", "value": "7"}
+    - [one month]{"entity": "step", "value": "30"}
+    - [1 month]{"entity": "step", "value": "30"}
+    - [a month]{"entity": "step", "value": "30"}
+    - [thirty days]{"entity": "step", "value": "30"}
+    - [30 days]{"entity": "step", "value": "30"}
+    - [one year]{"entity": "step", "value": "365"}
+    - [1 year]{"entity": "step", "value": "365"}
+    - [a year]{"entity": "step", "value": "365"}
+    - [365 days]{"entity": "step", "value": "365"}
+    - [12 months]{"entity": "step", "value": "365"}
+    - [twelve months]{"entity": "step", "value": "365"}
+
+- intent: provide_number
+  examples: |
+    - [175]{"entity":"number"}
+    - [70]{"entity":"number"}
+    - [42]{"entity":"number"}
+    - [25]{"entity":"number"}
+    - [165]{"entity":"number"}
+    - [55]{"entity":"number"}
+    - [41]{"entity":"number"}
+    - [23]{"entity":"number"}
+    - [180]{"entity":"number"}
+    - [9.5]{"entity":"number"}
+    - [1.75]{"entity":"number"}
+    - [68]{"entity":"number"}
+
+- intent: restart_analysis
+  examples: |
+    - start over
+    - restart
+    - begin again
+    - new analysis
+    - reset
+    - start fresh
+    - new trend analysis
+    - restart analysis
+    - reset analysis
+
+- regex: request shopping trends pattern
+  examples: |
+    - \b[sS]hopping\s+[tT]rend[s]*\b
+    - \b[tT]rend[s]{0,1}\b
+    - \b[sS]hopping\b
+    - \b[bB]uying\s+[tT]rend[s]{0,1}\b
+    - \b[tT]rend[s]{0,1}\s*of\s*[bB]uying\b
+    - \b[tT]rend[s]{0,1}\s*of\s*[sS]hopping\b
+    - \b[tT]endency\b
+    - \b[fF]ashion\b
+
+- regex: request_profit_revenue_pattern
+  examples: |
+    - \b[pP]rofit[s]{0,1}\b
+    - \b[rR]evenue[s]{0,1}\b
+    - \b[nN]et\s*[iI]ncome\b
+    - \b[eE]arning[s]+\b
+    - \b[gG]ain[s]+\b
+    - \b[tT]urn\s*[oO]ver\b
+    - \b[pP]roceed[s]+\b
+    - \b[tT]rading[s]+\b
+    - \b[iI]ncome[s]+\b
+
+- regex: provide_report_amount_pattern
+  examples: |
+    - \b[aA]ll\b
+    - \b[eE]verything\b
+    - \b[eE]very thing\b
+    - \b[oO]nly [oO]ne\b
+    - \b[jJ]ust [oO]ne\b
+
+- regex: date
+  examples: |
+    - \b\d{4}-\d{1,2}-\d{1,2}\b
+    - \b\d{4}/\d{1,2}/\d{1,2}\b
+    - \b\d{1,2}/\d{1,2}/\d{4}\b
+    - \b\d{1,2}-\d{1,2}-\d{4}\b
+    - \b\d{1,2}\.\d{1,2}\.\d{4}\b
+    - \b\d{1,2} \d{1,2} \d{4}\b
+    - \b(January|February|March|April|May|June|July|August|September|October|November|December)\s+0*([1-9]|[12][0-9]|3[01])\s*(st|nd|rd|th){0,1}\s*,?\s*\d{4}\b
+    - \b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\s+0*([1-9]|[12][0-9]|3[01])\s*(st|nd|rd|th){0,1}\s*,?\s*\d{4}\b
+    - \b0*([1-9]|[12][0-9]|3[01])\s*(st|nd|rd|th){0,1}\s*(January|February|March|April|May|June|July|August|September|October|November|December)\s*,?\s*\d{4}\b
+    - \b0*([1-9]|[12][0-9]|3[01])\s*(st|nd|rd|th){0,1}\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\s*,?\s*\d{4}\b
+
+- synonym: "Shopping Trends"
+  examples: |
+    - trends
+    - trend
+    - trends of buying
+    - trends of shopping
+    - trend of buying
+    - trend of shopping
+    - shopping trend
+    - buying trends
+    - buying trend
+    - shopping
+    - tendency
+    - fashion
+
+- synonym: "Shirts"
+  examples: |
+    - shirt
+
+- synonym: "Pants"
+  examples: |
+    - Trousers
+    - trousers
+    - Trouser
+    - trouser
+    - pants
+    - Pant
+    - pant
+
+- synonym: "Profit"
+  examples: |
+    - profit
+    - profits
+    - Profits
+    - earnings
+    - earning
+    - net income
+    - net incomes
+    - gain
+    - gains
+
+- synonym: "Revenue"
+  examples: |
+    - revenue
+    - revenues
+    - Revenues
+    - turnovers
+    - turnover
+    - proceeds
+    - proceed
+    - income
+    - incomes
+    - trading
+    - tradings
+
+- synonym: "All"
+  examples: |
+    - all
+    - all of them
+    - Every single one of them
+    - everything
+    - every thing
+    - All of them
+
+- synonym: "One"
+  examples: |
+    - just one
+    - only one
+    - single
+    - a
+
+- synonym: "Best Seller"
+  examples: |
+    - best-seller
+    - top selling item
+    - top selling product
+    - top-selling item
+    - top-selling product
+    - most popular item
+    - most popular product
+    - leading item
+    - leading product
+    - hot item
+    - hot product
+    - sale champion
+    - top performer in sale
+    - most purchased item
+    - most purchased product
+
+- synonym: "Least Seller"
+  examples: |
+    - lowest-selling item
+    - lowest-selling product
+    - lowest selling item
+    - lowest selling product
+    - least-popular item
+    - least-popular product
+    - least popular item
+    - least popular product
+    - poor performance in sale
+    - bottom-ranked product
+    - bottom-ranked item
+    - underperforming item
+    - weakest in sale
+    - lowest demand item
+    - lowest demand product
+    - least purchased item
+    - least purchased product
+
+- synonym: "Now"
+  examples: |
+    - currently
+    - at the moment
+    - at this time
+    - present
