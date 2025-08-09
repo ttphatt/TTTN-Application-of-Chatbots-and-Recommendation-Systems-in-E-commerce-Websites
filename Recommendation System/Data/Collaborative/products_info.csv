@@ -1,0 +1,229 @@
+id,name
+1,GG Monogram Silk Shirt
+2,Tailored Poplin Shirt
+3,Relaxed Fit Graphic Tee
+4,AIRism Organic Cotton Tee
+5,Embroidered Linen Kurta
+6,GG Crest Tailored Trousers
+7,High-Waisted Flared Jeans
+8,Kids Elastic Waist Shorts
+9,Smart Stretch Chinos
+10,Kids Elastic Cotton Shorts
+11,Double-G Leather Bomber
+12,Recycled Denim Jacket
+13,Kids Puffer Jacket
+14,Water-Resistant Parka
+15,Ultraboost 25
+16,Air Max 270
+17,Kids Active Sneakers
+18,Classic Leather Sneakers
+19,Stan Smith Eco Sneakers
+20,Recycled Cotton Skater Dress
+21,Sequin Embroidered Blouse
+22,Kids Cartoon Print Tee
+23,Cotton Linen Blend Shirt
+24,Organic Cotton Polo
+25,Logo Print Polo Shirt
+26,Slim Fit Oxford Shirt
+27,Kids Printed T-shirt
+28,AIRism Active Polo
+29,Performance Running Skirt
+30,Active Performance Track Pants
+31,Pleated Wide-Leg Trousers
+32,Classic Denim Jeans
+33,Kids Corduroy Pants
+34,Smart Ankle Pants
+35,Kids Fleece Joggers
+36,Tailored Wool Dress Pants
+37,Recycled Wool Coat
+38,Kids Raincoat
+39,Monogrammed Wool Trousers
+40,Quilted Wool Coat
+41,Softshell Jacket
+42,Kids Denim Jacket
+43,Lightweight Trench Coat
+44,Kids Utility Coat
+45,Recycled Puffer Vest
+46,Classic Leather Boots
+47,Kids Velcro Sneakers
+48,Hooded Windbreaker
+49,Dunk Low Retro
+50,Air Force 1
+51,Classic Canvas Sneakers
+52,Kids Sport Sandals
+53,Recycled Flip-Flops
+54,Leather Loafers
+55,Kids Beach Sandals
+56,NMD_R1 Primeblue
+57,Kids Coastal Flip-Flops
+58,Recycled Cotton Hoodie
+59,Biti’s Kids Active Sneakers
+60,Organic Cotton T-shirt
+61,Linen Blend Shirt
+62,Kids Graphic Tee
+63,Recycled Cotton Dress
+64,Vintage Washed Jeans
+65,Kids Play Shorts
+66,Wool Blend Trousers
+67,Kids Softshell Jacket
+68,Waterproof Raincoat
+69,Double-G Leather Belt
+70,Alphabounce Coastal Runner
+71,Biti’s AquaPulse Swim Shoes
+72,GG Floral Midi Dress
+73,Kids Swim Shorts
+74,Vintage Striped Polo
+75,Kids Sun Protection Rash Guard
+76,Organic Cotton Leggings
+77,Smart Casual Shirt
+78,Kids Active Shorts
+79,Floral Wrap Maxi Dress
+80,Kids Cartoon Swimsuit
+81,Recycled Polyester Joggers
+82,Vintage Denim Jacket
+83,AIRism Performance Crop Top
+84,Kids Cotton Overalls
+85,Wool Blend Cardigan
+86,Kids Sun Hat
+87,Double-G Leather Sandals
+88,Kids Slip-On Sneakers
+89,Recycled Nylon Windbreaker
+90,Vintage Floral Blouse
+91,Kids Graphic Hoodie
+92,Organic Cotton Sweatshirt
+93,Kids Denim Overalls
+94,Performance Running Shorts
+95,Recycled Cotton T-shirt
+96,Kids Striped Polo
+97,Double-G Leather Tote Bag
+98,Kids Beach Cover-up
+99,Recycled Swim Shorts
+100,Vintage Knitwear
+101,Kids Rash Guard
+102,Organic Cotton Henley
+103,Kids Graphic Swimsuit
+104,Recycled Fleece Jacket
+105,Vintage Floral Maxi Dress
+106,Kids Canvas Sneakers
+107,Recycled Cotton Jeans
+108,Kids Printed Shorts
+109,Organic Cotton Hoodie
+110,Kids Slip-On Sandals
+111,Performance Sports Jacket
+112,Recycled Cotton Polo
+113,Kids Graphic T-shirt
+114,GG Monogram Crop Top
+115,GG Silk Wrap Skirt
+116,Active Recovery Sneakers
+117,GG Monogram Silk Scarf
+118,Uniqlo Hoodie (Sustainable Cotton)
+119,Zara T-shirt (Casual Polyester)
+120,H&M Jeans (Streetwear Denim)
+121,Gucci Dress (Luxury/Statement Silk)
+122,Nike Sneakers (Athleisure Mesh)
+123,Adidas Hoodie (Athleisure Cotton)
+124,Puma Skirt (Sustainable Polyester)
+125,Coolmate Shorts (Casual Spandex)
+126,Biti’s Polo Shirt (Eco-Friendly Cotton)
+127,Everest Jacket (Seasonal Wool)
+128,Bloom Sandals (Minimalist Leather)
+129,Zara T-shirt (Casual Cotton)
+130,H&M Jeans (Vintage/Retro Denim)
+131,Uniqlo Dress (Sustainable Organic Cotton)
+132,Gucci Sneakers (Luxury/Statement Leather)
+133,Nike Hoodie (Athleisure Polyester)
+134,Adidas Skirt (Seasonal Spandex)
+135,Puma Shorts (Casual Cotton)
+136,Coolmate Polo Shirt (Eco-Friendly Recycled Polyest
+137,Biti’s Jacket (Streetwear Denim)
+138,Everest Sandals (Minimalist Leather)
+139,Bloom T-shirt (Casual Cotton)
+140,Zara Jeans (Vintage/Retro Denim)
+141,H&M Dress (Sustainable Organic Cotton)
+142,Uniqlo Sneakers (Athleisure Mesh)
+143,Gucci Hoodie (Luxury/Statement Silk)
+144,Nike Skirt (Seasonal Spandex)
+145,Adidas Shorts (Casual Cotton)
+146,Puma Polo Shirt (Eco-Friendly Recycled Polyester)
+147,Coolmate Jacket (Streetwear Denim)
+148,Biti’s Sandals (Minimalist Leather)
+149,Everest T-shirt (Casual Cotton)
+150,Bloom Jeans (Vintage/Retro Denim)
+151,Zara Dress (Sustainable Organic Cotton)
+152,H&M Sneakers (Athleisure Mesh)
+153,Uniqlo Hoodie (Luxury/Statement Silk)
+154,Gucci Skirt (Seasonal Spandex)
+155,Nike Shorts (Casual Cotton)
+156,Adidas Polo Shirt (Eco-Friendly Recycled Polyester
+157,Puma Jacket (Streetwear Denim)
+158,Coolmate Sandals (Minimalist Leather)
+159,Biti’s T-shirt (Casual Cotton)
+160,Everest Jeans (Vintage/Retro Denim)
+161,Bloom Dress (Sustainable Organic Cotton)
+162,Zara Sneakers (Athleisure Mesh)
+163,H&M Hoodie (Luxury/Statement Silk)
+164,Uniqlo Skirt (Seasonal Spandex)
+165,Gucci Shorts (Casual Cotton)
+166,Nike Polo Shirt (Eco-Friendly Recycled Polyester)
+167,Adidas Jacket (Streetwear Denim)
+168,Sustainable Cargo Pants
+169,Vintage Slim-Fit Trousers
+170,Athleisure Track Pants
+171,Sustainable Chinos
+172,Athleisure Joggers
+173,Sustainable Culottes
+174,Streetwear Cargo Pants
+175,Vintage High-Waisted Trousers
+176,Seasonal Lightweight Leggings
+177,Vintage Flannel Shirt
+178,Streetwear Graphic Overshirt
+179,Sustainable Denim Shirt
+180,Athleisure Performance Tee
+181,Seasonal Lightweight Tunic
+182,Streetwear Oversized Graphic Tee
+183,Sustainable Flannel Shirt
+184,Athleisure Crop Performance Top
+185,Vintage Denim Blouse
+186,Sustainable Joggers
+187,Streetwear Slim-Fit Trousers
+188,Athleisure Cargo Pants
+189,Vintage Chinos
+190,Sustainable Wide-Leg Pants
+191,Streetwear Culottes
+192,Athleisure Leggings
+193,Vintage Cargo Pants
+194,Seasonal High-Waisted Trousers
+195,Sustainable Overshirt
+196,Streetwear Graphic Tee
+197,Athleisure Performance Shirt
+198,Vintage Flannel Shirt
+199,Seasonal Linen Blend Shirt
+200,Sustainable Tunic
+201,Streetwear Oversized Blouse
+202,Athleisure Crop Tee
+203,Vintage Denim Shirt
+204,Seasonal Flannel Blouse
+205,Eco Cargo Joggers
+206,Urban Slim Cargo Pants
+207,Retro Relaxed Trousers
+208,Active Performance Chinos
+209,Summer Track Pants
+210,Eco Flared Culottes
+211,Urban Wide-Leg Cargo Pants
+212,Active Stretch Leggings
+213,Retro High-Waisted Jeans
+214,Summer Relaxed Trousers
+215,Eco Henley Shirt
+216,Urban Graphic Overshirt
+217,Active Performance Polo
+218,Retro Plaid Shirt
+219,Summer Linen Tee
+220,Eco Wrap Blouse
+221,Urban Crop Graphic Tee
+222,Active Performance Crop Top
+223,Retro Flannel Tunic
+224,Summer Denim Blouse
+225,Active One-Piece Swimsuit
+226,Active Tank Top
+227,Active Bikini
+228,Active Rash Guard
