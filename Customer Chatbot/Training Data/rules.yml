@@ -1,0 +1,163 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+#- rule: Greet
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+
+- rule: Custom greet
+  steps:
+  - intent: greet
+  - action: action_greet_custom
+
+# Rules for size helping
+- rule: Start size form
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+
+- rule: Start size form with provided information
+  steps:
+  - intent: request_help_size_general
+  - action: size_form
+  - active_loop: size_form
+
+- rule: Finish size form
+  condition:
+  - active_loop: size_form
+  steps:
+    - action: size_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_generate_size_recommendation
+
+# Rules for product recommendation
+- rule: Start product recommendation form
+  steps:
+  - intent: request_product_recommendation
+  - action: product_recommendation_form
+  - active_loop: product_recommendation_form
+
+#- rule: Start product recommendation form
+#  steps:
+#  - intent: provide_multiple_recommendation_information
+#  - action: action_generate_product_recommendation
+#  - action: product_recommendation_form
+#  - active_loop: product_recommendation_form
+
+#- rule: Display product recommendation for provided information group_category_name
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_group_category_name
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information category
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_category
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information type
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_type
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information material
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_material
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information topic
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_topic
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information brand_name
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_brand_name
+#  - action: action_generate_product_recommendation
+#
+#- rule: Display product recommendation for provided information price
+#  condition:
+#  - active_loop: product_recommendation_form
+#  steps:
+#  - intent: provide_price
+#  - action: action_generate_product_recommendation
+
+- rule: Finish product recommendation form
+  condition:
+  - active_loop: product_recommendation_form
+  steps:
+  - action: product_recommendation_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_generate_product_recommendation
+
+
+# Rules for promotion form
+- rule: Start promotion form
+  steps:
+  - intent: request_promotions
+  - action: promotion_form
+  - active_loop: promotion_form
+
+- rule: Finish promotion form
+  condition:
+  - active_loop: promotion_form
+  steps:
+    - action: promotion_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_generate_promotions
+
+# Rules for order status tracking:
+- rule: Ask order status tracking
+  steps:
+  - intent: ask_tracking_order_status
+  - action: action_guide_tracking_order_status
+
+# Rules for refund/return products
+- rule: Request for a refund
+  steps:
+  - intent: ask_refund_products
+  - action: action_guide_refund_products
+
+# Restart form
+- rule: Restart form
+  steps:
+  - intent: reset_form
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+
+# Out of scope - Fall back
+- rule: Ask the user to rephrase in case of low NLU confidence
+  steps:
+    - intent: nlu_fallback
+    - action: action_handle_out_of_scope
