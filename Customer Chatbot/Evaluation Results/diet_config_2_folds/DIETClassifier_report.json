@@ -1,0 +1,196 @@
+{
+  "Price": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2.0,
+    "confused_with": {
+      "price": 2
+    }
+  },
+  "group_category_name": {
+    "precision": 0.8874458874458875,
+    "recall": 0.9276018099547512,
+    "f1-score": 0.9070796460176991,
+    "support": 221.0,
+    "confused_with": {
+      "topic": 2
+    }
+  },
+  "shoes_size": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6.0,
+    "confused_with": {
+      "price": 1
+    }
+  },
+  "amount": {
+    "precision": 0.75,
+    "recall": 0.375,
+    "f1-score": 0.5,
+    "support": 8.0,
+    "confused_with": {
+      "promotion_type_amount": 3
+    }
+  },
+  "number": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12.0,
+    "confused_with": {}
+  },
+  "price": {
+    "precision": 0.9042553191489362,
+    "recall": 0.9139784946236559,
+    "f1-score": 0.9090909090909091,
+    "support": 93.0,
+    "confused_with": {
+      "Price": 7,
+      "height": 1
+    }
+  },
+  "brand_name": {
+    "precision": 0.9029535864978903,
+    "recall": 0.9385964912280702,
+    "f1-score": 0.9204301075268817,
+    "support": 228.0,
+    "confused_with": {}
+  },
+  "weight": {
+    "precision": 0.7058823529411765,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.8,
+    "support": 13.0,
+    "confused_with": {
+      "height": 1
+    }
+  },
+  "category": {
+    "precision": 0.8653846153846154,
+    "recall": 0.9,
+    "f1-score": 0.8823529411764706,
+    "support": 250.0,
+    "confused_with": {
+      "adjective": 8,
+      "type": 8
+    }
+  },
+  "noun": {
+    "precision": 0.5775401069518716,
+    "recall": 0.44813278008298757,
+    "f1-score": 0.5046728971962616,
+    "support": 241.0,
+    "confused_with": {
+      "adjective": 37
+    }
+  },
+  "foot_length": {
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8888888888888888,
+    "support": 9.0,
+    "confused_with": {
+      "height": 1
+    }
+  },
+  "type": {
+    "precision": 0.8539130434782609,
+    "recall": 0.8736654804270463,
+    "f1-score": 0.8636763412489006,
+    "support": 562.0,
+    "confused_with": {
+      "adjective": 11
+    }
+  },
+  "promotion_type_amount": {
+    "precision": 0.8771929824561403,
+    "recall": 1.0,
+    "f1-score": 0.9345794392523364,
+    "support": 50.0,
+    "confused_with": {}
+  },
+  "topic": {
+    "precision": 0.6754176610978521,
+    "recall": 0.6316964285714286,
+    "f1-score": 0.6528258362168397,
+    "support": 448.0,
+    "confused_with": {
+      "adjective": 34
+    }
+  },
+  "price_description": {
+    "precision": 0.7142857142857143,
+    "recall": 0.75,
+    "f1-score": 0.7317073170731707,
+    "support": 80.0,
+    "confused_with": {
+      "adjective": 2
+    }
+  },
+  "material": {
+    "precision": 0.8947368421052632,
+    "recall": 0.8717948717948718,
+    "f1-score": 0.8831168831168831,
+    "support": 156.0,
+    "confused_with": {
+      "adjective": 3
+    }
+  },
+  "clothes_size": {
+    "precision": 1.0,
+    "recall": 0.8125,
+    "f1-score": 0.896551724137931,
+    "support": 16.0,
+    "confused_with": {
+      "brand_name": 1
+    }
+  },
+  "promotion_type": {
+    "precision": 0.9506172839506173,
+    "recall": 1.0,
+    "f1-score": 0.9746835443037974,
+    "support": 77.0,
+    "confused_with": {}
+  },
+  "height": {
+    "precision": 0.7692307692307693,
+    "recall": 0.5882352941176471,
+    "f1-score": 0.6666666666666666,
+    "support": 17.0,
+    "confused_with": {
+      "weight": 5,
+      "price": 1
+    }
+  },
+  "adjective": {
+    "precision": 0.48872180451127817,
+    "recall": 0.4391891891891892,
+    "f1-score": 0.4626334519572954,
+    "support": 296.0,
+    "confused_with": {
+      "topic": 31
+    }
+  },
+  "micro avg": {
+    "precision": 0.7811237605582079,
+    "recall": 0.7637342908438061,
+    "f1-score": 0.7723311546840959,
+    "support": 2785.0
+  },
+  "macro avg": {
+    "precision": 0.7853233429187582,
+    "recall": 0.7557844992644396,
+    "f1-score": 0.764402375148092,
+    "support": 2785.0
+  },
+  "weighted avg": {
+    "precision": 0.7730011842207776,
+    "recall": 0.7637342908438061,
+    "f1-score": 0.7667824900956839,
+    "support": 2785.0
+  },
+  "accuracy": 0.873666239863423
+}

@@ -1,0 +1,935 @@
+version: "3.1"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+- story: path about time
+  steps:
+  - intent: tell_time
+  - action: action_show_time
+
+- story: size form shirt/pants - knows size
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shirt"
+  - slot_was_set:
+    - category: "Shirt"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "H&M"
+  - slot_was_set:
+    - brand_name: "H&M"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: affirm
+  - slot_was_set:
+    - knows_size: true
+  - slot_was_set:
+    - requested_slot: clothes_size
+  - intent: provide_clothes_size
+    entities:
+    - clothes_size: "S"
+  - slot_was_set:
+    - clothes_size: "S"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form shirt/pants - don't know size
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Pants"
+  - slot_was_set:
+    - category: "Pants"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Gucci"
+  - slot_was_set:
+    - brand_name: "Gucci"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: provide_height
+    entities:
+    - height: 165
+  - slot_was_set:
+    - height: 165
+  - slot_was_set:
+    - requested_slot: weight
+  - intent: provide_weight
+    entities:
+    - weight: 55
+  - slot_was_set:
+    - weight: 55
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form shoes - knows size
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Kid's Fashion"
+  - slot_was_set:
+    - group_category_name: "Kid's Fashion"
+  - slot_was_set:
+      - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shoes"
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Nike"
+  - slot_was_set:
+    - brand_name: "Nike"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: affirm
+  - slot_was_set:
+    - knows_size: true
+  - slot_was_set:
+    - requested_slot: shoes_size
+  - intent: provide_shoes_size
+    entities:
+    - shoes_size: 32
+  - slot_was_set:
+    - shoes_size: 32
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form shoes - don't know size - knows foot length
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shoes"
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: knows_foot_length
+  - intent: affirm
+  - slot_was_set:
+    - knows_foot_length: true
+  - slot_was_set:
+    - requested_slot: foot_length
+  - intent: provide_foot_length
+    entities:
+    - foot_length: 44
+  - slot_was_set:
+    - foot_length: 44
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form shoes - don't know size - don't know foot length
+  steps:
+  - intent: help_size
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shoes"
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: knows_foot_length
+  - intent: deny
+  - slot_was_set:
+    - knows_foot_length: false
+  - slot_was_set:
+    - requested_slot: foot_length
+  - intent: provide_foot_length
+    entities:
+    - foot_length: 44
+  - slot_was_set:
+    - foot_length: 44
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shirt/pants - provide category with individual type and brand - knows shirt/pants size
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Men's Fashion"
+    - category: "Shirt"
+    - brand_name: "H&M"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Shirt"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "H&M"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: affirm
+  - slot_was_set:
+    - knows_size: true
+  - slot_was_set:
+    - requested_slot: clothes_size
+  - intent: provide_clothes_size
+    entities:
+    - clothes_size: "S"
+  - slot_was_set:
+    - clothes_size: "S"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shirt/pants - provide category with individual type and brand - don't know shirt/pants size
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Women's Fashion"
+    - category: "Pants"
+    - brand_name: "Gucci"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Pants"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "Gucci"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: provide_height
+    entities:
+    - height: 165
+  - slot_was_set:
+    - height: 165
+  - slot_was_set:
+    - requested_slot: weight
+  - intent: provide_weight
+    entities:
+    - weight: 55
+  - slot_was_set:
+    - weight: 55
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shoes - provide category with individual type and brand - know shoes size
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Kid's Fashion"
+    - category: "Shoes"
+    - brand_name: "Nike"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Kid's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "Nike"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: affirm
+  - slot_was_set:
+    - knows_size: true
+  - slot_was_set:
+    - requested_slot: shoes_size
+  - intent: provide_shoes_size
+    entities:
+    - shoes_size: 32
+  - slot_was_set:
+    - shoes_size: 32
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shoes - provide category with individual type and brand - don't know shoes size - knows foot length
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Men's Fashion"
+    - category: "Shoes"
+    - brand_name: "Adidas"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: knows_foot_length
+  - intent: affirm
+  - slot_was_set:
+    - knows_foot_length: true
+  - slot_was_set:
+    - requested_slot: foot_length
+  - intent: provide_foot_length
+    entities:
+    - foot_length: 44
+  - slot_was_set:
+    - foot_length: 44
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shoes - provide category with individual type and brand - don't know shoes size - don't know foot length
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Men's Fashion"
+    - category: "Shoes"
+    - brand_name: "Adidas"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Shoes"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "Adidas"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: deny
+  - slot_was_set:
+    - knows_size: false
+  - slot_was_set:
+    - requested_slot: knows_foot_length
+  - intent: deny
+  - slot_was_set:
+    - knows_foot_length: false
+  - slot_was_set:
+    - requested_slot: foot_length
+  - intent: provide_foot_length
+    entities:
+    - foot_length: 44
+  - slot_was_set:
+    - foot_length: 44
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: size form for shirt/pants - provide a single entity
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Kid's Fashion"
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Kid's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Shirt"
+  - slot_was_set:
+    - category: "Shirt"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "H&M"
+  - slot_was_set:
+    - brand_name: "H&M"
+  - slot_was_set:
+    - requested_slot: knows_size
+  - intent: affirm
+  - slot_was_set:
+    - knows_size: true
+  - slot_was_set:
+    - requested_slot: clothes_size
+  - intent: provide_clothes_size
+    entities:
+    - clothes_size: "S"
+  - slot_was_set:
+    - clothes_size: "S"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: Size recommendation - all information for apparel provided
+  steps:
+  - intent: request_help_size_general
+    entities:
+    - group_category_name: "Men's Fashion"
+    - category: "Outerwear"
+    - brand_name: "Routine"
+    - height: 175
+    - weight: 80
+  - action: size_form
+  - active_loop: size_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: "Outerwear"
+  - slot_was_set:
+    - requested_slot: brand_name
+  - slot_was_set:
+    - brand_name: "Routine"
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: 175
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: 80
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_size_recommendation
+
+- story: Size recommendation interrupted or restarted
+  steps:
+  - intent: request_help_size_general
+  - action: size_form
+  - active_loop: size_form
+  - intent: reset_form
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+
+# Story for promotion
+#- story: Request for promotion - without entities
+#  steps:
+#  - intent: request_promotions
+#  - action: promotion_form
+#  - active_loop: promotion_form
+#  - slot_was_set:
+#    - requested_slot: promotion_type
+#  - intent: request_promotions
+#    entities:
+#    - promotion_type: ["Order"]
+#  - slot_was_set:
+#    - promotion_type: ["Order"]
+#  - slot_was_set:
+#    - requested_slot: promotion_type_amount
+#  - slot_was_set:
+#    - promotion_type_amount: "One"
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_generate_promotions
+
+#- story: Request for promotion - with entities
+#  steps:
+#  - intent: request_promotions
+#    entities:
+#    - promotion_type: ["Order", "Delivery"]
+#    - promotion_type_amount: "All"
+#  - action: promotion_form
+#  - active_loop: promotion_form
+#  - slot_was_set:
+#    - requested_slot: promotion_type
+#  - slot_was_set:
+#    - promotion_type: ["Order", "Delivery"]
+#  - slot_was_set:
+#    - requested_slot: promotion_type_amount
+#  - slot_was_set:
+#    - promotion_type_amount: "All"
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_generate_promotions
+
+- story: Request for promotion
+  steps:
+  - intent: request_promotions
+  - action: promotion_form
+  - active_loop: promotion_form
+  - slot_was_set:
+    - requested_slot: promotion_type_amount
+  - intent: provide_amount
+    entities:
+    - amount: "All"
+  - slot_was_set:
+    - amount: "All"
+  - slot_was_set:
+    - requested_slot: promotion_type
+  - slot_was_set:
+    - promotion_type: [ "Order", "Delivery" ]
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_promotions
+
+- story: Request for promotion - with entity promotion amount
+  steps:
+  - intent: request_promotions
+    entities:
+    - promotion_type_amount: "All"
+  - action: promotion_form
+  - active_loop: promotion_form
+  - slot_was_set:
+    - requested_slot: promotion_type
+  - slot_was_set:
+    - promotion_type: ["Order", "Delivery"]
+  - slot_was_set:
+    - requested_slot: promotion_type_amount
+  - slot_was_set:
+    - promotion_type_amount: "All"
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_promotions
+
+#- story: Request for promotion - provide promotion amount
+#  steps:
+#  - intent: request_promotions
+#  - action: promotion_form
+#  - active_loop: promotion_form
+#  - slot_was_set:
+#    - requested_slot: promotion_type_amount
+#  - intent: request_promotions
+#    entities:
+#    - promotion_type_amount: "All"
+#  - slot_was_set:
+#    - promotion_type_amount: "All"
+#  - slot_was_set:
+#    - promotion_type: [ "Order", "Delivery" ]
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_generate_promotions
+
+#- story: Request for promotion - provide amount
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: request_promotions
+#  - action: promotion_form
+#  - active_loop: promotion_form
+#  - slot_was_set:
+#    - requested_slot: promotion_type
+#  - slot_was_set:
+#    - promotion_type: [ "Order", "Delivery" ]
+#  - slot_was_set:
+#    - requested_slot: promotion_type_amount
+#  - intent: provide_amount
+#    entities:
+#    - amount: "All"
+#  - slot_was_set:
+#    - promotion_type_amount: amount
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_generate_promotions
+
+#- story: incremental promotions with provided promotion type
+#  steps:
+#  - intent: request_promotions
+#    entities:
+#    - promotion_type: ["Order"]
+#  - slot_was_set:
+#    - promotion_type: ["Order"]
+#  - action: action_generate_promotions
+#  - action: action_ask_price
+#  - intent: provide_price
+#    entities:
+#    - price: [50, 100]
+#    - price_description: ["Between"]
+#  - action: action_generate_promotions
+
+#- story: incremental promotions with no provided information
+#  steps:
+#  - intent: request_promotions
+#  - action: action_ask_promotion_type
+#  - intent: request_promotions
+#    entities:
+#    - promotion_type: ["Order"]
+#    - promotion_type_amount: "One"
+#  - action: action_set_promotion_type
+#  - slot_was_set:
+#    - promotion_type: ["Order"]
+#  - slot_was_set:
+#    - promotion_type_amount: "One"
+#  - action: action_generate_promotions
+#  - action: action_ask_price
+#  - intent: provide_price
+#    entities:
+#    - price: [50, 100]
+#    - price_description: ["Between"]
+#  - action: action_generate_promotions
+
+- story: Request promotions interrupted or restarted
+  steps:
+  - intent: request_promotions
+  - action: promotion_form
+  - active_loop: promotion_form
+  - intent: reset_form
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+
+
+# Rules for product recommendation form
+- story: Request product recommendation - step by step correspondingly - knows material
+  steps:
+  - intent: request_product_recommendation
+  - action: product_recommendation_form
+  - active_loop: product_recommendation_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - group_category_name: "Men's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Outerwear"
+  - slot_was_set:
+    - category: "Outerwear"
+  - slot_was_set:
+    - requested_slot: type
+  - intent: provide_type
+    entities:
+    - type: "Coat"
+  - slot_was_set:
+    - type: "Coat"
+  - slot_was_set:
+    - requested_slot: topic
+  - intent: provide_topic
+    entities:
+    - topic: ["Vintage", "Retro"]
+  - slot_was_set:
+    - topic: ["Vintage", "Retro"]
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Routine"
+  - slot_was_set:
+    - brand_name: "Routine"
+  - slot_was_set:
+    - requested_slot: price
+  - intent: provide_price
+    entities:
+    - price: [144]
+  - slot_was_set:
+    - price: [144]
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_product_recommendation
+
+- story: Request product recommendation - step by step correspondingly - don't know material
+  steps:
+  - intent: request_product_recommendation
+  - action: product_recommendation_form
+  - active_loop: product_recommendation_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - requested_slot: category
+  - intent: provide_category
+    entities:
+    - category: "Outerwear"
+  - slot_was_set:
+    - category: "Outerwear"
+  - slot_was_set:
+    - requested_slot: type
+  - intent: provide_type
+    entities:
+    - type: "Denim Jacket"
+  - slot_was_set:
+    - type: "Denim Jacket"
+  - slot_was_set:
+    - requested_slot: topic
+  - intent: provide_topic
+    entities:
+    - topic: ["Casual", "Vintage"]
+  - slot_was_set:
+    - topic: ["Casual", "Vintage"]
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Everest"
+  - slot_was_set:
+    - brand_name: "Everest"
+  - slot_was_set:
+    - requested_slot: price
+  - intent: provide_price
+    entities:
+    - price: [144]
+  - slot_was_set:
+    - price: [144]
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_product_recommendation
+
+- story: Request product recommendation - provide all information
+  steps:
+    - intent: provide_multiple_recommendation_information
+      entities:
+        - group_category_name: "Men's Fashion"
+        - category: "Outerwear"
+        - type: "Coat"
+        - topic: ["Vintage"]
+        - brand_name: "Gucci"
+        - price: [50]
+    - action: product_recommendation_form
+    - active_loop: product_recommendation_form
+    - slot_was_set:
+      - requested_slot: group_category_name
+    - slot_was_set:
+      - group_category_name: "Men's Fashion"
+    - slot_was_set:
+      - requested_slot: category
+    - slot_was_set:
+      - category: "Outerwear"
+    - slot_was_set:
+      - requested_slot: type
+    - slot_was_set:
+      - type: "Coat"
+    - slot_was_set:
+      - requested_slot: topic
+    - slot_was_set:
+      - topic: ["Vintage"]
+    - slot_was_set:
+      - requested_slot: brand_name
+    - slot_was_set:
+      - brand_name: "Gucci"
+    - slot_was_set:
+      - requested_slot: price
+    - slot_was_set:
+      - price: [50]
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_generate_product_recommendation
+
+- story: Request product recommendation - provide type only
+  steps:
+  - intent: provide_multiple_recommendation_information
+    entities:
+    - type: "Cargo Pants"
+  - action: product_recommendation_form
+  - active_loop: product_recommendation_form
+  - slot_was_set:
+    - requested_slot: group_category_name
+  - intent: provide_group_category_name
+    entities:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - group_category_name: "Women's Fashion"
+  - slot_was_set:
+    - requested_slot: type
+  - slot_was_set:
+    - type: "Cargo Pants"
+  - slot_was_set:
+    - requested_slot: topic
+  - intent: provide_topic
+    entities:
+    - topic: ["Casual"]
+  - slot_was_set:
+    - topic: ["Casual"]
+  - slot_was_set:
+    - requested_slot: brand_name
+  - intent: provide_brand_name
+    entities:
+    - brand_name: "Uniqlo"
+  - slot_was_set:
+    - brand_name: "Uniqlo"
+  - slot_was_set:
+    - requested_slot: price
+  - intent: provide_price
+    entities:
+    - price: [50]
+  - slot_was_set:
+    - price: [50]
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_product_recommendation
+
+- story: Product recommendation restarted or interrupted
+  steps:
+  - intent: request_product_recommendation
+  - action: product_recommendation_form
+  - active_loop: product_recommendation_form
+  - intent: reset_form
+  - action: action_inform_restart
+  - action: action_deactivate_loop
+  - action: action_reset_slots

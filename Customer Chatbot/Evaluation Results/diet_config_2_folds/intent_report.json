@@ -1,0 +1,305 @@
+{
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1-score": 0.4,
+    "support": 4.0,
+    "confused_with": {
+      "goodbye": 2,
+      "provide_multiple_recommendation_information": 1
+    }
+  },
+  "deny": {
+    "precision": 0.42857142857142855,
+    "recall": 0.46153846153846156,
+    "f1-score": 0.4444444444444444,
+    "support": 13.0,
+    "confused_with": {
+      "help_size": 3,
+      "provide_multiple_recommendation_information": 2
+    }
+  },
+  "mood_unhappy": {
+    "precision": 0.7333333333333333,
+    "recall": 0.7857142857142857,
+    "f1-score": 0.7586206896551724,
+    "support": 14.0,
+    "confused_with": {
+      "deny": 2,
+      "provide_multiple_recommendation_information": 1
+    }
+  },
+  "greet": {
+    "precision": 0.4117647058823529,
+    "recall": 0.5384615384615384,
+    "f1-score": 0.4666666666666667,
+    "support": 13.0,
+    "confused_with": {
+      "provide_clothes_size": 1,
+      "provide_topic": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.75,
+    "recall": 0.3,
+    "f1-score": 0.42857142857142855,
+    "support": 10.0,
+    "confused_with": {
+      "request_promotions": 1,
+      "deny": 1
+    }
+  },
+  "provide_foot_length": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5.0,
+    "confused_with": {}
+  },
+  "mood_great": {
+    "precision": 0.6363636363636364,
+    "recall": 0.5,
+    "f1-score": 0.56,
+    "support": 14.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 3,
+      "mood_unhappy": 2
+    }
+  },
+  "request_help_size_general": {
+    "precision": 0.88,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.8979591836734694,
+    "support": 48.0,
+    "confused_with": {
+      "help_size": 3,
+      "provide_multiple_recommendation_information": 1
+    }
+  },
+  "provide_topic": {
+    "precision": 0.410958904109589,
+    "recall": 0.27522935779816515,
+    "f1-score": 0.32967032967032966,
+    "support": 109.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 62,
+      "provide_type": 5
+    }
+  },
+  "provide_clothes_size": {
+    "precision": 0.7857142857142857,
+    "recall": 0.6875,
+    "f1-score": 0.7333333333333333,
+    "support": 16.0,
+    "confused_with": {
+      "help_size": 3,
+      "mood_great": 1
+    }
+  },
+  "help_size": {
+    "precision": 0.5666666666666667,
+    "recall": 0.68,
+    "f1-score": 0.6181818181818182,
+    "support": 25.0,
+    "confused_with": {
+      "request_help_size_general": 3,
+      "provide_multiple_recommendation_information": 3
+    }
+  },
+  "provide_weight": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5.0,
+    "confused_with": {}
+  },
+  "provide_shoes_size": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 6.0,
+    "confused_with": {
+      "help_size": 1
+    }
+  },
+  "reset_form": {
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1-score": 0.4444444444444444,
+    "support": 5.0,
+    "confused_with": {
+      "provide_type": 2,
+      "ask_refund_products": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.5454545454545454,
+    "recall": 0.6,
+    "f1-score": 0.5714285714285714,
+    "support": 10.0,
+    "confused_with": {
+      "greet": 2,
+      "provide_type": 1
+    }
+  },
+  "provide_multiple_recommendation_information": {
+    "precision": 0.7553366174055829,
+    "recall": 0.7986111111111112,
+    "f1-score": 0.7763713080168776,
+    "support": 576.0,
+    "confused_with": {
+      "provide_topic": 34,
+      "provide_type": 26
+    }
+  },
+  "provide_material": {
+    "precision": 0.8260869565217391,
+    "recall": 0.76,
+    "f1-score": 0.7916666666666666,
+    "support": 50.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 8,
+      "provide_topic": 2
+    }
+  },
+  "tell_time": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5.0,
+    "confused_with": {}
+  },
+  "ask_refund_products": {
+    "precision": 0.90625,
+    "recall": 0.90625,
+    "f1-score": 0.90625,
+    "support": 32.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 2,
+      "provide_price": 1
+    }
+  },
+  "provide_group_category_name": {
+    "precision": 0.8813559322033898,
+    "recall": 0.9454545454545454,
+    "f1-score": 0.9122807017543859,
+    "support": 55.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 2,
+      "provide_topic": 1
+    }
+  },
+  "provide_price": {
+    "precision": 0.6097560975609756,
+    "recall": 0.9259259259259259,
+    "f1-score": 0.7352941176470589,
+    "support": 27.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 2
+    }
+  },
+  "request_promotions": {
+    "precision": 0.9423076923076923,
+    "recall": 0.9423076923076923,
+    "f1-score": 0.9423076923076923,
+    "support": 104.0,
+    "confused_with": {
+      "provide_price": 3,
+      "provide_multiple_recommendation_information": 3
+    }
+  },
+  "provide_category": {
+    "precision": 0.3333333333333333,
+    "recall": 0.3,
+    "f1-score": 0.3157894736842105,
+    "support": 20.0,
+    "confused_with": {
+      "provide_type": 7,
+      "provide_multiple_recommendation_information": 6
+    }
+  },
+  "provide_brand_name": {
+    "precision": 0.8918918918918919,
+    "recall": 0.6875,
+    "f1-score": 0.7764705882352941,
+    "support": 48.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 13,
+      "request_help_size_general": 2
+    }
+  },
+  "provide_number": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.96,
+    "support": 12.0,
+    "confused_with": {}
+  },
+  "provide_amount": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 6.0,
+    "confused_with": {
+      "request_promotions": 1,
+      "provide_multiple_recommendation_information": 1
+    }
+  },
+  "request_product_recommendation": {
+    "precision": 0.6363636363636364,
+    "recall": 0.7777777777777778,
+    "f1-score": 0.7,
+    "support": 9.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 2
+    }
+  },
+  "provide_type": {
+    "precision": 0.7114093959731543,
+    "recall": 0.7310344827586207,
+    "f1-score": 0.7210884353741497,
+    "support": 145.0,
+    "confused_with": {
+      "provide_multiple_recommendation_information": 33,
+      "greet": 1
+    }
+  },
+  "ask_tracking_order_status": {
+    "precision": 1.0,
+    "recall": 0.9523809523809523,
+    "f1-score": 0.975609756097561,
+    "support": 21.0,
+    "confused_with": {
+      "provide_type": 1
+    }
+  },
+  "provide_height": {
+    "precision": 1.0,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7272727272727273,
+    "support": 7.0,
+    "confused_with": {
+      "provide_price": 2,
+      "ask_refund_products": 1
+    }
+  },
+  "accuracy": 0.7482319660537482,
+  "macro avg": {
+    "precision": 0.746644310535583,
+    "recall": 0.7009038234219217,
+    "f1-score": 0.7075685236819879,
+    "support": 1414.0
+  },
+  "weighted avg": {
+    "precision": 0.7440449466895749,
+    "recall": 0.7482319660537482,
+    "f1-score": 0.7416519400221462,
+    "support": 1414.0
+  },
+  "micro avg": {
+    "precision": 0.7482319660537482,
+    "recall": 0.7482319660537482,
+    "f1-score": 0.7482319660537482,
+    "support": 1414.0
+  }
+}

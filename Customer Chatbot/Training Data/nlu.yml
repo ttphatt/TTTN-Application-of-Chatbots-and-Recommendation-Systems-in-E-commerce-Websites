@@ -1,0 +1,2482 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+#- intent: affirm
+#  examples: |
+#    - yes
+#    - y
+#    - indeed
+#    - of course
+#    - that sounds good
+#    - correct
+#
+#- intent: deny
+#  examples: |
+#    - no
+#    - n
+#    - never
+#    - I don't think so
+#    - don't like that
+#    - no way
+#    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it?
+    - do you know what time it is
+
+- intent: ask_open_time
+  examples: |
+    - what time does your shop open?
+    - when does your shop open?
+    - tell me the time your shop open
+    - open time
+    - open when?
+    - when open?
+
+- intent: ask_close_time
+  examples: |
+    - when does your shop close?
+    - at what time your shop closes?
+    - tell me the time your shop close
+    - close time
+    - close when?
+    - when your shop close?
+
+#- intent: ask_size
+#  examples: |
+#    - I want to know which size fits me
+#    - Can you help me find my size?
+#    - What size should I wear?
+#    - Help me choose the right size
+
+- intent: reset_form
+  examples: |
+    - start over
+    - restart
+    - begin again
+    - reset
+    - start fresh
+
+- intent: request_promotions
+  examples: |
+    - promotions
+    - coupons
+    - discounts
+    - types of discounts
+    - what types of promotions do you have?
+    - I need information about available coupons
+    - any discounts that your shop offering?
+    - what promotions do you have?
+    - any deals available?
+    - show me current discounts
+    - are there any special offers?
+    - I want to see promotions
+    - give me the coupons
+    - I want you to show me deals
+    - [order]{"entity": "promotion_type", "value": "Order"} [around]{"entity": "price_description", "value": "Under"} [60]{"entity": "price"}
+    - [orders]{"entity": "promotion_type", "value": "Order"} [up to]{"entity": "price_description", "value": "Under"} [175]{"entity": "price"}
+    - [delivery]{"entity":"promotion_type", "value": "Delivery"}
+    - [shipping]{"entity":"promotion_type", "value": "Delivery"}
+    - [ship]{"entity":"promotion_type", "value": "Delivery"}
+    - [shipment]{"entity":"promotion_type", "value": "Delivery"}
+    - [order]{"entity": "promotion_type", "value": "Order"} discounts
+    - [all]{"entity": "promotion_type_amount", "value": "All"} types of coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} types of promotions
+    - what [delivery]{"entity":"promotion_type", "value": "Delivery"} promotions do you have?
+    - any free [shipping]{"entity":"promotion_type", "value":"Delivery"} right now?
+    - do you have any free [ship]{"entity":"promotion_type", "value":"Delivery"} discounts?
+    - any there any promotions about [order]{"entity":"promotion_type", "value": "Order"}?
+    - what [order]{"entity":"promotion_type", "value": "Order"} promotion do you have?
+    - does the shop offer any promotions on [shipping]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"}?
+    - list [all]{"entity": "promotion_type_amount", "value": "All"} promotions for me
+    - I want to see [all]{"entity": "promotion_type_amount", "value": "All"} coupons
+    - tell me about all [shipping]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} coupons
+    - I am looking for [order]{"entity":"promotion_type", "value": "Order"} and [shipping]{"entity":"promotion_type", "value": "Delivery"} promotions
+    - what [ship]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} coupons do you have?
+    - do you have any [order]{"entity":"promotion_type", "value": "Order"} and [ship]{"entity":"promotion_type", "value": "Delivery"} coupons?
+    - coupons of [shipment]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"}
+    - promotions of [order]{"entity":"promotion_type", "value": "Order"} and [shipment]{"entity":"promotion_type", "value": "Delivery"}
+    - any discounts for [shipment]{"entity":"promotion_type", "value": "Delivery"} fee
+    - show me [all]{"entity": "promotion_type_amount", "value": "All"} discounts for [ship]{"entity":"promotion_type", "value": "Delivery"}
+    - I want [order]{"entity":"promotion_type", "value": "Order"} promotions
+    - give me [shipment]{"entity":"promotion_type", "value": "Delivery"} discounts
+    - [shipping]{"entity":"promotion_type", "value": "Delivery"} promotions
+    - [ship]{"entity":"promotion_type", "value": "Delivery"} coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions of [delivery]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [delivery]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [delivery]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions of [ship]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [ship]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [ship]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions of [shipment]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [shipment]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [shipment]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions of [shipping]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [shipping]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [shipping]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [delivery]{"entity": "promotion_type", "value": "Delivery"} promotions
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [delivery]{"entity": "promotion_type", "value": "Delivery"} discounts
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [delivery]{"entity": "promotion_type", "value": "Delivery"} coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [ship] promotions]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [ship] discounts]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [ship] coupons]{"entity": "promotion_type", "value": "Delivery"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipment]{"entity": "promotion_type", "value": "Delivery"} promotions
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipment]{"entity": "promotion_type", "value": "Delivery"} discounts
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipment]{"entity": "promotion_type", "value": "Delivery"} coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipping]{"entity": "promotion_type", "value": "Delivery"} promotions
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipping]{"entity": "promotion_type", "value": "Delivery"} coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} [shipping]{"entity": "promotion_type", "value": "Delivery"} discounts
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions of [order]{"entity": "promotion_type", "value": "Order"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [order]{"entity": "promotion_type", "value": "Order"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [order]{"entity": "promotion_type", "value": "Order"}
+    - give me [both]{"entity": "promotion_type_amount", "value": "Both"} promotions
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} promotions
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} discounts
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} coupons
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} types of promotions
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} types of coupons
+    - [both]{"entity": "promotion_type_amount", "value": "Both"} types of discounts
+    - show me [both]{"entity": "promotion_type_amount", "value": "Both"} types of coupons
+    - [all]{"entity": "promotion_type_amount", "value": "All"} promotions
+    - show me [all]{"entity": "promotion_type_amount", "value": "All"} coupons [50]{"entity": "price"} - [100] {"entity": "price"}
+    - display [all]{"entity": "promotion_type_amount", "value": "All"} discounts [19]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [56]{"entity": "price"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} available promotions [15]{"entity": "price"} - [76]{"entity": "price"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} available discounts [45]{"entity": "price"}  - [97]{"entity": "price"}
+    - [all]{"entity": "promotion_type_amount", "value": "All"} available coupons [01]{"entity": "price"}  - [15]{"entity": "price"} 
+    - [all]{"entity": "promotion_type_amount", "value": "All"} current promotions
+    - [all]{"entity": "promotion_type_amount", "value": "All"} current discounts
+    - [al]l{"entity": "promotion_type_amount", "value": "All"} current coupons
+    - I want to see [all]{"entity": "promotion_type_amount", "value": "All"} coupons of [ship]{"entity": "promotion_type", "value": "Delivery"}
+    - display [all]{"entity": "promotion_type_amount", "value": "All"} discounts of [order]{"entity":"promotion_type", "value": "Order"} 
+    - [shipping]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} promotions
+    - [order]{"entity":"promotion_type", "value": "Order"}  and [shipping]{"entity":"promotion_type", "value": "Delivery"} discounts
+    - [ship]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} coupons
+    - [shipment]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"}
+    - [delivery]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} promotion
+    - are there any promotions for [order]{"entity":"promotion_type", "value": "Order"} with price [lower]{"entity": "price_description", "value": "Under"} than [100]{"entity": "price"} bucks
+    - I am looking for promotions that can apply [within]{"entity": "price_description", "value": "Between"} the price range of [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - coupons for [order]{"entity":"promotion_type", "value": "Order"}  with price [under]{"entity": "price_description", "value": "Under"} [300]
+    - [shipment]{"entity":"promotion_type", "value": "Delivery"} deals for price [below]{"entity": "price_description", "value": "Under"} or [equal]{"entity": "price_description", "value": "Equal"} [456]{"entity": "price"}
+    - [ship]{"entity":"promotion_type", "value": "Delivery"} promotions for price [less]{"entity": "price_description", "value": "Under"} or [equal]{"entity": "price_description", "value": "Equal"} [102]{"entity": "price"}
+    - [shipping]{"entity":"promotion_type", "value": "Delivery"} coupon for price [higher]{"entity": "price_description", "value": "Above"} or [equals]{"entity": "price_description", "value": "Equal"} to [503]{"entity": "price"}
+    - [order]{"entity":"promotion_type", "value": "Order"} promotions for price [greater]{"entity": "price_description", "value": "Above"}  than [54]{"entity": "price"}
+    - [shipment]{"entity":"promotion_type", "value": "Delivery"} coupons for price [between]{"entity": "price_description", "value": "Between"}  [100]{"entity": "price"} and [150]{"entity": "price"}
+    - [order]{"entity":"promotion_type", "value": "Order"} deals for price [from]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [250]{"entity": "price"}
+    - [shipping]{"entity":"promotion_type", "value": "Delivery"}  coupons for price [between]{"entity": "price_description", "value": "Between"}  [56]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"}  [98]{"entity": "price"}
+
+#    - looking for all [coupons of order]{"entity":"promotion_type", "value": "Order Promotion"}
+#    - trying to find for [discounts of order]{"entity":"promotion_type", "value": "Order Promotion"}
+#    - tell me about [promotions of order]{"entity":"promotion_type", "value": "Order Promotion"}
+#    - I want to know about [coupons of shipping]{"entity":"promotion_type", "value": "Delivery Promotion"}
+#    - any [discounts of shipping]{"entity":"promotion_type", "value": "Delivery Promotion"}?
+#    - do you have any [promotions of shipping]{"entity":"promotion_type", "value": "Delivery Promotion"}
+#    - I am looking for [coupons of ship]{"entity":"promotion_type", "value": "Delivery Promotion"}
+#    - can you tell me about [discounts of ship]{"entity":"promotion_type", "value": "Delivery Promotion"}
+#    - does your shop offer any [promotions of ship]{"entity":"promotion_type", "value": "Delivery Promotion"}?
+#    - any [coupons of shipment]{"entity":"promotion_type", "value": "Delivery Promotion"} that your shop offer?
+#    - I want to know if your store have any [discounts of shipment]{"entity":"promotion_type", "value": "Delivery Promotion"}
+#    - do you have any [promotions of shipment]{"entity":"promotion_type", "value": "Delivery Promotion"}?
+
+- intent: provide_amount
+  examples: |
+    - I want [both]{"entity": "amount", "value": "Both"}
+    - want to see [all]{"entity": "amount", "value": "All"}
+    - [All]{"entity": "amount", "value": "All"}
+    - give me [all of them]{"entity": "amount", "value": "All"}
+    - [all]{"entity": "amount", "value": "All"}
+    - [both]{"entity": "amount", "value": "Both"}
+    - [all]{"entity": "amount", "value": "All"} types
+    - [both]{"entity": "amount", "value": "Both"} types
+    - show [all]{"entity": "amount", "value": "All"}
+    - show [both]{"entity": "amount", "value": "Both"}
+
+#- intent: provide_promotion_type
+#  examples: |
+#    - I want [order]{"entity":"promotion_type", "value": "Order"} promotions
+#    - give me [shipment]{"entity":"promotion_type", "value": "Delivery"} discounts
+#    - show me all coupons
+#    - [shipping][shipment]{"entity":"promotion_type", "value": "Delivery"} promotions
+#    - [ship][shipment]{"entity":"promotion_type", "value": "Delivery"} coupons
+#    - all promotions
+#    - I want to see all discounts
+#    - [shipping]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} promotions
+#    - [order]{"entity":"promotion_type", "value": "Order"}  and [shipping]{"entity":"promotion_type", "value": "Delivery"} discounts
+#    - [ship]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} coupons
+#    - [shipment]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"}
+#    - [delivery]{"entity":"promotion_type", "value": "Delivery"} and [order]{"entity":"promotion_type", "value": "Order"} promotion
+
+- intent: request_help_size_general
+  examples: |
+    - help me pick the right size for [men fashion]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - can you help me choose size for [man]{"entity": "group_category_name", "value": "Men's Fashion"} [shoe]{"entity": "category", "value": "Shoes"} of [nikke]{"entity": "brand_name", "value": "Nike"} 
+    - I am a [man]{"entity": "group_category_name", "value": "Men's Fashion"} and I need you to help me choose which [shirt]{"entity": "category", "value": "Shirts"} size of [h&m]{"entity": "brand_name", "value":"H&M"} fits me?
+    - I need help with choosing size for [men]{"entity": "group_category_name", "value": "Men's Fashion"} of [Addidas]{"entity": "brand_name", "value": "Adidas"}
+    - choose size for [menswear]{"entity": "group_category_name", "value": "Men's Fashion"} specifically [shoe]{"entity": "category", "value": "Shoes"} of [H and m]{"entity": "brand_name", "value": "H&M"}
+    - picking size for [man's fashion]{"entity": "group_category_name", "value": "Men's Fashion"} of [zara]{"entity": "brand_name", "value": "Zara"}
+    - I don't know which size of [h and M]{"entity": "brand_name", "value": "H&M"} [pants]{"entity": "category", "value": "Pants"} suits me
+    - I need help for picking size of [fashion for men]{"entity": "group_category_name", "value": "Men's Fashion"} of [H & m]{"entity": "brand_name", "value": "H&M"}
+    - I am looking for size of [pants]{"entity": "category", "value": "Pants"}, the brand I am looking for is [guci]{"entity": "brand_name", "value": "Gucci"} and I am looking for [manswear]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - I need help with choosing size for [women]{"entity": "group_category_name", "value": "Women's Fashion"} [trousers]{"entity": "category", "value": "Pants"} of [H and M]{"entity": "brand_name", "value":"H&M"}
+    - can you guide me to choose size for [woman]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - size help for [zara]{"entity": "brand_name", "value":"Zara"} [trouser]{"entity": "category", "value": "Pants"} of [woman]{"entity": "group_category_name", "value": "Women's Fashion"} 
+    - choose size for [women fashion]{"entity": "group_category_name", "value": "Women's Fashion"} specifically [shoe]{"entity": "category", "value": "Shoes"} of [nike]{"entity": "brand_name", "value": "Nike"}
+    - sizing help for [women's fashion]{"entity": "group_category_name", "value": "Women's Fashion"} with brand [addidas]{"entity": "brand_name", "value": "Adidas"}
+    - help size for [woman fashion] {"entity": "group_category_name", "value": "Women's Fashion"} about [pant]{"entity": "category", "value": "Pants"} of [h and m]{"entity": "brand_name", "value":"H&M"}
+    - I need help choosing size for [woman's fashion]{"entity": "group_category_name", "value": "Women's Fashion"} of [h & m]{"entity": "brand_name", "value":"H&M"}
+    - size help for [H and m]{"entity": "brand_name", "value":"H&M"}'s [pants]{"entity": "category", "value": "Pants"}
+    - picking size for [womenswear]{"entity": "group_category_name", "value":"Women's Fashion"} of [HandM]{"entity": "brand_name", "value":"H&M"}
+    - picking size for [kid]{"entity": "group_category_name", "value":"Kid's Fashion"} of [H & M]{"entity": "brand_name", "value":"H&M"}
+    - I want to choose size for my [kids]{"entity": "group_category_name", "value":"Kid's Fashion"} of [h and M]{"entity": "brand_name", "value":"H&M"}
+    - help choosing size for [childrenswear]{"entity": "group_category_name", "value":"Kid's Fashion"} of [H & M]{"entity": "brand_name", "value":"H&M"}
+    - need help for picking size for [kid's wear]{"entity": "group_category_name", "value":"Kid's Fashion"} of [h & m]{"entity": "brand_name", "value":"H&M"} brand
+    - I need to find size for [kid's fashion]{"entity": "group_category_name", "value":"Kid's Fashion"} specifically [shirts]{"entity": "category", "value": "Shirts"} of [H & m]{"entity": "brand_name", "value":"H&M"}
+    - choose size for [kidswear]{"entity": "group_category_name", "value":"Kid's Fashion"} of [H & m]{"entity": "brand_name", "value":"H&M"}'s [shoe]{"entity": "category", "value": "Shoes"}
+    - find size for [children]{"entity": "group_category_name", "value":"Kid's Fashion"}'s [shoes]{"entity": "category", "value": "Shoes"}
+    - looking for size of [child]{"entity": "group_category_name", "value":"Kid's Fashion"} clothing of [gucci]{"entity": "brand_name", "value": "Gucci"}
+    - help with size for [shoes]{"entity": "category", "value": "Shoes"} of [h and m]{"entity": "brand_name", "value":"H&M"} and the fashion is for [children]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - I need to figure out size of [guci]{"entity": "brand_name", "value": "Gucci"}'s [shoes]{"entity": "category", "value": "Shoes"} for my [children]"entity": "group_category_name", "value": "Kid's Fashion"}
+    - need help for picking size for [zara]{"entity": "brand_name", "value": "Zara"} [shoe]{"entity": "category", "value": "Shoes"}
+    - what size of [nike]{"entity": "brand_name", "value": "Nike"} [shoes]{"entity": "category", "value": "Shoes"} should I wear ?
+    - help me choose size for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - can you help me pick size for [shoe]{"entity": "category", "value": "Shoes"}
+    - I need help with choosing size for [shirt]{"entity": "category", "value": "Shirts"}
+    - choosing size for [trouser]{"entity": "category", "value": "Pants"}
+    - my height is [165]{"entity": "height"} and my weight is [57]{"entity": "weight"}, can you help me choose size for [men]{"entity": "group_category_name", "value": "Men's Fashion"} [shirts]{"entity": "category", "value": "Shirts"} ?
+    - I don't know how to choose size, my current height is [178]{"entity": "height"} cm and I weigh [78]{"entity": "weight"} kg
+    - my foot length is [23]{"entity": "foot_length"} cm and I am a [man]{"entity": "group_category_name", "value": "Men's Fashion"}, can you help find the size for [shoes]{"entity": "category", "value": "Shoes"} 
+    - the length of my foot [24]{"entity": "foot_length"} cm and I am a [woman]{"entity": "group_category_name", "value": "Women's Fashion"}, I do not know which size suit me best
+    - I need help with choosing size for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"} [pants]{"entity": "category", "value": "Pants"} with height is [155]{"entity": "height"} and weight is [45]{"entity": "weight"} 
+    - can you please help me choose size for [men]{"entity": "group_category_name", "value": "Men's Fashion"} [outerwear]{"entity": "category", "value": "Outerwear"} of [zara]{"entity": "brand_name", "value": "Zara"} and the height is [170]{"entity": "height"} and weigh [68]{"entity": "height"}
+    - I am [175]{"entity": "height"} cm and [70]{"entity": "weight"} kg, I don't know how to choose size help me
+    - I need help choosing [shoe]{"entity": "category", "value": "Shoes"} for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"} with foot length [22]{"entity": "foot_length"} cm
+    - I am [75]{"entity": "weight"} kg and I am tall [175]{"entity": "height"} cm, can you help me choose size?
+    - I am [80]{"entity": "weight"} kg, I don't know how to choose size
+    - I am tall [168]{"entity": "height"} cm, can you help me choose size ?
+    - the foot length of mine is [22]{"entity": "foot_length"} cm, help me choose size 
+    - my weight is [79]{"entity": "weight"} kg and my height is [185]{"entity": "height"} cm, can you recommend for me size of [swimwear]{"entity": "category", "value": "Swimwear"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - I don't know which size of [swimwears]{"entity": "category", "value": "Swimwear"}, my height is [170]{"entity": "height"} cm and my weight is [55]{"entity": "weight"} kg
+    
+
+- intent: help_size
+  examples: |
+    - size
+    - can you help me choose size?
+    - I want to know which size fits me
+    - can you help me find my size?
+    - what size should I wear?
+    - help me choose the right size
+    - I don't know which size fits me
+    - help with size
+    - choose size
+    - I need help with choosing size
+    - size choices
+    - size support
+    - which size fit me?
+    - I don't know how to choose size
+    - can you help me choose a size?
+    - I am not sure what size to get
+    - I don't know how to choose the right size
+    - what size do you recommend for me?
+    - what size do you suggest for me?
+    - how do I know which size fits me best?
+    - can you tell me which size would be good for me?
+    - I am between sizes, what should I do?
+    - is there a size guide I can follow
+    - do these clothes run big or small?
+    - can I get help finding the right fit?
+    - I am not sure what size to get
+    - I don't know how to choose the right size
+    - what size do you recommend for me?
+
+- intent: provide_group_category_name
+  examples: |
+    - I want [fashion for men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - my individual type is [women's fashion]{"entity":"group_category_name", "value": "Women's Fashion"}
+    - I need [kid's fashion]{"entity":"group_category_name", "value": "Kid's Fashion"}
+    - I am looking for [fashion for man]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - individual type [men's fashion]{"entity":"group_category_name", "value": "Men's Fashion"}
+    - looking for [men fashion]{"entity":"group_category_name", "value": "Men's Fashion"}
+    - the type is [women fashion]{"entity":"group_category_name", "value": "Women's Fashion"}
+    - [man fashion]{"entity":"group_category_name", "value": "Men's Fashion"}
+    - [woman fashion]{"entity":"group_category_name", "value": "Women's Fashion"}
+    - [children's fashion]{"entity":"group_category_name", "value": "Kid's Fashion"}
+    - I am looking for [menswear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - I need [manswear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [menswear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [fashion for woman]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [fashion for women]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - I am trying to find [womenswear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - I am searching for [womanswear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [childrenswear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kidswear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for children]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for child]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [man]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [men]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [fashion for man]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [fashion for men]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [menswear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [manswear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [man wear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [men wear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [man's wear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [men's wear]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - [women]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [woman]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [fashion for women]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [fashion for woman]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [woman fashion]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [woman's fashion]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [womenswear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [womanswear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [women's wear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [woman's wear]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - [children]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [children' fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [children fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for children]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [childrenswear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [children's wear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [child]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [child' fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [child fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for child]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [childswear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [child's wear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kids]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kids' fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kids fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for kids]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kidswear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kid's wear]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kid]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kid' fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [kid fashion]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - [fashion for kid]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - for [men]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - for [man]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - for [my husband]{"entity":"group_category_name", "value":"Men's Fashion"}
+    - for [women]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - for [ladies]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - for [my wife]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - for [lady]{"entity":"group_category_name", "value":"Women's Fashion"}
+    - for [kids]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - for [children]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - for [little kids]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - for [my kids]{"entity":"group_category_name", "value":"Kid's Fashion"}
+    - for [my children]{"entity":"group_category_name", "value":"Kid's Fashion"}
+
+- intent: provide_category
+  examples: |
+    - I want [shirt]{"entity":"category", "value": "Shirts"}
+    - I am looking for [pants]{"entity":"category", "value": "Pants"}
+    - category [shoes]{"entity":"category", "value": "Shoes"}
+    - [shoe]{"entity":"category", "value": "Shoes"} category
+    - looking for [trousers]{"entity":"category", "value": "Pants"} category
+    - I need [trouser]{"entity":"category", "value": "Pants"}
+    - need [shoe]{"entity":"category", "value": "Shoes"}
+    - [shirts]{"entity":"category", "value": "Shirts"}
+    - [pant]{"entity":"category", "value": "Pants"}
+    - [pants]{"entity":"category", "value": "Pants"}
+    - [shoes]{"entity":"category", "value": "Shoes"}
+    - [accessories]{"entity": "category", "value": "Accessories"}
+    - [accessory]{"entity": "category", "value": "Accessories"}
+    - [dresses]{"entity": "category", "value": "Dresses"}
+    - [outerwear]{"entity": "category", "value": "Outerwear"}
+    - [trouser]{"entity": "category", "value": "Pants"}
+    - [trousers]{"entity": "category", "value": "Pants"}
+    - [pant]{"entity": "category", "value": "Pants"}
+    - [swimwear]{"entity": "category", "value": "Swimwear"}
+    - [swim-wear]{"entity": "category", "value": "Swimwear"}
+    - [swim wear]{"entity": "category", "value": "Swimwear"}
+
+- intent: provide_brand_name
+  examples: |
+    - I am looking for [H & M]{"entity":"brand_name", "value": "H&M"} brand
+    - fashion brand [Zara]{"entity":"brand_name", "value": "Zara"}
+    - the brand is [Nike]{"entity":"brand_name", "value": "Nike"}
+    - I need brand [Adidas]{"entity":"brand_name", "value": "Adidas"}
+    - looking for [Gucci]{"entity":"brand_name", "value": "Gucci"} brand
+    - I am interested in [nikke]{"entity":"brand_name", "value": "Nike"} brand
+    - brand [guci]{"entity":"brand_name", "value": "Gucci"}
+    - [HandM]{"entity":"brand_name", "value": "H&M"}
+    - [H and M]{"entity":"brand_name", "value": "H&M"}
+    - [h and M]{"entity":"brand_name", "value": "H&M"}
+    - [H and m]{"entity":"brand_name", "value": "H&M"}
+    - [h and m]{"entity":"brand_name", "value": "H&M"}
+    - [h&m]{"entity":"brand_name", "value": "H&M"}
+    - [H&m]{"entity":"brand_name", "value": "H&M"}
+    - [h&M]{"entity":"brand_name", "value": "H&M"}
+    - [h & m]{"entity":"brand_name", "value": "H&M"}
+    - [H & m]{"entity":"brand_name", "value": "H&M"}
+    - [h & M]{"entity":"brand_name", "value": "H&M"}
+    - [H & M]{"entity":"brand_name", "value": "H&M"}
+    - [h& m]{"entity":"brand_name", "value": "H&M"}
+    - [H& m]{"entity":"brand_name", "value": "H&M"}
+    - [h& M]{"entity":"brand_name", "value": "H&M"}
+    - [H& M]{"entity":"brand_name", "value": "H&M"}
+    - [h &m]{"entity":"brand_name", "value": "H&M"}
+    - [H &m]{"entity":"brand_name", "value": "H&M"}
+    - [h &M]{"entity":"brand_name", "value": "H&M"}
+    - [H &M]{"entity":"brand_name", "value": "H&M"}
+    - [zara]{"entity":"brand_name", "value": "Zara"}
+    - [Nikke]{"entity":"brand_name", "value": "Nike"}
+    - [adiddas]{"entity":"brand_name", "value": "Adidas"}
+    - [Adiddas]{"entity":"brand_name", "value": "Adidas"}
+    - [Guci]{"entity":"brand_name", "value": "Gucci"}
+    - [gucci]{"entity":"brand_name", "value": "Gucci"}
+    - [bitis]{"entity": "brand_name", "value": "Biti's"}
+    - [bitis's]{"entity": "brand_name", "value": "Biti's"}
+    - [blom]{"entity": "brand_name", "value": "Bloom"}
+    - [bloom]{"entity": "brand_name", "value": "Bloom"}
+    - [coolmate]{"entity": "brand_name", "value": "Coolmate"}
+    - [Coolmate]{"entity": "brand_name", "value": "Coolmate"}
+    - [coolMate]{"entity": "brand_name", "value": "Coolmate"}
+    - [CoolMate]{"entity": "brand_name", "value": "Coolmate"}
+    - [Cool Mate]{"entity": "brand_name", "value": "Coolmate"}
+    - [everest]{"entity": "brand_name", "value": "Everest"}
+    - [puma]{"entity": "brand_name", "value": "Puma"}
+    - [routines]{"entity": "brand_name", "value": "Routine"}
+    - [routine]{"entity": "brand_name", "value": "Routine"}
+    - [uniqlo]{"entity": "brand_name", "value": "Uniqlo"}
+    - [uniquelo]{"entity": "brand_name", "value": "Uniqlo"}
+
+- intent: provide_clothes_size
+  examples: |
+    - my usual size is [S]{"entity":"clothes_size"}
+    - size [M]{"entity":"clothes_size"}
+    - my size is [l]{"entity":"clothes_size", "value": "L"}
+    - I usually wear [XL]{"entity":"clothes_size"} size
+    - [S]{"entity":"clothes_size"}
+    - I wear [m]{"entity":"clothes_size", "value": "M"}
+    - I feel comfortable when wearing size [L]{"entity":"clothes_size"}
+    - usual size [xl]{"entity":"clothes_size", "value": "XL"}
+    - wearing [s]{"entity":"clothes_size", "value": "S"} size
+    - [S]{"entity":"clothes_size"}
+    - [M]{"entity":"clothes_size"}
+    - [L]{"entity":"clothes_size"}
+    - [XL]{"entity":"clothes_size"}
+    - [s]{"entity":"clothes_size", "value": "S"}
+    - [m]{"entity":"clothes_size", "value": "M"}
+    - [l]{"entity":"clothes_size", "value": "L"}
+    - [xl]{"entity":"clothes_size", "value": "XL"}
+
+- intent: provide_height
+  examples: |
+    - [160]{"entity":"height"} cm
+    - my height is [155]{"entity":"height"} Cm
+    - I tall [175]{"entity":"height"} CM
+    - current height [164]{"entity":"height"} cm
+    - height [173]{"entity":"height"}
+    - the height of mine is [165]{"entity":"height"} centimeters
+    - current height of mine is [175]{"entity":"height"} centimeter
+    - current height [200]{"entity":"height"}
+    - me height is [3000]{"entity":"height"}
+
+- intent: provide_weight
+  examples: |
+    - [65]{"entity":"weight"} kg
+    - my weight is [78]{"entity":"weight"} KG
+    - my current weight [80]{"entity":"weight"} Kg
+    - I weight [55]{"entity":"weight"} kg
+    - weight [60]{"entity":"weight"} KG
+    - my weight is [800]{"entity":"weight"}
+    - current weight is [1000]{"entity":"weight"}
+
+- intent: provide_shoes_size
+  examples: |
+    - my shoes size is [44]{"entity":"shoes_size"}
+    - the size of my shoes is [35]{"entity":"shoes_size"}
+    - I usually wear size [40]{"entity":"shoes_size"}
+    - the size I am looking for my shoes is [43]{"entity":"shoes_size"}
+    - shoes size [32]{"entity":"shoes_size"}
+    - shoes with size [39]{"entity":"shoes_size"}
+
+- intent: provide_foot_length
+  examples: |
+    - my foot length is [43]{"entity":"foot_length"} cm
+    - length of foot: [40]{"entity":"foot_length"} CM
+    - the current length of my foot is [40]{"entity":"foot_length"} centimeter
+    - the length of my foot is [45]{"entity":"foot_length"} centimeters
+    - [38]{"entity":"foot_length"} centimeters is the length of my foot
+
+#- intent: provide_unknown_information
+#  examples: |
+#    - I don't know
+#    - I have never worn this before
+#    - this is the first time I've worn clothes of Gucci brand
+
+- intent: ask_tracking_order_status
+  examples: |
+    - I want to know the status of my order
+    - order status
+    - status of the order
+    - how can I track the status of my order?
+    - help me check the status of my order
+    - tell me about the order status
+    - show me the order's status
+    - I want to check the status of my orders
+    - I need to check my order
+    - display order status
+    - can you help me track my orders?
+    - order tracking
+    - track orders
+    - status order check
+    - check status of orders
+    - check status of order
+    - checking order stat
+    - I want to see order status
+    - I want to track my order status
+    - status checking
+    - status tracking
+
+- intent: ask_refund_products
+  examples: |
+    - refund
+    - return
+    - refund products
+    - refund items
+    - refund item
+    - return products
+    - return items
+    - return item
+    - can I please get a refund? The product is not as described
+    - I’d like to request a refund for this product as it didn’t meet my expectations
+    - I’m not satisfied with the item I received and would like to return it for a refund
+    - I would like to return this product. It didn’t look as expected
+    - I’m unhappy with this purchase and would like a full refund
+    - I’m not satisfied with the product and would appreciate a refund
+    - please process a refund for this item
+    - I want to return this. Not satisfied
+    - how to refund a product?
+    - help refund products
+    - I need help with products refund
+    - I want to refund products
+    - how do I return products
+    - how do I refund the producs
+    - how can I return items
+    - I want to know how to refund items
+    - refund guide
+    - I want to make a refund
+    - I would like a compensation
+    - I want the shop to compensate for products that are not as expected
+    - I want to restore money
+    - I need reimbursement
+    - I want repayment
+    - I need a rebate
+
+#- intent: provide_order_id
+#  examples: |
+#    - my order id is [01]{"entity": "order_id"}
+#    - id is [2]{"entity": "order_id"}
+#    - the id of the order is [3]{"entity": "order_id"}
+#    - order's id [3]{"entity": "order_id"}
+#    - id [01]{"entity": "order_id"}
+#    - the order that I want to see has the id [5]{"entity": "order_id"}
+
+- intent: request_product_recommendation
+  examples: |
+    - I don't know what to buy can you recommend for me some products?
+    - product recommendation
+    - I need help with product recommendation
+    - do you have any suggestions for the products?
+    - product suggestion
+    - can you suggest for me some products?
+    - I want product recommendation
+    - I need help with product suggestion
+    - any recommendation for the products?
+
+- intent: provide_multiple_recommendation_information
+  examples: |
+    - product recommendation for [men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - suggest [vintage]{"entity": "topic", "value": "Vintage"} products for [women]{"entity": "group_category_name", "value": "Women's Fashion"} of [gucci]{"entity": "brand_name", "value": "Gucci"} with price within [50]{"entity": "price"} to [70]{"entity": "price"}
+    - product suggestion for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - I am looking for [men]{"entity": "group_category_name", "value": "Men's Fashion"} [jeans]{"entity": "type", "value": "Jeans"} of [guci]{"entity": "brand_name", "value": "Gucci"}
+    - [H and M]{"entity": "brand_name", "value": "H&M"} jeans for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - recommend for me products for [woman]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - can you suggest for me [retro]{"entity": "topic", "value": "Retro"} [shoes]{"entity": "category", "value": "Shoes"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"} specifically [sneakers]{"entity": "type", "value": "Sneakers"} of brand [routine]{"entity": "brand_name", "value": "Routine"} with price [60]{"entity": "price"}
+    - I want to see products of [coolmate]{"entity": "brand_name", "value": "Coolmate"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"} with topic is formal and the price should be cheaper than [100]{"entity": "price"}
+    - I am looking for [sneakers]{"entity": "type", "value": "Sneakers"}
+    - recommend for me products relate to [jeans]{"entity": "type", "value": "Jeans"}
+    - I am looking [men]{"entity": "group_category_name", "value": "Men's Fashion"} clothes
+    - I am searching for [shirt]{"entity": "category", "value": "Shirts"}
+    - product recommendation for [women]{"entity": "group_category_name", "value": "Women's Fashion"} [shoes]{"entity": "category", "value": "Shoes"} of [everest]{"entity": "brand_name", "value": "Everest"}
+    - show me products in the range of [50]{"entity": "price"} to [100]{"entity": "price"}
+    - I want to see [chino]{"entity": "type", "value": "Chinos"}
+    - recommend for me products with [informal]{"entity": "topic", "value": "Casual"} style
+    - looking for products of [bloom]{"entity": "brand_name", "value": "Bloom"}
+    - product suggestion for [puma]{"entity": "brand_name", "value": "Puma"} [shoes]{"entity": "category", "value": "Shoes"}
+    - wanting to see [parka]{"entity": "type", "value": "Parka"}
+    - looking for product with [waterproof]{"entity": "topic", "value": "Weather-Ready"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}  from [coolmate]{"entity": "brand_name", "value": "Coolmate"}
+    - [accessorizing]{"entity": "noun"}
+    - do you sell any [pants]{"entity": "category", "value": "Pants"} to go on an [adventure]{"entity": "noun"}
+    - do you have any [shirts]{"entity": "category", "value": "Shirts"} to go on [adventures]{"entity": "noun"}
+    - I am looking for [aesthetic]{"entity": "noun"} [shirt]{"entity": "category", "value": "Shirts"}
+    - looking for [shoes]{"entity": "category", "value": "Shoes"} that provide [air-sole]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} that can give [appeal]{"entity": "noun"}
+    - [base]{"entity": "noun"}
+    - next week I am going to the [beach]{"entity": "topic", "value": "Summer & Swim"}, any recommendations for products [vintage-style]{"entity": "adjective"} ? 
+    - [blend]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} that can give me [boost]{"entity": "noun"}
+    - searching for [pants]{"entity": "category", "value": "Pants"} for [bulk]{"entity": "noun"}
+    - [centerpiece]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} with [charm]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} to wear in city
+    - searching for some [shirts]{"entity": "category", "value": "Shirts"} to wear on different [climate]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that can give [closure]{"entity": "noun"}
+    - do you have any [collection]{"entity": "noun"} of [shirts]{"entity": "category", "value": "Shirts"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that have [color-blocking]{"entity": "noun"}
+    - looking for [shoes]{"entity": "category", "value": "Shoes"} that can bring [comfort]{"entity": "noun"}
+    - can you recommned for me some [shoes]{"entity": "category", "value": "Shoes"} as a [companion]{"entity": "noun"} of mine
+    - [conscience]{"entity": "noun"}
+    - searching for [shoes]{"entity": "category", "value": "Shoes"} for [construction]{"entity": "noun"}
+    - [core]{"entity": "noun"}
+    - [cornerstone]{"entity": "noun"}
+    - [coverage]{"entity": "noun"}
+    - [craftsmanship]{"entity": "noun"}
+    - [creator]{"entity": "noun"}
+    - [crest]{"entity": "noun"}
+    - [cuff]{"entity": "noun"}
+    - [cushioning]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} to wear in [day]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} to wear in [days]{"entity": "noun"}
+    - looking for [shirt]{"entity": "category", "value": "Shirts"} with [detail]{"entity": "noun"}
+    - searching for [shirt]{"entity": "category", "value": "Shirts"} with [detailing]{"entity": "noun"}
+    - [heavy]{"entity": "adjective"} [drape]{"entity": "noun"} of [shirts]{"entity": "category", "value": "Shirts"}
+    - looking for some [shoes]{"entity": "category", "value": "Shoes"} with [durability]{"entity": "noun"}
+    - do you have any [shoes]{"entity": "category", "value": "Shoes"} that can give [ease]{"entity": "noun"}
+    - [edge]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} with some [good]{"entity": "adjective"} [effect]{"entity": "noun"}
+    - [dresses]{"entity": "category", "value": "Dresses"} with [elegance]{"entity": "noun"}
+    - [element]{"entity": "noun"}
+    - [emblem]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that can give [strong]{"entity": "adjective"} [energy]{"entity": "noun"}
+    - [ensemble]{"entity": "noun"}
+    - I am looking for [epitome]{"entity": "noun"} of [shirts]{"entity": "category", "value": "Shirts"}
+    - [pants]{"entity": "category", "value": "Pants"} to go for some [errand]{"entity": "noun"}
+    - I am looking for some [essential]{"entity": "noun"} of brand [zara]{"entity": "brand_name", "value": "Zara"}
+    - can you provide me some products which are [essentials]{"entity": "noun"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - [shirts]{"entity": "category", "value": "Shirts"} to wear on [important]{"entity": "adjective"} [event]{"entity": "noun"}
+    - [face]{"entity": "noun"}
+    - looking for [shirts]{"entity": "category", "value": "Shirts"} with [family]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [fashion]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that can give a strong [feel]{"entity": "noun"}
+    - I am looking for [shoes]{"entity": "category", "value": "Shoes"} for my [feet]{"entity": "noun"}
+    - [fit]{"entity": "noun"}
+    - do you have any [pants]{"entity": "category", "value": "Pants"} with [flexibility]{"entity": "noun"}
+    - [focus]{"entity": "noun"}
+    - [footprint]{"entity": "noun"}
+    - looking for [shirts]{"entity": "category", "value": "Shirts"} with [frame]{"entity": "noun"}
+    - I want [shirts]{"entity": "category", "value": "Shirts"} that can give [freedom]{"entity": "noun"}
+    - [front]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} to wear for [fun]{"entity": "noun"}
+    - [functionality]{"entity": "noun"} [accessories]{"entity": "category", "value": "Accessories"}
+    - [fusion]{"entity": "noun"} [shirt]{"entity": "category", "value": "Shirts"}
+    - [future]{"entity": "noun"}
+    - [acessories]{"entity": "category", "value": "Accessories"} for [game]{"entity": "noun"} 
+    - [pants]{"entity": "category", "value": "Pants"} for [gathering]{"entity": "noun"}
+    - [girl]{"entity": "noun"}
+    - [shoe]{"entity": "category", "value": "Shoes"} for [golf]{"entity": "noun"}
+    - [hardware]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} with [heart]{"entity": "noun"}
+    - [heat]{"entity": "noun"}
+    - I am going for a [hike]{"entity": "noun"}, recommend for me some [pants]{"entity": "category", "value": "Pants"}
+    - [hit]{"entity": "noun"}
+    - recommend for some [shirts]{"entity": "category", "value": "Shirts"} that I can wear at [home]{"entity": "noun"}
+    - recommend for some [trouser]{"entity": "category", "value": "Pants"} that I can wear in my [house]{"entity": "noun"}
+    - looking for some [shirts]{"entity": "category", "value": "Shirts"} that can give [inspiration]{"entity": "noun"}
+    - recommend for me some [insulation]{"entity": "noun"} [pant]{"entity": "category", "value": "Pants"}
+    - [lapel]{"entity": "noun"}
+    - [outerwears]{"entity": "category", "value": "Outerwear"} with many [layer]{"entity": "noun"}
+    - [shirts] for [leisure]{"entity": "noun"}
+    - [level]{"entity": "noun"}
+    - do you have [shirts]{"entity": "category", "value": "Shirts"} with [life]{"entity": "noun"} [pattern]{"entity": "noun"} on it ?
+    - [limit]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with [logo]{"entity": "noun"} on it
+    - do you have any [loungewear]{"entity": "noun"} for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - finding for [shirts]{"entity": "category", "value": "Shirts"} have [love]{"entity": "noun"} drawings
+    - searching for [shirts]{"entity": "category", "value": "Shirts"} with [button]{"entity": "noun"} on it
+    - [mile]{"entity": "noun"}
+    - [mission]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} with a [mix]{"entity": "noun"} of color
+    - [shirts]{"entity": "category", "value": "Shirts"} that can prevent [moisture]{"entity": "noun"}
+    - [swimwear]{"entity": "category", "value": "Swimwear"} with [monogram]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} for [mood]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} that can provide better [motion]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} with [cool]{"entity": "adjective"} [motif]{"entity": "noun"}
+    - looking for some pants that give ease in [movement]{"entity": "noun"}
+    - do you sell any [must-have]{"entity": "noun"} [shoes]{"entity": "category", "value": "Shoes"}
+    - looking for some [nature]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - [need]{"entity": "noun"}
+    - [nod]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} for [special]{"entity": "adjective"} [occasion]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} for [normal]{"entity": "adjective"} [occasions]{"entity": "noun"}
+    - looking for [office]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - trying to find for [origin]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - do you have any [outing]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"}
+    - recommend for me [outings]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - suggest for me [overlay]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"}
+    - [owner]{"entity": "noun"}
+    - does your shop has [p.e]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"}
+    - searching for some [pants]{"entity": "category", "value": "Pants"} with [pack]{"entity": "noun"}
+    - [pair]{"entity": "noun"} of [shoes]{"entity": "category", "value": "Shoes"}
+    - [shirts]{"entity": "adjective"} for my parent
+    - [pants]{"entity": "category", "value": "Pants"} for [park]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} for [partner]{"entity": "noun"}
+    - [shirts]{"entity": "adjective"} to go to [party]{"entity": "noun"}
+    - [past]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"}
+    - [shirts]{"entity": "category", "value": "Shirts"} with a small [patch]{"entity": "noun"}
+    - any [pinnacle]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"} ?
+    - [shirts] with [planet]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with [placket]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} for [play]{"entity": "noun"}
+    - [playdate]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - [playtime]{"entity": "noun"} [shoes]{"entity": "category", "value": "Shoes"}
+    - [shirts]{"entity": "category", "value": "Shirts"} with [pocket]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} for [pool]{"entity": "topic", "value": "Summer & Swim"}
+    - [shoes]{"entity": "category", "value": "Shoes"} with [power]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} for [practicality]{"entity": "noun"} purposes
+    - do you sell any [protection]{"entity": "noun"} [outerwear]{"entity": "category", "value": "Outerwear"}
+    - I need [quality]{"entity": "noun"} [shirt]{"entity": "category", "value": "Shirts"}
+    - looking for some [quarter-zip]{"entity": "noun"} [pants]{"entity": "category", "value": "Pants"}
+    - [shoes]{"entity": "category", "value": "Shoes"} of [relaxation]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} to give a [ride]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} of [romance]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} for [run]{"entity": "noun"}
+    - searching for [shoes]{"entity": "category", "value": "Shoes"} to walk on [sand]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} to go to [school]{"entity": "noun"}
+    - I am looking for [shirts]{"entity": "category", "value": "Shirts"} to wear on a specific [season]{"entity": "noun"}
+    - I seaching for [pants]{"entity": "category", "value": "Pants"} that can be worn on multiple [seasons]{"entity": "noun"}
+    - I am looking for [shirt]{"entity": "category", "value": "Shirts"} that can serve as a [second-skin]{"entity": "noun"}
+    - [sense]{"entity": "noun"}
+    - [series]{"entity": "noun"}
+    - looking for [shade]{"entity": "noun"} [shirt]{"entity": "category", "value": "Shirts"}
+    - looking for [shoes]{"entity": "category", "value": "Shoes"} to walk along a [shore]{"entity": "noun"}
+    - [shoulder]{"entity": "noun"}
+    - [simplicity]{"entity": "topic", "value": "Minimalist"} [shirt]{"entity": "category", "value": "Shirts"}
+    - [pants]{"entity": "category", "value": "Pants"} with [sky]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [shirts] with [sleeve]{"entity": "noun"}
+    - I want [shirts]{"entity": "category", "value": "Shirts"} that can give me a [slouch]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with a [smile]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} with [space]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} for [speed]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} with [spirit]{"entity": "noun"} [pattern]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} with a [splash]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} for [sport]{"entity": "noun"}
+    - looking for [sportswear]{"entity": "noun"} [shirts]{"entity": "category", "value": "Shirts"}
+    - searching for some [steel]{"entity": "noun"} [accessories]{"entity": "category", "value": "Accessories"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with [stitch]{"entity": "noun"}
+    - I am looking for [stitching]{"entity": "noun"} [shirt]{"entity": "category", "value": "Shirts"}
+    - [shoes]{"entity": "category", "value": "Shoes"} to wear on [street]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} to wear [streets]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} that can give [stretch]{"entity": "noun"}
+    - [shirts] with [strong]{"entity": "adjective"} [structure]{"entity": "noun"}
+    - I am a [student]{"entity": "noun"}, recommend for me some [shirts]{"entity": "category", "value": "Shirts"}
+    - [shirts]{"entity": "category", "value": "Shirts"} to wear on [summer]{"entity": "topic", "value": "Summer & Swim"}
+    - [shoes]{"entity": "category", "value": "Shoes"} to walk under [sun]{"entity": "noun"}
+    - [swimwear]{"entity": "category", "value": "Swimwear"} for [sunbathing]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} with height [support]{"entity": "noun"}
+    - [shirts] with [sustainability]{"entity": "noun"}
+    - [pants]{"entity": "category", "value": "Pants"} to [swim]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that can handle my [swing]{"entity": "noun"}
+    - I am searching for [tee]{"entity": "type", "value": "T-shirt"} on [special]{"entity": "adjective"} [occasions]{"entity": "noun"} 
+    - [shirt]{"entity": "category", "value": "Shirts"} for [high]{"entity": "adjective"} [temperature]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with good [texture]{"entity": "noun"}
+    - need [shoes]{"entity": "category", "value": "Shoes"} for my [toe]{"entity": "noun"}
+    - [shoes]{"entity": "category", "value": "Shoes"} to walk on [trail]{"entity": "noun"}
+    - looking for [pants]{"entity": "category", "value": "Pants"} for [training]{"entity": "noun"}
+    - [transition]{"entity": "noun"}
+    - do you have any [pants]{"entity": "category", "value": "Pants"} for [treatment]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} with [tree]{"entity": "noun"} on it
+    - do you have any [trend]{"entity": "noun"} [trousers]{"entity": "category", "value": "Pants"}
+    - I want to be a [trendsetter]{"entity": "noun"}, recommend for me some [shirts]{"entity": "category", "value": "Shirts"}
+    - I am going on  a [trip]{"entity": "noun"} suggest for me some [dresses]{"entity": "category", "value": "Dresses"}
+    - [utility]{"entity": "noun"} [shoes]{"entity": "category", "value": "Shoes"}
+    - any [dreesses]{"entity": "category", "value": "Dresses"} [vacation]{"entity": "noun"}
+    - do you have any [shirts]{"entity": "category", "value": "Shirts"} with [cool]{"entity": "adjective"} [vibe]{"entity": "noun"}
+    - [shirts]{"entity": "category", "value": "Shirts"} that can give me [victory]{"entity": "noun"} on games
+    - do you have any products relate [waist]{"entity": "noun"} ?
+    - do you sell any [waistband]{"entity": "noun"} for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - [shoes]{"entity": "category", "value": "Shoes"} for [warmth]{"entity": "noun"} [weather]{"entity": "noun"}
+    - [shirt]{"entity": "category", "value": "Shirts"} that can prevent getting wet from [water]{"entity": "noun"}
+    - any recommendations for [shirt]{"entity": "category", "value": "Shirts"} on [weekend]{"entity": "noun"} ?
+    - do you sell some [pants]{"entity": "category", "value": "Pants"} for [weekends]{"entity": "noun"} ?
+    - do you sell any [shirts]{"entity": "category", "value": "Shirts"} for [wind]{"entity": "noun"} [weather]{"entity": "noun"}
+    - I am looking for some [work]{"entity": "topic", "value": "Business Casual"} [pants]{"entity": "category", "value": "Pants"}
+    - [workout]{"entity": "topic", "value": "Performance"} [pants]{"entity": "category", "value": "Pants"}
+    - I am looking for [work out]{"entity": "topic", "value": "Performance"} [pants]{"entity": "category", "value": "Pants"} for my [wife]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [workouts]{"entity": "topic", "value": "Performance"} [pant]{"entity": "category", "value": "Pants"}
+    - I am looking for [jogger]{"entity": "type", "value": "Joggers"} that I can wear to go the [gym]{"entity": "topic", "value": "Performance"}
+    - you have any [yoga]{"entity": "noun"} [trousers]{"entity": "category", "value": "Pants"}
+    - looking for [pants]{"entity": "category", "value": "Pants"} with  [zipper]{"entity": "noun"}
+    - [active]{"entity": "topic", "value": "Performance"} [trousers]{"entity": "category", "value": "Pants"}
+    - looking for some [adorable]{"entity": "adjective"} [dresses]{"entity": "category", "value": "Dresses"}
+    - you have or sell any [airy]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"} ?
+    - do you have any [all-day]{"entity": "adjective"} [shirts]{"entity": "category", "value": "Shirts"}
+    - do you have or sell any [athletic]{"entity": "adjective"} [trouser]{"entity": "category", "value": "Pants"}
+    - searching for some [authentic]{"entity": "adjective"} [pant]{"entity": "category", "value": "Pants"}
+    - [basic]{"entity": "topic", "value": "Minimalist"} [shirt]{"entity": "category", "value": "Shirts"}
+    - [beautiful]{"entity": "adjective"} [dresses]{"entity": "category", "value": "Dresses"} for [ladies]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [bold]{"entity": "adjective"} [soft-shell jacket]{"entity": "type", "value": "Softshell Jacket"} made from [cotton]{"entity": "material", "value": "Cotton"}
+    - I am looking for some [breathtaking]{"entity": "adjective"} [pants]{"entity": "category", "value": "Pants"}
+    - the [weather]{"entity": "noun"} is [breezy]{"entity": "adjective"} now, can you suggest for me some [outerwears]{"entity": "category", "value": "Outerwear"}
+    - looking for [classic]{"entity": "adjective"} [shirts]{"entity": "category", "value": "Shirts"}
+    - I am looking for some [clean]{"entity": "adjective"} [accessories]{"entity": "category", "value": "Accessories"}
+    - do you sell any [coastal]{"entity": "adjective"} [shirts]{"entity": "category", "value": "Shirts"}
+    - looking for some [cold-weather]{"entity": "adjective"} products of [zara]{"entity": "brand_name", "value": "Zara"} for [kids]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - trying to find some [shirts]{"entity": "category", "value": "Shirts"} that are [comfy]{"entity": "adjective"}
+    - do you have any [comfortable]{"entity": "adjective"} [trousers]{"entity": "category", "value": "Pants"}
+    - I want to look [confident]{"entity": "adjective"} can you recommend for me some [shirts]{"entity": "category", "value": "Shirts"} of [gucci]{"entity": "brand_name", "value": "Gucci"}
+    - do you have any [convenient]{"entity": "adjective"} [pants]{"entity": "category", "value": "Pants"}
+    - I want to be [cool]{"entity": "adjective"} so can you suggest for me some products of [shirts]{"entity": "category", "value": "Shirts"}
+    - looking for some [cozy]{"entity": "adjective"} [trousers]{"entity": "category", "value": "Pants"}
+    - looking for [crisp]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"}
+    - I am searching for [cushioned]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"}
+    - looking for some [cute]{"entity": "adjective"} dresses for my [girlfriend]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - do you have any [daily]{"entity": "adjective"} pair of [shoes]{"entity": "category", "value": "Shoes"}
+    - looking for some [dazzling]{"entity": "adjective"} [pants]{"entity": "category", "value": "Pants"}
+    - searching for a [delicate]{"entity": "adjective"} [dresses]{"entity": "category", "value": "Dresses"} for my gorgeous [wife]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - searching for some [durable]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"} of [routine]{"entity": "brand_name", "value": "Routine"}
+    - do you have any products that are [eco-conscious]{"entity": "adjective"} like [accessorry]{"entity": "category", "value": "Accessories"}
+    - do you have any [elastic]{"entity": "adjective"} products specifically [swim wear]{"entity": "category", "value": "Swimwear"}
+    - I will attend a [party]{"entity": "noun"} next month, therefore I am searching for [elegant]{"entity": "adjective"} [dresses]{"entity": "category", "value": "Dresses"}
+    - I am looking for products that I can wear [everyday]{"entity": "adjective"}, do you have any recommendations ?
+    - do you have any [exclusive]{"entity": "adjective"} [trousers]{"entity": "category", "value": "Pants"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"} of [pumma]{"entity": "brand_name", "value": "Puma"}
+    - searching for [exquisite]{"entity": "adjective"} [dresses]{"entity": "category", "value": "Dresses"} for my [lady]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - searching for some [eye-catching]{"entity": "adjective"} products for [ladies]{"entity": "group_category_name", "value": "Women's Fashion"} specifically [outterwear]{"entity": "category", "value": "Outerwear"}
+    - I am feeling [faded]{"entity": "adjective"}, can you recommned for me some products relate to [accessories]{"entity": "category", "value": "Accessories"}
+    - does your shop sell any [fashion-forward]{"entity": "adjective"} [shoe]{"entity": "category", "value": "Shoes"} specifically [sneakers]{"entity": "type", "value": "Sneakers"} ?
+    - I am searching for some [fashionable]{"entity": "adjective"} outfits can you recommend for me some products relate to [trouser]{"entity": "category", "value": "Pants"}
+    - do you have any [feminine]{"entity": "adjective"} [swimwear]{"entity": "category", "value": "Swimwear"}
+    - do you sell any products that can be worn on [festive]{"entity": "adjective"} [occasions]{"entity": "noun"}
+    - I am looking for [firm]{"entity": "adjective"} [outter wear]{"entity": "category", "value": "Outerwear"}
+    - any products that can be [fit-and-flare]{"entity": "adjective"} ?
+    - [five-pocket]{"entity": "adjective"} [pants]{"entity": "category", "value": "Pants"}
+    - looking for some [flared]{"entity": "adjective"} [outer-wear]{"entity": "category", "value": "Outerwear"}
+    - [flattering]{"entity": "adjective"} [outerwear]{"entity": "category", "value": "Outerwear"}
+    - do you have any products that are [flexible]{"entity": "adjective"} in [work]{"entity": "topic", "value": "Business Casual"}?
+    - say I am looking for some [flirty]{"entity": "adjective"} [accessory]{"entity": "category", "value": "Accessories"} to catch some attention 
+    - I am looking for formal [work]{"entity": "topic", "value": "Business Casual"} [pant]{"entity": "category", "value": "Pants"}
+    - [four-way]{"entity": "adjective"} [shirts]{"entity": "category", "value": "Shirts"}
+    - [fresh]{"entity": "adjective"} [wool coat]{"entity": "type", "value": "Wool Coat"} made from [chifon]{"entity": "material", "value": "Chiffon"}
+    - [functional]{"entity": "adjective"} [wind breaker]{"entity": "type", "value": "Windbreaker"} made of [denim]{"entity": "material", "value": "Denim"}
+    - I am doing some [gentle]{"entity": "adjective"} [exercises]{"entity": "adjective"}, can you recommned for me some products relate to [dresses]{"entity": "category", "value": "Dresses"} of [addiddas]{"entity": "brand_name", "value": "Adidas"}
+    - [good]{"entity": "adjective"} [wide leg trouser]{"entity": "type", "value": "Wide-Leg Pants"} made from [polyester]{"entity": "material", "value": "Polyester"}
+    - [graceful]{"entity": "adjective"}
+    - [happy]{"entity": "adjective"} [t shirt]{"entity": "type", "value": "T-shirt"} made from [recycled cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [heavy-duty]{"entity": "adjective"} [vest]{"entity": "type", "value": "Vest"} made with [spandex]{"entity": "material", "value": "Spandex"}
+    - [high-end]{"entity": "adjective"} [wind-breaker]{"entity": "type", "value": "Windbreaker"} made out of [fleece]{"entity": "material", "value": "Fleece"}
+    - [high-performance]{"entity": "adjective"} [water shoes]{"entity": "type", "value": "Water Shoes"} with material of [chiffon]{"entity": "material", "value": "Chiffon"}
+    - [high-waisted]{"entity": "adjective"}
+    - any [shirts]{"entity": "category", "value": "Shirts"} for [hot]{"entity": "adjective"} [weather]{"entity": "noun"}
+    - [iconic]{"entity": "adjective"} [wide-leg trouser]{"entity": "type", "value": "Wide-Leg Pants"} made from [recycling cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [ideal]{"entity": "adjective"}
+    - [impeccable]{"entity": "adjective"} [wide-leg pant]{"entity": "type", "value": "Wide-Leg Pants"} made of with the price within [50]{"entity": "price"} to [90]{"entity": "price"}
+    - [incredible]{"entity": "adjective"} [utility coat]{"entity": "type", "value": "Utility Coat"} made out of [cotton]{"entity": "material", "value": "Cotton"}
+    - [incredibly]{"entity": "adjective"}
+    - [instant]{"entity": "adjective"} [shirts]{"entity": "category", "value": "Shirts"}
+    - [shirt]{"entity": "category", "value": "Shirts"} to wear in [intense]{"entity": "adjective"} [weather]{"entity": "noun"}
+    - [intricate]{"entity": "adjective"}
+    - [irresistible]{"entity": "adjective"} [t-shirt]{"entity": "type", "value": "T-shirt"} made of [recycle wool]{"entity": "material", "value": "Recycled Wool"}
+    - [lasting]{"entity": "adjective"} [track pant]{"entity": "type", "value": "Track Pants"} made of [recycling wool]{"entity": "material", "value": "Recycled Wool"}
+    - [light]{"entity": "adjective"} [trench coat]{"entity": "type", "value": "Trench Coat"} made from [recycle cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [light-wash]{"entity": "adjective"} [wide leg pants]{"entity": "type", "value": "Wide-Leg Pants"} made from [recycling polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [little]{"entity": "adjective"}
+    - [long]{"entity": "adjective"} [wide leg trousers]{"entity": "type", "value": "Wide-Leg Pants"} made from and the price is [between]{"entity": "price_description", "value": "Between"} [45]{"entity": "Price"} [to]{"entity": "price_description", "value": "Between"} [60]{"entity": "Price"}
+    - [loose]{"entity": "adjective"} [tshirt]{"entity": "type", "value": "T-shirt"} made out of corduroy]{"entity": "material", "value": "Corduroy"}
+    - [luxurious]{"entity": "adjective"} [windbreaker]{"entity": "type", "value": "Windbreaker"} made of [recycled wool]{"entity": "material", "value": "Recycled Wool"} with [heritage style]{"entity": "topic", "value": "Heritage Style"}
+    - [metal]{"entity": "adjective"} [accessories]{"entity": "category", "value": "Accessories"}
+    - [mild]{"entity": "adjective"} [tote bag]{"entity": "type", "value": "Tote Bag"} made from [recycling rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [modern]{"entity": "adjective"} [swim-suit]{"entity": "type", "value": "Swimsuit"} made from [recycled rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [totebag]{"entity": "type", "value": "Tote Bag"} made from [natural]{"entity": "adjective"} materials:  
+    - [neon]{"entity": "adjective"} [swim short]{"entity": "type", "value": "Swim Shorts"} made with [recycle wol]{"entity": "material", "value": "Recycled Wool"}
+    - [new]{"entity": "adjective"} [swim suit]{"entity": "type", "value": "Swimsuit"} made from [recycle polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [next-level]{"entity": "adjective"} and [vintage]{"entity": "topic", "value": "Vintage"} [track trousers]{"entity": "type", "value": "Track Pants"} made out of [canva]{"entity": "material", "value": "Canvas"}
+    - [non-slip]{"entity": "adjective"} [wide-leg trousers]{"entity": "type", "value": "Wide-Leg Pants"} made from less expensive than [50]{"entity": "price"} bucks
+    - [off-duty]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"}
+    - [on-point]{"entity": "adjective"} [tote-bag]{"entity": "type", "value": "Tote Bag"} made from [recycled polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [on-trend]{"entity": "adjective"} [sports jacket]{"entity": "type", "value": "Sports Jacket"} made for [men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - [one-piece]{"entity": "adjective"} [swimsuit]{"entity": "type", "value": "Swimsuit"} for [lady]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [optimal]{"entity": "adjective"} [wide leg pant]{"entity": "type", "value": "Wide-Leg Pants"} made of cheaper than [78]{"entity": "price"}
+    - [sneaker]{"entity": "type", "value": "Sneakers"} made from [organic]{"entity": "adjective"} material like [organic cotton]{"entity": "material", "value": "Organic Cotton"}
+    - [original]{"entity": "adjective"} [soft shell jacket]{"entity": "type", "value": "Softshell Jacket"} made from [recycle nylon]{"entity": "material", "value": "Recycled Nylon"}
+    - [outdoor]{"entity": "adjective"} [track pants]{"entity": "type", "value": "Track Pants"} made of [recycled ruber]{"entity": "material", "value": "Recycled Rubber"}
+    - [oversized]{"entity": "adjective"} [sport-jacket]{"entity": "type", "value": "Sports Jacket"}
+    - [tunic]{"entity": "type", "value": "Tunic"} with [padded]{"entity": "adjective"} [pattern]{"entity": "noun"}
+    - [pinstriped]{"entity": "adjective"} [track trousers]{"entity": "type", "value": "Track Pants"}
+    - [plaid]{"entity": "adjective"} [track trouser]{"entity": "type", "value": "Track Pants"}
+    - [playful]{"entity": "adjective"} [swim shorts]{"entity": "type", "value": "Swim Shorts"} made from [recycling nylon]{"entity": "material", "value": "Recycled Nylon"} with topic [lifestyle]{"entity": "topic", "value": "Lifestyle"}
+    - [polished]{"entity": "adjective"} [swim shorts]{"entity": "type", "value": "Swim Shorts"} made from [recycled nylon]{"entity": "material", "value": "Recycled Nylon"} and the topic is [summer & swim]{"entity": "topic", "value": "Summer & Swim"}
+    - [pop]{"entity": "adjective"} [slimfit pant]{"entity": "type", "value": "Slim-Fit Trousers"} made of [recycling ruber]{"entity": "material", "value": "Recycled Rubber"}, the topic is [weather-ready]{"entity": "topic", "value": "Weather-Ready"}
+    - [positive]{"entity": "adjective"} [slim fit pant]{"entity": "type", "value": "Slim-Fit Trousers"} made out of [canvas]{"entity": "material", "value": "Canvas"}
+    - [post-workout]{"entity": "topic", "value": "Performance"} [sneaker]{"entity": "type", "value": "Sneakers"} made from [ruber]{"entity": "material", "value": "Rubber"}
+    - [practical]{"entity": "adjective"} [sports-jacket]{"entity": "type", "value": "Sports Jacket"} made from [rubber]{"entity": "material", "value": "Rubber"} 
+    - [premium]{"entity": "adjective"} [slim-fit pant]{"entity": "type", "value": "Slim-Fit Trousers"} made of [recycled ruber]{"entity": "material", "value": "Recycled Rubber"}
+    - [primeblue]{"entity": "adjective"} [softshell jacket]{"entity": "type", "value": "Softshell Jacket"} made from [mesh]{"entity": "material", "value": "Mesh"}
+    - [sneakers]{"entity": "type", "value": "Sneakers"}, made from [coton]{"entity": "material", "value": "Cotton"} , with [printed]{"entity": "adjective"} pattern
+    - [professional]{"entity": "adjective"} [slim-fit trousers]{"entity": "type", "value": "Slim-Fit Trousers"} made from [cotton]{"entity": "material", "value": "Cotton"}
+    - [pull-on]{"entity": "adjective"} [wide-leg pants]{"entity": "type", "value": "Wide-Leg Pants"} made from [linene]{"entity": "material", "value": "Linen"}
+    - [pure]{"entity": "adjective"} [slim-fit trouser]{"entity": "type", "value": "Slim-Fit Trousers"} made of [recycle rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [quick-drying]{"entity": "topic", "value": "Summer & Swim"} [scarf]{"entity": "type", "value": "Scarf"} in winter days made from [recycled wol]{"entity": "material", "value": "Recycled Wool"}
+    - [quilted]{"entity": "adjective"} [slimfit trousers]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [rain-ready]{"entity": "adjective"} [sport jacket]{"entity": "type", "value": "Sports Jacket"} made from [linen]{"entity": "material", "value": "Linen"}
+    - [sweater]{"entity": "type", "value": "Sweater"} for [rainy days]{"entity": "topic", "value": "Weather-Ready"} made from [lether]{"entity": "material", "value": "Leather"}
+    - [ready]{"entity": "adjective"} [soft-shell jacket]{"entity": "type", "value": "Softshell Jacket"} made out of [airism]{"entity": "material", "value": "AIRism"}
+    - [luxury]{"entity": "topic", "value": "Luxury"} [soft-shell jacket]{"entity": "type", "value": "Softshell Jacket"} made with [recycled]{"entity": "adjective"} material such as: [recycled polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [statement piece]{"entity": "topic", "value": "Statement Piece"} and [refined]{"entity": "adjective"} [skirt]{"entity": "type", "value": "Skirt"} made from [leather]{"entity": "material", "value": "Leather"}
+    - [regular]{"entity": "adjective"} [sandal]{"entity": "type", "value": "Sandals"} for [work]{"entity": "topic", "value": "Business Casual"} made from [fleeccee]{"entity": "material", "value": "Fleece"}
+    - [relaxed]{"entity": "adjective"} [slim fit trouser]{"entity": "type", "value": "Slim-Fit Trousers"} made from [flecce]{"entity": "material", "value": "Fleece"}
+    - [minimalist]{"entity": "topic", "value": "Minimalist"} and [relaxed-fit]{"entity": "adjective"} [runningshoes]{"entity": "type", "value": "Running Shoes"} made from [flece]{"entity": "material", "value": "Fleece"}
+    - [reliable]{"entity": "adjective"} [slimfit pants]{"entity": "type", "value": "Slim-Fit Trousers"} made with [recycling wol]{"entity": "material", "value": "Recycled Wool"}
+    - do you have any [sandals]{"entity": "type", "value": "Sandals"} made by [renowned]{"entity": "adjective"} brand ?
+    - [resistant]{"entity": "adjective"} [loafer]{"entity": "type", "value": "Loafers"} made from [fleece]{"entity": "material", "value": "Fleece"}
+    - [responsive]{"entity": "adjective"} [running shoes]{"entity": "type", "value": "Running Shoes"} made from [denim]{"entity": "material", "value": "Denim"}
+    - I want to see [sustainable]{"entity": "topic", "value": "Sustainable"} and [retro-inspired]{"entity": "adjective"} [slim fit pants]{"entity": "type", "value": "Slim-Fit Trousers"} with material of [canvas]{"entity": "material", "value": "Canvas"}
+    - [rich]{"entity": "adjective"} [rash-guard]{"entity": "type", "value": "Rash Guard"}
+    - [rocky]{"entity": "adjective"} [rashguard]{"entity": "type", "value": "Rash Guard"}
+    - I am looking for [maxi dress]{"entity": "type", "value": "Maxi Dress"} for [romantic]{"entity": "adjective"} [occasion]{"entity": "noun"} [10]{"entity": "price"} - [100]{"entity": "price"}
+    - [roomy]{"entity": "adjective"} [parka]{"entity": "type", "value": "Parka"} in the [range]{"entity": "price_description", "value": "Between"} of [100]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [200]{"entity": "price"}
+    - [rugged]{"entity": "adjective"} [puffer jacket]{"entity": "type", "value": "Puffer Jacket"} [from]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - [safe]{"entity": "adjective"} [raincoat]{"entity": "type", "value": "Raincoat"} [between]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} and [100]{"entity": "price"} bucks
+    - [seamless]{"entity": "adjective"} [slim fit trousers]{"entity": "type", "value": "Slim-Fit Trousers"} made from [coton]{"entity": "material", "value": "Cotton"} [under]{"entity": "price_description", "value": "Under"} [100]{"entity": "price"}
+    - [seasonal]{"entity": "topic", "value": "Seasonal"} [maxi-dress]{"entity": "type", "value": "Maxi Dress"} for pretty [lady]{"entity": "group_category_name", "value": "Women's Fashion"} [below]{"entity": "price_description", "value": "Under"} [47]{"entity": "price"}
+    - [secure]{"entity": "adjective"} and [core essential]{"entity": "topic", "value": "Core Essential"} [legging]{"entity": "type", "value": "Leggings"} [less expensive]{"entity": "price_description", "value": "Under"} [150]{"entity": "price"}
+    - [sensitive]{"entity": "adjective"} [maxidress]{"entity": "type", "value": "Maxi Dress"} with price [cheaper]{"entity": "price_description", "value": "Under"} [014]{"entity": "price"}
+    - [separate]{"entity": "adjective"} [overall]{"entity": "type", "value": "Overalls"}
+    - [sharp]{"entity": "adjective"} [rash guard]{"entity": "type", "value": "Rash Guard"}
+    - [shorts]{"entity": "type", "value": "Shorts"} of [sheer]{"entity": "adjective"} [silk]{"entity": "material", "value": "Silk"} [above]{"entity": "price_description", "value": "Above"} [45]{"entity": "price"} dollars
+    - my [aunt]{"entity": "group_category_name", "value": "Women's Fashion"} is looking for some [signature]{"entity": "adjective"} [knitwear]{"entity": "type", "value": "Knitwear"}, any recommendation?
+    - my style is [simple]{"entity": "topic", "value": "Minimalist"} so can you recommend for me some [knit wear]{"entity": "type", "value": "Knitwear"} with that style [more expensive]{"entity": "price_description", "value": "Above"} than [50]{"entity": "price"}?
+    - a [single]{"entity": "adjective"} [overshirt]{"entity": "type", "value": "Overshirt"} [higher]{"entity": "price_description", "value": "Above"} than [89]{"entity": "price"}
+    - sleek [leggin]{"entity": "type", "value": "Leggings"} for my [uncle]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - do you have any slim [leggings]{"entity": "type", "value": "Leggings"} ?
+    - [informal]{"entity": "topic", "value": "Casual"} and [slim-fit]{"entity": "adjective"} [knit-wear]{"entity": "type", "value": "Knitwear"} for old [lady]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [slip-on]{"entity": "adjective"} [loafers]{"entity": "type", "value": "Loafers"}
+    - in searching for [small]{"entity": "adjective"} [kurta]{"entity": "type", "value": "Kurta"} with [cultural]{"entity": "topic", "value": "Cultural"} topic
+    - recommend for me some [jogger]{"entity": "type", "value": "Joggers"} which can make me look [smart]{"entity": "adjective"}
+    - do you have any [joggers]{"entity": "type", "value": "Joggers"} that have [smart-casual]{"entity": "adjective"} style
+    - [smooth]{"entity": "adjective"} [texture]{"entity": "noun"} for [street-wear]{"entity": "topic", "value": "Streetwear"} [hodie]{"entity": "type", "value": "Hoodie"}
+    - I am looking for a [seasonal]{"entity": "topic", "value": "Seasonal"} [jacket]{"entity": "type", "value": "Jacket"} that can give me a [snug]{"entity": "adjective"} feeling
+    - [soft]{"entity": "adjective"} and [environmentally-friendly]{"entity": "topic", "value": "Eco-Friendly"} [flip flop]{"entity": "type", "value": "Flip-Flops"} for a [child]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - do you have any [running-shoes]{"entity": "type", "value": "Running Shoes"} made with [softshell]{"entity": "adjective"} material?
+    - [solid]{"entity": "adjective"} [flipflops]{"entity": "type", "value": "Flip-Flops"}
+    - [solo]{"entity": "adjective"} and [eco-friendly]{"entity": "topic", "value": "Eco-Friendly"} [polo shirt]{"entity": "type", "value": "Polo Shirt"}
+    - [sophisticated]{"entity": "adjective"} [midi-dress]{"entity": "type", "value": "Midi Dress"}
+    - searching for [midi dress]{"entity": "type", "value": "Midi Dress"} for [special]{"entity": "adjective"} [event]{"entity": "noun"}
+    - [sporty]{"entity": "adjective"} and [street wear]{"entity": "topic", "value": "Streetwear"} [hoodie]{"entity": "type", "value": "Hoodie"}
+    - [everyday essential]{"entity": "topic", "value": "Everyday Essential"} and [stainless]{"entity": "adjective"} [flip-flop]{"entity": "type", "value": "Flip-Flops"}
+    - [standard]{"entity": "adjective"} [flipflop]{"entity": "type", "value": "Flip-Flops"} for [summer]{"entity": "topic", "value": "Summer & Swim"}
+    - [statement-making]{"entity": "adjective"} [henley shirt]{"entity": "type", "value": "Henley Shirt"} with topic is [conscious choice]{"entity": "topic", "value": "Conscious Choice"}
+    - [straight]{"entity": "adjective"} and [core-essential]{"entity": "topic", "value": "Core Essential"} [slim-fit pants]{"entity": "type", "value": "Slim-Fit Trousers"} with material from [cotton]{"entity": "material", "value": "Cotton"}
+    - [straight-leg]{"entity": "adjective"} [slimfit trouser]{"entity": "type", "value": "Slim-Fit Trousers"} with material from [mesh]{"entity": "material", "value": "Mesh"}
+    - [street-ready]{"entity": "adjective"} [flip-flops]{"entity": "type", "value": "Flip-Flops"}
+    - [dress trousers]{"entity": "type", "value": "Dress Pants"} with [stretchy]{"entity": "adjective"} material
+    - [retro]{"entity": "topic", "value": "Retro"} [dress pants]{"entity": "type", "value": "Dress Pants"} with [striped]{"entity": "adjective"} [pattern]{"entity": "noun"} of [pumma]{"entity": "brand_name", "value": "Puma"}
+    - [dress pants]{"entity": "type", "value": "Dress Pants"} with [strong]{"entity": "adjective"} looking [pattern]{"entity": "adjective"}
+    - [ecofriendly]{"entity": "topic", "value": "Eco-Friendly"} and [stunning]{"entity": "adjective"} [dress pant]{"entity": "type", "value": "Dress Pants"} for my [mother]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [stylish]{"entity": "adjective"} and [urban essential]{"entity": "topic", "value": "Urban Essential"} [dress]{"entity": "type", "value": "Dress"} for [lady]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - do you have any [dress shirt]{"entity": "type", "value": "Dress Shirt"} that has [subtle]{"entity": "adjective"} style
+    - [sun-drenched]{"entity": "adjective"}
+    - you have any [flip flops]{"entity": "type", "value": "Flip-Flops"} with [sunny]{"entity": "adjective"} pattern ?
+    - [super]{"entity": "adjective"} [overalls]{"entity": "type", "value": "Overalls"}
+    - [clean design]{"entity": "topic", "value": "Clean Design"} and [super-soft]{"entity": "adjective"} [denim shirt]{"entity": "type", "value": "Denim Shirt"} of [everrest]{"entity": "brand_name", "value": "Everest"}
+    - [eco friendly]{"entity": "topic", "value": "Eco-Friendly"} and [supportive]{"entity": "adjective"} [rain-coat]{"entity": "type", "value": "Raincoat"}
+    - [sweat-wicking]{"entity": "adjective"} [culotte]{"entity": "type", "value": "Culottes"} of [routines]{"entity": "brand_name", "value": "Routine"}
+    - [kids everyday]{"entity": "topic", "value": "Kids Everyday"} and [sweet]{"entity": "adjective"} [dress pants]{"entity": "type", "value": "Dress Pants"} for [ladies]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [tailored]{"entity": "adjective"} [flannel shirt]{"entity": "type", "value": "Flannel Shirt"}
+    - [tapered]{"entity": "adjective"} [culottes]{"entity": "type", "value": "Culottes"} of [zara]{"entity": "brand_name", "value": "Zara"}
+    - [kid everyday]{"entity": "topic", "value": "Kids Everyday"} and [technical]{"entity": "adjective"} [rain coat]{"entity": "type", "value": "Raincoat"}
+    - [thermal]{"entity": "adjective"} [denim jacket]{"entity": "type", "value": "Denim Jacket"} of [uniqlo]{"entity": "brand_name", "value": "Uniqlo"}
+    - [thin]{"entity": "adjective"} [croptop]{"entity": "type", "value": "Crop Top"} for young [women]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - I want to make everyone thinks that I am a [thoughtful]{"entity": "adjective"} person, can you recommend for me some [crop-top]{"entity": "type", "value": "Crop Top"}
+    - [timeless]{"entity": "adjective"} [chino]{"entity": "type", "value": "Chinos"} for old [man]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - [top]{"entity": "adjective"} [over shirt]{"entity": "type", "value": "Overshirt"} and the topic is [streetwear]{"entity": "topic", "value": "Streetwear"}
+    - [total]{"entity": "adjective"} [over-shirt]{"entity": "type", "value": "Overshirt"}
+    - [environmentally friendly]{"entity": "topic", "value": "Eco-Friendly"} and [tough]{"entity": "adjective"} [chinos]{"entity": "type", "value": "Chinos"} for my [grandma]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - [festive wear]{"entity": "topic", "value": "Festive Wear"} and [traditional]{"entity": "adjective"} [croptop]{"entity": "type", "value": "Crop Top"} of [H & M]{"entity": "brand_name", "value": "H&M"}
+    - [transitional]{"entity": "adjective"} and [urban-essential]{"entity": "topic", "value": "Urban Essential"} [cover up]{"entity": "type", "value": "Cover-up"} of [H andM]{"entity": "brand_name", "value": "H&M"}
+    - [transparent]{"entity": "adjective"} [coverup]{"entity": "type", "value": "Cover-up"} of [H& M]{"entity": "brand_name", "value": "H&M"}
+    - [travel-ready]{"entity": "adjective"} [crop top]{"entity": "type", "value": "Crop Top"} for my [aunt]{"entity": "group_category_name", "value": "Women's Fashion"} of [H &M]{"entity": "brand_name", "value": "H&M"}
+    - looking for [Hand M]{"entity": "brand_name", "value": "H&M"} [trendy]{"entity": "adjective"} [corduroy trouser]{"entity": "type", "value": "Corduroy Pants"} 
+    - [true]{"entity": "adjective"} [mididress]{"entity": "type", "value": "Midi Dress"} and the topic is [summer and swim]{"entity": "topic", "value": "Summer & Swim"}
+    - do you have any [true-blue]{"entity": "adjective"} [cover-up]{"entity": "type", "value": "Cover-up"} for [summer]{"entity": "topic", "value": "Summer & Swim"} with topic [performance]{"entity": "topic", "value": "Performance"}
+    - [ultimate]{"entity": "adjective"} [fleece jacket]{"entity": "type", "value": "Fleece Jacket"} of [blom]{"entity": "brand_name", "value": "Bloom"}
+    - recommend for me [ultra-cozy]{"entity": "adjective"} [buttonup shirt]{"entity": "type", "value": "Button-up Shirt"} for my [grandad]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - searching for [ultra-soft]{"entity": "adjective"} [cover up]{"entity": "type", "value": "Cover-up"} made from [wool]{"entity": "material", "value": "Wool"}
+    - looking for [cargo pant]{"entity": "type", "value": "Cargo Pants"} with [unparalleled]{"entity": "adjective"} [pattern]{"entity": "noun"} made from [wol blend]{"entity": "material", "value": "Wool Blend"}
+    - do you have any outfit for [unexpected]{"entity": "adjective"} [occasions]{"entity": "noun"} for [children]{"entity": "group_category_name", "value": "Kid's Fashion"}
+    - does your shop sell any [unique]{"entity": "adjective"} [coverup]{"entity": "type", "value": "Cover-up"} made from [wol]{"entity": "material", "value": "Wool"}
+    - [modern work wear]{"entity": "topic", "value": "Modern Workwear"} and [urban]{"entity": "adjective"} [button up shirt]{"entity": "type", "value": "Button-up Shirt"} for my [grandpa]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - my [grandfather]{"entity": "group_category_name", "value": "Men's Fashion"} is searching for [urban-inspired]{"entity": "adjective"} [cargo trouser]{"entity": "type", "value": "Cargo Pants"} of [H and M]{"entity": "brand_name", "value": "H&M"}
+    - my [granddad]{"entity": "group_category_name", "value": "Men's Fashion"} trying to search for [useful]{"entity": "adjective"} and [business casual]{"entity": "topic", "value": "Business Casual"} [cargo pant]{"entity": "type", "value": "Cargo Pants"} of [HandM]{"entity": "brand_name", "value": "H&M"}
+    - any suggestions for [utilitarian]{"entity": "adjective"} [corduroy trousers]{"entity": "type", "value": "Corduroy Pants"} for [man]{"entity": "group_category_name", "value": "Men's Fashion"} of [H & M]{"entity": "brand_name", "value": "H&M"}
+    - does [uniquelo]{"entity": "brand_name", "value": "Uniqlo"} have any [versatile]{"entity": "adjective"} [corduroy pants]{"entity": "type", "value": "Corduroy Pants"} made from [wool blend]{"entity": "material", "value": "Wool Blend"} with topic [athleisure]{"entity": "topic", "value": "Athleisure"}
+    - do you have any products that can make me look a bit [vibrant]{"entity": "adjective"} of [routine]{"entity": "brand_name", "value": "Routine"}
+    - My [uncle]{"entity": "group_category_name", "value": "Men's Fashion"} is looking for some [vintage-inspired]{"entity": "adjective"} [cargo trousers]{"entity": "type", "value": "Cargo Pants"} of [puma]{"entity": "brand_name", "value": "Puma"}, do you have any recommendations?
+    - I am looking for [vintage-style]{"entity": "adjective"} [blouse]{"entity": "type", "value": "Blouse"} for my [mom]{"entity": "group_category_name", "value": "Women's Fashion"} of brand [bloom]{"entity": "brand_name", "value": "Bloom"}
+    - do you have [everest]{"entity": "brand_name", "value": "Everest"} [cargo pants][cargo pants]{"entity": "type", "value": "Cargo Pants"} which look a bit [virtual]{"entity": "adjective"}
+    - do you have any highly [visible]{"entity": "adjective"} [cap]{"entity": "type", "value": "Cap"} of [coolmate]{"entity": "brand_name", "value": "Coolmate"} for [man] {"entity": "group_category_name", "value": "Men's Fashion"} with the topic is [modern-workwear]{"entity": "topic", "value": "Modern Workwear"}
+    - I am want to give a [warm]{"entity": "adjective"} [cardigan]{"entity": "type", "value": "Cardigan"} for my [grandma]{"entity": "group_category_name", "value": "Women's Fashion"} as a present
+    - I am looking for [warm-weather]{"entity": "adjective"} [button up shirt]{"entity": "type", "value": "Button-up Shirt"} for my [husband]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - display for me products which can be [water-repellent]{"entity": "adjective"} for [men{"entity": "group_category_name", "value": "Men's Fashion"} of [bitis]{"entity": "brand_name", "value": "Biti's"}
+    - I am tryin to find some [water-resistant]{"entity": "topic", "value": "Weather-Ready"} products that I can wear in [rainy day]{"entity": "topic", "value": "Weather-Ready"} of [Adiddas]{"entity": "brand_name", "value": "Adidas"}
+    - show me some [water resistant]{"entity": "topic", "value": "Weather-Ready"} [coats]{"entity": "type", "value": "Coat"} for [rainy days]{"entity": "topic", "value": "Weather-Ready"}
+    - can you show some [boot]{"entity": "type", "value": "Boots"} that can prevent me from getting [wet]{"entity": "adjective"} of [H and M]{"entity": "brand_name", "value": "H&M"}
+    - do you have any [casual]{"entity": "topic", "value": "Casual"} [belts]{"entity": "type", "value": "Belt"} that can tighten my [wide]{"entity": "adjective"} belly
+    - show me some [wide-leg]{"entity": "adjective"} products for [women]{"entity": "group_category_name", "value": "Women's Fashion"} of brand [zara]{"entity": "brand_name", "value": "Zara"}
+    - do you have any [modern workwear]{"entity": "topic", "value": "Modern Workwear"} [bomber jacket]{"entity": "type", "value": "Bomber Jacket"} made of [viscose]{"entity": "material", "value": "Viscose"} that can be [wind-resistant]{"entity": "adjective"} of [guci]{"entity": "brand_name", "value": "Gucci"}?
+    - [worn-in]{"entity": "adjective"}
+    - does your shop has any products that have a [traditional]{"entity": "adjective"} [woven]{"entity": "noun"} made by [nikke]{"entity": "brand_name", "value": "Nike"}?
+    - formal and [business-casual]{"entity": "topic", "value": "Business Casual"} [shirt]{"entity": "category", "value": "Shirts"} with topic is modern
+    
+    - I am looking for some [Nike]{"entity": "brand_name", "value": "Nike"} [joggers]{"entity": "type", "value": "Joggers"} that are [comfortable]{"entity": "adjective", "value": "Comfortable"} enough for [hanging out on the weekend]{"entity": "topic", "value": "Lifestyle"}
+    - Show me some [stylish]{"entity": "adjective"} [sneakers]{"entity": "type", "value": "Sneakers"} I can [wear for a casual day in the city]{"entity": "topic", "value": "Lifestyle"}
+    - Do you have a [cozy]{"entity": "adjective"} [hoodie]{"entity": "type", "value": "Hoodie"} that is good for [running errands and grabbing coffee]{"entity": "topic", "value": "Lifestyle"}?
+    - Suggest a [fashionable]{"entity": "adjective"} set with [pants]{"entity": "type", "value": "Pants"} and a [jacket]{"entity": "type", "value": "Jacket"} for a [streetwear look]{"entity": "topic", "value": "Streetwear"}
+    - I need [training pants]{"entity": "type", "value": "Pants"} that are [sweat-wicking]{"entity": "adjective"} and [stretchy]{"entity": "adjective"} for my [gym workouts]{"entity": "topic", "value": "Performance"}
+    - Can you show me [running shoes]{"entity": "type", "value": "Running Shoes"} from [Adidas]{"entity": "brand_name", "value": "Adidas"} for [long-distance training]{"entity": "topic", "value": "Performance"}?
+    - Show me [lightweight]{"entity": "adjective", "value": "light"} [windbreakers]{"entity": "type", "value": "Windbreaker"} that are [water-resistant]{"entity": "topic", "value": "Weather-Ready"}, suitable for [morning runs]{"entity": "topic", "value": "Performance"}
+    - I am looking for some [high-performance]{"entity": "adjective"} [gear]{"entity": "category", "value": "Gear"}, including [outerwear]{"entity": "type", "value": "Outerwear"}, for [intense outdoor sports]{"entity": "topic", "value": "Performance"}
+    - Show me your collection of [athleisure]{"entity": "topic", "value": "Athleisure"} [outerwear]{"entity": "type", "value": "Outerwear"} for [man]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - Can you suggest some [smart casual looks]{"entity": "topic", "value": "Business Casual"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}? I need a versatile [shirt]{"entity": "category", "value": "Shirts"} I can wear on a date or at the office
+    - I need to refresh my wardrobe with some new [office outfits]{"entity": "topic", "value": "Business Casual"}. Can you show me your new collection of [dresses]{"entity": "type", "value": "Dresses"}?
+    - I am searching for a [classic]{"entity": "adjective"} leather [tote bag]{"entity": "type", "value": "Tote Bag"} that is big enough to carry my laptop to the [office]{"entity": "topic", "value": "Modern Workwear"}
+    - I have a few important [work presentations]{"entity": "topic", "value": "Modern Workwear"} coming up. Do you have a [sharp]{"entity": "adjective"} looking [vest]{"entity": "type", "value": "Vest"}
+    - What kind of [shoes]{"entity": "type", "value": "Shoes"} would you recommend for a [corporate environment]{"entity": "topic", "value": "Modern Workwear"}?
+    - I need a [comfortable]{"entity": "adjective"} [blouse]{"entity": "type", "value": "Blouse"} for [women]{"entity": "group_category_name", "value": "Women's Fashion"} that would be appropriate for my [9-to-5 job]{"entity": "topic", "value": "Business Casual"}
+    - What are some of your most [exclusive items]{"entity": "topic", "value": "Statement Piece"} that have just arrived? 
+    - I want to buy myself a birthday present, something really [luxurious]{"entity": "topic", "value": "Luxury"}. Can you show me something of [guci]{"entity": "type", "value": "Gucci"}
+    - I want a look that's guaranteed to turn heads. Show me a [dress]{"entity": "type", "value": "Dress"} that a [celebrity would wear]{"entity": "topic", "value": "Luxury"} on the red carpet.
+    - My [dress]{"entity": "type", "value": "Dress"} for the wedding is quite [simple]{"entity": "topic", "value": "Minimalist"}, so I am looking for another [statement piece]{"entity": "topic", "value": "Statement Piece"}
+    - I am ready to invest in a quality [dress pants]{"entity": "type", "value": "Dress Pants"}. Can you show me your [high-end options]{"entity": "topic", "value": "Luxury"} from brands like [Gucci]{"entity": "brand_name", "value": "Gucci"}
+    - I have a corporate [black-tie event]{"entity": "topic", "value": "Luxury"} next month and the dress code is strictly formal
+    - My daughter is graduating from university, so it is a very [special occasion]{"entity": "topic", "value": "Luxury"}. I want to find her a [beautiful]{"entity": "adjective"} [shirt]{"entity": "category", "value": "Shirts"} that she can cherish for years to come.
+    - I am looking for a [vintage-style] {"entity": "topic", "value": "Vintage} [denim jacket]{"entity": "type", "value": "Denim Jacket"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - I am trying to put together a full [retro look]{"entity": "topic", "value": "Retro"} for a music festival. Can you show me some [wide-leg trousers]{"entity": "type", "value": "Wide-Leg Pants"}.
+    - I love clothes with an [old-school vibe]{"entity": "topic", "value": "Heritage Style"}. Does [zara]{"entity": "brand_name", "value": "Zara"} have any [polo shirts]{"entity": "type", "value": "Polo Shirt"} like that?
+    - I am really into [90s fashion]{"entity": "topic", "value": "Vintage"} right now. Do you have a [simple]{"entity": "topic", "value": "Minimalist"} [dress]{"entity": "type", "value": "Dress"} that I can layer over a [t-shirt]{"entity": "type", "value": "T-shirt"}?
+    - I am searching for a [warm]{"entity": "adjective"} [jacket]{"entity": "type", "value": "Jacket"} that has a real [80s fashion]{"entity": "topic", "value": "Vintage"} feel to it, maybe from [zara]{"entity": "brand_name", "value": "Zara"}?
+    - Show me some [henley shirt]{"entity": "type", "value": "Henley Shirt"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"} with a [throwback feel]{"entity": "topic", "value": "Heritage Style"}, like with an old band or movie poster on it
+    - My grandfather loves [traditional-looking]{"entity": "topic", "value": "Vintage"} clothes. I am trying to find a [warm]{"entity": "adjective"} wool [cardigan]{"entity": "type", "value": "Cardigan"} for his birthday.
+    - I want to find a pair of [high-waisted]{"entity": "adjective"} [jeans]{"entity": "type", "value": "Jeans"} to get that classic [70s aesthetic]{"entity": "topic", "value": "Retro"}.
+    - I am moving to a new city and want to update my wardrobe. Can you suggest a versatile [bomber jacket]{"entity": "type", "value": "Bomber Jacket"} that's perfect for a cool [city look]{"entity": "topic", "value": "Urban Essential"}?
+    - Help me put together a complete [streetwear look]{"entity": "topic", "value": "Streetwear"}. I need some [cargo pants]{"entity": "type", "value": "Cargo Pants"} from [Coolmate]{"entity": "brand_name", "value": "Coolmate"}.
+    - My son is really into the [skater vibe]{"entity": "topic", "value": "Streetwear"}. Do you have any baggy [shorts]{"entity": "type", "value": "Shorts"} or slip-on [sneakers]{"entity": "type", "value": "Sneakers"} from brands like [Nike]{"entity": "brand_name", "value": "Nike"} or [Biti's]{"entity": "brand_name", "value": "Biti's"}?
+    - I want a new pair of [women's]{"entity": "group_category_name", "value": "Women's Fashion"} [sneakers]{"entity": "type", "value": "Sneakers"} that are really [on trend]{"entity": "topic", "value": "Urban Essential"} this season. 
+    - I have a trip coming up and I need an outfit that [looks modern]{"entity": "topic", "value": "Urban Essential"} in photos for my Instagram feed. Can you suggest some cool [accessories]{"entity": "type", "value": "Accessories"}?
+    - I am planning a trip to a cold country and need some gear [for the winter]{"entity": "topic", "value": "Seasonal"}. Can you show me your [warmest]{"entity": "adjective", "value": "Warm"} [parkas]{"entity": "type", "value": "Parka"} from [100]{"entity": "price"} dollar
+    - I need to find a versatile [lightweight jacket]{"entity": "type", "value": "Jacket"} for [the fall]{"entity": "topic", "value": "Seasonal"}. Something I can layer easily
+    - What kind of [outerwear]{"entity": "type", "value": "Outerwear"} do you recommend for the light showers we get [in spring]{"entity": "topic", "value": "Seasonal"}? I prefer some from [Bloom]{"entity": "brand_name", "value": "Bloom"}
+    - I am tired of getting wet on my commute. Show me your best [raincoats]{"entity": "type", "value": "Raincoat"} for [women]{"entity": "group_category_name", "value": "Women's Fashion"} that are suitable for [rainy days]{"entity": "topic", "value": "Weather-Ready"}
+    - I need a [good windbreaker]{"entity": "topic", "value": "Weather-Ready"} for my morning runs. It needs to be [lightweight]{"entity": "adjective", "value": "light"} and breathable
+    - Are these [hiking boots]{"entity": "type", "value": "Boots"} completely [waterproof]{"entity": "topic", "value": "Weather-Ready"}? I need something that can handle stream crossings
+    - I really do not  need a full raincoat, just a [jacket]{"entity": "type", "value": "Jacket"} that is [water-resistant]{"entity": "topic", "value": "Weather-Ready"} enough for a light drizzle.
+    - I am going on a trip to the mountains where there's a lot of [unpredictable weather]{"entity": "topic", "value": "Weather-Ready"}. Can you suggest a [wind breaker]{"entity": "type", "value": "Windbreaker"} that is both wind and [water-resistant]"entity": "topic", "value": "Weather-Ready"?
+    - It is very [windy]{"entity": "topic", "value": "Weather-Ready"} where I live. Show me some [jackets]{"entity": "type", "value": "Jacket"} from [Uniqlo]{"entity": "brand_name", "value": "Uniqlo"} that can block the wind effectively.
+    - I am updating my kids' wardrobe [for summer]{"entity": "topic", "value": "Summer & Swim"}. I need to buy them some [sandals]{"entity": "type", "value": "Sandals"} that are suitable to go on sand.
+    - My wardrobe feels so dark. I want to buy some [bright]{"entity": "adjective"} [t-shirt]{"entity": "type", "value": "T-shirt"} for the [summer]{"entity": "topic", "value": "Summer & Swim"}
+    - I am getting ready for my [holiday]{"entity": "topic", "value": "Summer & Swim"}. I need some [men's]{"entity": "group_category_name", "value": "Men's Fashion"} [shorts]{"entity": "type", "value": "Shorts"} from [Uniqlo]{"entity": "brand_name", "value": "Uniqlo"}
+    - I need a sun [cap]{"entity": "type", "value": "Cap"} for my daughter for our trip to the [beach]{"entity": "topic", "value": "Summer & Swim"}. Does [H&M]{"entity": "brand_name", "value": "H&M"} have any options, preferably [less than]{"entity": "price_description", "value": "Under"} [500]{"entity": "price"}$
+    - I need a [coolmate]{"entity": "brand_name", "value": "Coolmate"} [polo shirt]{"entity": "type", "value": "Polo Shirt"} that's [breathable]{"entity": "adjective"} enough for this [hot weather]{"entity": "topic", "value": "Summer & Swim"}
+    - Show me the new [buttonup shirts]{"entity": "type", "value": "Button-up Shirt"} [speedos]{"entity": "topic", "value": "Summer & Swim"} collection from [Nike]{"entity": "brand_name", "value": "Nike"}. I am looking for something [under]{"entity": "price_description", "value": "Under"} the [70]{"entity": "price"}$
+    - I would love to find a [breezy sundress]{"entity": "topic", "value": "Summer & Swim"} from [Bloom]{"entity": "brand_name", "value": "Bloom"}. Recommend me something.
+    - I am looking for some [bitis]{"entity": "brand_name", "value": "Biti's"} [flipflop]{"entity": "type", "value": "Flip-Flops"} for my kids["entity": "group_category_name", "value": "Kid's Fashion"] to wear to the [pool]{"entity": "topic", "value": "Summer & Swim"}
+    - My top priority is [sun protection]{"entity": "topic", "value": "Summer & Swim"}. Does [Uniqlo]{"entity": "brand_name", "value": "Uniqlo"} make a  [rash guard]{"entity": "type", "value": "Rash Guard"} that can eliminate sun rays?
+    - I really need a [UPF 50+]{"entity": "topic", "value": "Summer & Swim"} [coat]{"entity": "type", "value": "Coat"} from coolMate{"entity": "brand_name", "value": "CoolMate"} for [women]{"entity": "group_category_name", "value": "Women's Fashion"}
+    - I need a [vacation-ready]{"entity": "topic", "value": "Summer & Swim"} [slimfit trouser]{"entity": "type", "value": "Slim-Fit Trousers"} from [Zara]{"entity": "brand_name", "value": "Zara"}. My budget allows me to spend [up to]{"entity": "price_description", "value": "Under"} [200]{"entity": "price"} dollar
+    - Which [men's]{"entity": "group_category_name", "value": "Men's Fashion"} [swimsuit]{"entity": "type", "value": "Swimsuit"} from [Adidas]{"entity": "brand_name", "value": "Adidas"} are [quick-drying]{"entity": "topic", "value": "Summer & Swim"}?
+    - My wardrobe needs a refresh. I am finding some [basic fashion]{"entity": "topic", "value": "Everyday Essential"} items from [Uniqlo]{"entity": "brand_name", "value": "Uniqlo"}, like some plain [t-shirts]{"entity": "type", "value": "T-shirt"}
+    - I need a [simple]{"entity": "topic", "value": "Minimalist"}, [easy-to-wear]{"entity": "topic", "value": "Everyday Essential"} [dress]{"entity": "type", "value": "Dress"} for [women]{"entity": "group_category_name", "value": "Women's Fashion"} from [Zara]{"entity": "brand_name", "value": "Zara"}. Something I can just throw on for [work]{"entity": "topic", "value": "Business Casual"} or errands.
+    - Do you have any [durable]{"entity": "adjective"} [runningshoes]{"entity": "type", "value": "Running Shoes"} from [Everest]{"entity": "brand_name", "value": "Everest"} for my [daily life]{"entity": "topic", "value": "Everyday Essential"}
+    - I have [a casual gathering]{"entity": "topic", "value": "Casual"} with friends. Show me some [stylish]{"entity": "adjective"} [polo shirts]{"entity": "type", "value": "Polo Shirt"} from [Coolmate]{"entity": "brand_name", "value": "Coolmate"} that are [around]{"entity": "price_description", "value": "Under"} [30]{"entity": "price"}$
+    - I am looking for an [all-purpose]{"entity": "topic", "value": "Casual"} leather [jacket]{"entity": "type", "value": "Jacket"} from [H&M]{"entity": "brand_name", "value": "H&M"}
+    - Mornings are so busy. I just want some outfits I [don't have to think about]{"entity": "topic", "value": "Everyday Essential"}. Do [Zara]{"entity": "brand_name", "value": "Zara"} have any [dress pants]{"entity": "type", "value": "Dress Pants"} for [woman]{"entity": "group_category_name", "value": "Women's Fashion"} [under]{"entity": "price_description", "value": "Under"} [80]{"entity": "price"}$
+    - I need to buy new shoes for my [little boy]{"entity": "topic", "value": "Kids Everyday"}. I am looking for [sneakers]{"entity": "type", "value": "Sneakers"} from [Biti's]{"entity": "brand_name", "value": "Biti's"}. Are there any on sale?
+    - I am looking for clothes for my [little child]{"entity": "topic", "value": "Kids Everyday"}. He plays outside a lot, so I need some [durable]{"entity": "adjective", "value": "Durable"} [joggers]{"entity": "type", "value": "Joggers"} from [Coolmate]{"entity": "brand_name", "value": "Coolmate"}. Can you show me options?
+    - My mom is finding for my [little daughter]{"entity": "topic", "value": "Kids Everyday"} a [cute]{"entity": "adjective"} floral [dress]{"entity": "type", "value": "Dress"} from [Zara]{"entity": "brand_name", "value": "Zara"}. Recommend any?
+    - I am building a capsule wardrobe. I am looking for a [button-up shirt]{"entity": "type", "value": "Button-up Shirt"} from [Uniqlo]{"entity": "brand_name", "value": "Uniqlo"} with a really [clean design]{"entity": "topic", "value": "Clean Design"}
+    - I need a basic black [hoodie]{"entity": "type", "value": "Hoodie"} for [men]{"entity": "group_category_name", "value": "Men's Fashion"}. The most important thing for me is [no logos or graphics]{"entity": "topic", "value": "Minimalist"}. Does [Routine]{"entity": "brand_name", "value": "Routine"} have anything like that for [up to]{"entity": "price_description", "value": "Under"} [40]{"entity": "price"}$
+    - I am not a fan of loud patterns, Are there any [understated style]{"entity": "topic", "value": "Clean Design"}? I need a [versatile]{"entity": "adjective"} [dress]{"entity": "type", "value": "Dress"} from [Zara]{"entity": "brand_name", "value": "Zara"}.
+    - I am looking for a [9 to 5]{"entity": "topic", "value": "Business Casual"} [shirts]{"entity": "category", "value": "Shirts"} for my [husband]{"entity": "group_category_name", "value": "Men's Fashion"}
+    - do you have any recommendations for [pants]{"entity": "category", "value": "Pants"} that are suitable for a [9 - 5 job]{"entity": "topic", "value": "Business Casual"}
+    - I am trying to find for [shirts]{"entity": "category", "value": "Shirts"} that can be worn for [working]{"entity": "topic", "value": "Business Casual"} [from]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - I am trying to find [trouser]{"entity": "category", "value": "Pants"} that can be worn for [works]{"entity": "topic", "value": "Business Casual"} [from]{"entity": "price_description", "value": "Between"} [15]{"entity": "price"} - [200]{"entity": "price"}
+    - I am trying to find [shirts]{"entity": "category", "value": "Shirts"} that can be worn for [work]{"entity": "topic", "value": "Business Casual"} [in the range of]{"entity": "price_description", "value": "Between"} [79]{"entity": "price"} [120]{"entity": "price"} [from]{"entity": "price_description", "value": "Between"} [1000]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [3000]{"entity": "price"}
+    - I am looking products for my [lower body]{"entity": "category", "value": "Pants"} of [zarra]{"entity": "brand_name", "value": "Zara"} with price [below]{"entity": "price_description", "value": "Under"} [1500]{"entity": "price"}
+    - any recommendations for my [lower part body]{"entity": "category", "value": "Pants"} of [zarra]{"entity": "brand_name", "value": "Zara"} with price [cheaper]{"entity": "price_description", "value": "Under"} than [100]{"entity": "price"}
+    - any recommendations for my [lower body]{"entity": "category", "value": "Pants"} of [zarra]{"entity": "brand_name", "value": "Zara"} with price [above]{"entity": "price_description", "value": "Above"} [2000]{"entity": "price"}
+    - do you have any recommendations for my [lower body]{"entity": "category", "value": "Pants"} of [zarra]{"entity": "brand_name", "value": "Zara"} with price [more expensive]{"entity": "price_description", "value": "Above"} [999]{"entity": "price"}
+
+- intent: provide_type
+  examples: |
+    - the product type I am looking for is [jeans]{"entity": "type", "value": "Jeans"}
+    - type [jean]{"entity": "type", "value": "Jeans"}
+    - [belt]{"entity": "type", "value": "Belt"}
+    - [blouse]{"entity": "type", "value": "Blouse"}
+    - [bomber jacket]{"entity": "type", "value": "Bomber Jacket"}
+    - [boots]{"entity": "type", "value": "Boots"}
+    - [button-up shirt]{"entity": "type", "value": "Button-up Shirt"}
+    - [button up shirt]{"entity": "type", "value": "Button-up Shirt"}
+    - [buttonup shirt]{"entity": "type", "value": "Button-up Shirt"}
+    - [buttonup]{"entity": "type", "value": "Button-up Shirt"}
+    - [button-up]{"entity": "type", "value": "Button-up Shirt"}
+    - [button up]{"entity": "type", "value": "Button-up Shirt"}
+    - [cap]{"entity": "type", "value": "Cap"}
+    - [cardigan]{"entity": "type", "value": "Cardigan"}
+    - [cargo pants]{"entity": "type", "value": "Cargo Pants"}
+    - [cargo trousers]{"entity": "type", "value": "Cargo Pants"}
+    - [cargo pant]{"entity": "type", "value": "Cargo Pants"}
+    - [cargo trouser]{"entity": "type", "value": "Cargo Pants"}
+    - [coat]{"entity": "type", "value": "Coat"}
+    - [corduroy pants]{"entity": "type", "value": "Corduroy Pants"}
+    - [corduroy trousers]{"entity": "type", "value": "Corduroy Pants"}
+    - [corduroy trouser]{"entity": "type", "value": "Corduroy Pants"}
+    - [corduroy pant]{"entity": "type", "value": "Corduroy Pants"}
+    - [cover-up]{"entity": "type", "value": "Cover-up"}
+    - [cover up]{"entity": "type", "value": "Cover-up"}
+    - [coverup]{"entity": "type", "value": "Cover-up"}
+    - [crop top]{"entity": "type", "value": "Crop Top"}
+    - [croptop]{"entity": "type", "value": "Crop Top"}
+    - [crop-top]{"entity": "type", "value": "Crop Top"}
+    - [culottes]{"entity": "type", "value": "Culottes"}
+    - [culotte]{"entity": "type", "value": "Culottes"}
+    - [chinos]{"entity": "type", "value": "Chinos"}
+    - [chino]{"entity": "type", "value": "Chinos"}
+    - [denim jacket]{"entity": "type", "value": "Denim Jacket"}
+    - [denim shirt]{"entity": "type", "value": "Denim Shirt"}
+    - [dress]{"entity": "type", "value": "Dress"}
+    - [dress pants]{"entity": "type", "value": "Dress Pants"}
+    - [dress pant]{"entity": "type", "value": "Dress Pants"}
+    - [dress trousers]{"entity": "type", "value": "Dress Pants"}
+    - [dress trouser]{"entity": "type", "value": "Dress Pants"}
+    - [dress shirt]{"entity": "type", "value": "Dress Shirt"}
+    - [flannel shirt]{"entity": "type", "value": "Flannel Shirt"}
+    - [fleece jacket]{"entity": "type", "value": "Fleece Jacket"}
+    - [flip-flops]{"entity": "type", "value": "Flip-Flops"}
+    - [flip flops]{"entity": "type", "value": "Flip-Flops"}
+    - [flipflops]{"entity": "type", "value": "Flip-Flops"}
+    - [flip-flop]{"entity": "type", "value": "Flip-Flops"}
+    - [flip flop]{"entity": "type", "value": "Flip-Flops"}
+    - [flipflop]{"entity": "type", "value": "Flip-Flops"}
+    - [henley shirt]{"entity": "type", "value": "Henley Shirt"}
+    - [hoodie]{"entity": "type", "value": "Hoodie"}
+    - [hodie]{"entity": "type", "value": "Hoodie"}
+    - [jacket]{"entity": "type", "value": "Jacket"}
+    - [jeans]{"entity": "type", "value": "Jeans"}
+    - [joggers]{"entity": "type", "value": "Joggers"}
+    - [jogger]{"entity": "type", "value": "Joggers"}
+    - [knitwear]{"entity": "type", "value": "Knitwear"}
+    - [knit wear]{"entity": "type", "value": "Knitwear"}
+    - [knit-wear]{"entity": "type", "value": "Knitwear"}
+    - [kurta]{"entity": "type", "value": "Kurta"}
+    - [leggings]{"entity": "type", "value": "Leggings"}
+    - [leggin]{"entity": "type", "value": "Leggings"}
+    - [legging]{"entity": "type", "value": "Leggings"}
+    - [loafers]{"entity": "type", "value": "Loafers"}
+    - [loafer]{"entity": "type", "value": "Loafers"}
+    - [maxi dress]{"entity": "type", "value": "Maxi Dress"}
+    - [maxi-dress]{"entity": "type", "value": "Maxi Dress"}
+    - [maxidress]{"entity": "type", "value": "Maxi Dress"}
+    - [midi dress]{"entity": "type", "value": "Midi Dress"}
+    - [midi-dress]{"entity": "type", "value": "Midi Dress"}
+    - [mididress]{"entity": "type", "value": "Midi Dress"}
+    - [overalls]{"entity": "type", "value": "Overalls"}
+    - [overall]{"entity": "type", "value": "Overalls"}
+    - [overshirt]{"entity": "type", "value": "Overshirt"}
+    - [over-shirt]{"entity": "type", "value": "Overshirt"}
+    - [over shirt]{"entity": "type", "value": "Overshirt"}
+    - [parka]{"entity": "type", "value": "Parka"}
+    - [polo shirt]{"entity": "type", "value": "Polo Shirt"}
+    - [puffer jacket]{"entity": "type", "value": "Puffer Jacket"}
+    - [pufer jacket]{"entity": "type", "value": "Puffer Jacket"}
+    - [raincoat]{"entity": "type", "value": "Raincoat"}
+    - [rain coat]{"entity": "type", "value": "Raincoat"}
+    - [rain-coat]{"entity": "type", "value": "Raincoat"}
+    - [rash guard]{"entity": "type", "value": "Rash Guard"}
+    - [rashguard]{"entity": "type", "value": "Rash Guard"}
+    - [rash-guard]{"entity": "type", "value": "Rash Guard"}
+    - [running shoes]{"entity": "type", "value": "Running Shoes"}
+    - [running-shoes]{"entity": "type", "value": "Running Shoes"}
+    - [runningshoes]{"entity": "type", "value": "Running Shoes"}
+    - [sandals]{"entity": "type", "value": "Sandals"}
+    - [sandal]{"entity": "type", "value": "Sandals"}
+    - [scarf]{"entity": "type", "value": "Scarf"}
+    - [shorts]{"entity": "type", "value": "Shorts"}
+    - [skirt]{"entity": "type", "value": "Skirt"}
+    - [slim-fit trousers]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim fit trousers]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slimfit trousers]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim-fit trouser]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim fit trouser]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slimfit trouser]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim-fit pants]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim fit pants]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slimfit pants]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim-fit pant]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slim fit pant]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [slimfit pant]{"entity": "type", "value": "Slim-Fit Trousers"}
+    - [sneakers]{"entity": "type", "value": "Sneakers"}
+    - [sneaker]{"entity": "type", "value": "Sneakers"}
+    - [softshell jacket]{"entity": "type", "value": "Softshell Jacket"}
+    - [soft-shell jacket]{"entity": "type", "value": "Softshell Jacket"}
+    - [soft shell jacket]{"entity": "type", "value": "Softshell Jacket"}
+    - [sports jacket]{"entity": "type", "value": "Sports Jacket"}
+    - [sports-jacket]{"entity": "type", "value": "Sports Jacket"}
+    - [sport jacket]{"entity": "type", "value": "Sports Jacket"}
+    - [sport-jacket]{"entity": "type", "value": "Sports Jacket"}
+    - [sweater]{"entity": "type", "value": "Sweater"}
+    - [swim shorts]{"entity": "type", "value": "Swim Shorts"}
+    - [swim short]{"entity": "type", "value": "Swim Shorts"}
+    - [swimsuit]{"entity": "type", "value": "Swimsuit"}
+    - [swim suit]{"entity": "type", "value": "Swimsuit"}
+    - [swim-suit]{"entity": "type", "value": "Swimsuit"}
+    - [tote bag]{"entity": "type", "value": "Tote Bag"}
+    - [tote-bag]{"entity": "type", "value": "Tote Bag"}
+    - [totebag]{"entity": "type", "value": "Tote Bag"}
+    - [t-shirt]{"entity": "type", "value": "T-shirt"}
+    - [t shirt]{"entity": "type", "value": "T-shirt"}
+    - [tshirt]{"entity": "type", "value": "T-shirt"}
+    - [tee]{"entity": "type", "value": "T-shirt"}
+    - [tees]{"entity": "type", "value": "T-shirt"}
+    - [tunic]{"entity": "type", "value": "Tunic"}
+    - [track pants]{"entity": "type", "value": "Track Pants"}
+    - [track pant]{"entity": "type", "value": "Track Pants"}
+    - [track trousers]{"entity": "type", "value": "Track Pants"}
+    - [track trouser]{"entity": "type", "value": "Track Pants"}
+    - [trench coat]{"entity": "type", "value": "Trench Coat"}
+    - [utility coat]{"entity": "type", "value": "Utility Coat"}
+    - [vest]{"entity": "type", "value": "Vest"}
+    - [water shoes]{"entity": "type", "value": "Water Shoes"}
+    - [wide-leg pants]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide leg pants]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide-leg pant]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide leg pant]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide-leg trousers]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide leg trousers]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide-leg trouser]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [wide leg trouser]{"entity": "type", "value": "Wide-Leg Pants"}
+    - [windbreaker]{"entity": "type", "value": "Windbreaker"}
+    - [wind-breaker]{"entity": "type", "value": "Windbreaker"}
+    - [wind breaker]{"entity": "type", "value": "Windbreaker"}
+    - [wool coat]{"entity": "type", "value": "Wool Coat"} type
+
+- intent: provide_material
+  examples: |
+    - the material is [denim]{"entity": "material", "value": "Denim"}
+    - [cotton]{"entity": "material", "value": "Cotton"}
+    - [coton]{"entity": "material", "value": "Cotton"}
+    - [fleece]{"entity": "material", "value": "Fleece"}
+    - [airism]{"entity": "material", "value": "AIRism"}
+    - [canvas]{"entity": "material", "value": "Canvas"}
+    - [canva]{"entity": "material", "value": "Canvas"}
+    - [corduroy]{"entity": "material", "value": "Corduroy"}
+    - [cotton]{"entity": "material", "value": "Cotton"}
+    - [chiffon]{"entity": "material", "value": "Chiffon"}
+    - [chifon]{"entity": "material", "value": "Chiffon"}
+    - [denim]{"entity": "material", "value": "Denim"}
+    - [fleece]{"entity": "material", "value": "Fleece"}
+    - [flece]{"entity": "material", "value": "Fleece"}
+    - [flecce]{"entity": "material", "value": "Fleece"}
+    - [fleeccee]{"entity": "material", "value": "Fleece"}
+    - [leather]{"entity": "material", "value": "Leather"}
+    - [lether]{"entity": "material", "value": "Leather"}
+    - [linen]{"entity": "material", "value": "Linen"}
+    - [linene]{"entity": "material", "value": "Linen"}
+    - [cotton]{"entity": "material", "value": "Cotton"}
+    - [coton]{"entity": "material", "value": "Cotton"}
+    - [mesh]{"entity": "material", "value": "Mesh"}
+    - [rubber]{"entity": "material", "value": "Rubber"}
+    - [ruber]{"entity": "material", "value": "Rubber"}
+    - [organic cotton]{"entity": "material", "value": "Organic Cotton"}
+    - [polyester]{"entity": "material", "value": "Polyester"}
+    - [recycled cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [recycling cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [recycle cotton]{"entity": "material", "value": "Recycled Cotton"}
+    - [recycled nylon]{"entity": "material", "value": "Recycled Nylon"}
+    - [recycling nylon]{"entity": "material", "value": "Recycled Nylon"}
+    - [recycle nylon]{"entity": "material", "value": "Recycled Nylon"}
+    - [recycled polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [recycling polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [recycle polyester]{"entity": "material", "value": "Recycled Polyester"}
+    - [recycled rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycling rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycle rubber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycled ruber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycling ruber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycled ruber]{"entity": "material", "value": "Recycled Rubber"}
+    - [recycled wool]{"entity": "material", "value": "Recycled Wool"}
+    - [recycling wool]{"entity": "material", "value": "Recycled Wool"}
+    - [recycle wool]{"entity": "material", "value": "Recycled Wool"}
+    - [recycled wol]{"entity": "material", "value": "Recycled Wool"}
+    - [recycling wol]{"entity": "material", "value": "Recycled Wool"}
+    - [recycle wol]{"entity": "material", "value": "Recycled Wool"}
+    - [silk]{"entity": "material", "value": "Silk"}
+    - [spandex]{"entity": "material", "value": "Spandex"}
+    - [viscose]{"entity": "material", "value": "Viscose"}
+    - [wool]{"entity": "material", "value": "Wool"}
+    - [wol]{"entity": "material", "value": "Wool"}
+    - [wool blend]{"entity": "material", "value": "Wool Blend"}
+    - [wol blend]{"entity": "material", "value": "Wool Blend"}
+
+- intent: provide_topic
+  examples: |
+    - the topic I am looking for is [seasonal]{"entity": "topic", "value": "Seasonal"}
+    - searching for [casual]{"entity": "topic", "value": "Casual"} topic
+    - [athleisure]{"entity": "topic", "value": "Athleisure"}
+    - [lifestyle]{"entity": "topic", "value": "Lifestyle"}
+    - [performance]{"entity": "topic", "value": "Performance"}
+    - [business casual]{"entity": "topic", "value": "Business Casual"}
+    - [business-casual]{"entity": "topic", "value": "Business Casual"}
+    - [modern workwear]{"entity": "topic", "value": "Modern Workwear"}
+    - [modern-workwear]{"entity": "topic", "value": "Modern Workwear"}
+    - [modern work wear]{"entity": "topic", "value": "Modern Workwear"}
+    - [casual]{"entity": "topic", "value": "Casual"}
+    - [everyday essential]{"entity": "topic", "value": "Everyday Essential"}
+    - [kids everyday]{"entity": "topic", "value": "Kids Everyday"}
+    - [kid everyday]{"entity": "topic", "value": "Kids Everyday"}
+    - [festive wear]{"entity": "topic", "value": "Festive Wear"}
+    - [informal]{"entity": "topic", "value": "Casual"}
+    - [cultural]{"entity": "topic", "value": "Cultural"}
+    - [eco-friendly]{"entity": "topic", "value": "Eco-Friendly"}
+    - [eco friendly]{"entity": "topic", "value": "Eco-Friendly"}
+    - [ecofriendly]{"entity": "topic", "value": "Eco-Friendly"}
+    - [environmentally friendly]{"entity": "topic", "value": "Eco-Friendly"}
+    - [environmentally-friendly]{"entity": "topic", "value": "Eco-Friendly"}
+    - [conscious choice]{"entity": "topic", "value": "Conscious Choice"}
+    - [luxury]{"entity": "topic", "value": "Luxury"}
+    - [statement piece]{"entity": "topic", "value": "Statement Piece"}
+    - [minimalist]{"entity": "topic", "value": "Minimalist"}
+    - [clean design]{"entity": "topic", "value": "Clean Design"}
+    - [seasonal]{"entity": "topic", "value": "Seasonal"}
+    - [summer & swim]{"entity": "topic", "value": "Summer & Swim"}
+    - [summer and swim]{"entity": "topic", "value": "Summer & Swim"}
+    - [weather-ready]{"entity": "topic", "value": "Weather-Ready"}
+    - [streetwear]{"entity": "topic", "value": "Streetwear"}
+    - [street wear]{"entity": "topic", "value": "Streetwear"}
+    - [street-wear]{"entity": "topic", "value": "Streetwear"}
+    - [urban essential]{"entity": "topic", "value": "Urban Essential"}
+    - [urban-essential]{"entity": "topic", "value": "Urban Essential"}
+    - [core essential]{"entity": "topic", "value": "Core Essential"}
+    - [core-essential]{"entity": "topic", "value": "Core Essential"}
+    - [sustainable]{"entity": "topic", "value": "Sustainable"}
+    - [vintage]{"entity": "topic", "value": "Vintage"}
+    - [retro]{"entity": "topic", "value": "Retro"}
+    - [heritage style]{"entity": "topic", "value": "Heritage Style"}
+
+    
+    - [hanging out on the weekend]{"entity": "topic", "value": "Lifestyle"}
+    - [wear for a casual day in the city]{"entity": "topic", "value": "Lifestyle"}
+    - [running errands and grabbing coffee]{"entity": "topic", "value": "Lifestyle"}
+    - [streetwear look]{"entity": "topic", "value": "Streetwear"}
+    - [gym workouts]{"entity": "topic", "value": "Performance"}
+    - [long-distance training]{"entity": "topic", "value": "Performance"}
+    - [morning runs]{"entity": "topic", "value": "Performance"}
+    - [intense outdoor sports]{"entity": "topic", "value": "Performance"}
+    - [something for my 9-to-5 job]{"entity": "topic", "value": "Business Casual"}
+    - [something for my 9 to 5 job]{"entity": "topic", "value": "Business Casual"}
+    - [9 to 5]{"entity": "topic", "value": "Business Casual"}
+    - [9 to 5 job]{"entity": "topic", "value": "Business Casual"}
+    - [9-to-5 job]{"entity": "topic", "value": "Business Casual"}
+    - [nine to five]{"entity": "topic", "value": "Business Casual"}
+    - [9 to five]{"entity": "topic", "value": "Business Casual"}
+    - for [work]{"entity": "topic", "value": "Business Casual"}
+    - for [works]{"entity": "topic", "value": "Business Casual"}
+    - for [working]{"entity": "topic", "value": "Business Casual"}
+    - [smart casual looks]{"entity": "topic", "value": "Business Casual"}
+    - [office outfits]{"entity": "topic", "value": "Business Casual"}
+    - [office]{"entity": "topic", "value": "Modern Workwear"}
+    - [work presentations]{"entity": "topic", "value": "Modern Workwear"}
+    - [corporate environment]{"entity": "topic", "value": "Modern Workwear"}
+    - [statement piece]{"entity": "topic", "value": "Statement Piece"}
+    - [high-end options]{"entity": "topic", "value": "Luxury"}
+    - [black-tie event]{"entity": "topic", "value": "Luxury"}
+    - [special occasion]{"entity": "topic", "value": "Luxury"}
+    - [exclusive items]{"entity": "topic", "value": "Statement Piece"}
+    - [high-fashion]{"entity": "topic", "value": "Luxury"}
+    - [high-fashion clothing]{"entity": "topic", "value": "Luxury"}
+    - [luxurious]{"entity": "topic", "value": "Luxury"}
+    - [celebrity would wear]{"entity": "topic", "value": "Luxury"}
+    - [vintage-style]{"entity": "topic", "value": "Vintage"}
+    - [retro look]{"entity": "topic", "value": "Retro"}
+    - [old-school vibe]{"entity": "topic", "value": "Heritage Style"}
+    - [90s fashion]{"entity": "topic", "value": "Vintage"}
+    - [80s fashion]{"entity": "topic", "value": "Vintage"}
+    - [throwback feel]{"entity": "topic", "value": "Heritage Style"}
+    - [70s aesthetic]{"entity": "topic", "value": "Retro"}
+    - [traditional-looking]{"entity": "topic", "value": "Vintage"}
+    - [city look]{"entity": "topic", "value": "Urban Essential"}
+    - [streetwear look]{"entity": "topic", "value": "Streetwear"}
+    - [skater vibe]{"entity": "topic", "value": "Streetwear"}
+    - [on trend]{"entity": "topic", "value": "Urban Essential"}
+    - [looks modern]{"entity": "topic", "value": "Urban Essential"}
+    - [for the winter]{"entity": "topic", "value": "Seasonal"}
+    - [the fall]{"entity": "topic", "value": "Seasonal"}
+    - [in spring]{"entity": "topic", "value": "Seasonal"}
+    - [for summer]{"entity": "topic", "value": "Summer & Swim"}
+    - [rainy days]{"entity": "topic", "value": "Weather-Ready"}
+    - [good windbreaker]{"entity": "topic", "value": "Weather-Ready"}
+    - [waterproof]{"entity": "topic", "value": "Weather-Ready"}
+    - [water resistant]{"entity": "topic", "value": "Weather-Ready"}
+    - [unpredictable weather]{"entity": "topic", "value": "Weather-Ready"}
+    - [windy]{"entity": "topic", "value": "Weather-Ready"}
+    - [summer]{"entity": "topic", "value": "Summer & Swim"}
+    - [holiday]{"entity": "topic", "value": "Summer & Swim"}
+    - [beach]{"entity": "topic", "value": "Summer & Swim"}
+    - [hot weather]{"entity": "topic", "value": "Summer & Swim"}
+    
+    - [breezy sundress]{"entity": "topic", "value": "Summer & Swim"}
+    - [pool]{"entity": "topic", "value": "Summer & Swim"}
+    - [sun protection]{"entity": "topic", "value": "Summer & Swim"}
+    - [UPF]{"entity": "topic", "value": "Summer & Swim"}
+    - [vacation-ready]{"entity": "topic", "value": "Summer & Swim"}
+    - [vacation ready]{"entity": "topic", "value": "Summer & Swim"}
+    - [quick-drying]{"entity": "topic", "value": "Summer & Swim"}
+    - [quick drying]{"entity": "topic", "value": "Summer & Swim"}
+    - [basic fashion]{"entity": "topic", "value": "Everyday Essential"}
+    - [easy-to-wear]{"entity": "topic", "value": "Everyday Essential"}
+    - [easy to wear]{"entity": "topic", "value": "Everyday Essential"}
+    - [daily life]{"entity": "topic", "value": "Everyday Essential"}
+    - [a casual gathering]{"entity": "topic", "value": "Casual"}
+    - [all-purpose]{"entity": "topic", "value": "Casual"}
+    - [all purpose]{"entity": "topic", "value": "Casual"} 
+    - [don't have to think about]{"entity": "topic", "value": "Everyday Essential"}
+    - [little boy]{"entity": "topic", "value": "Kids Everyday"}
+    - [little child]{"entity": "topic", "value": "Kids Everyday"}
+    - [little daughter]{"entity": "topic", "value": "Kids Everyday"}
+    - [clean design]{"entity": "topic", "value": "Clean Design"}
+    - [no logos or graphics]{"entity": "topic", "value": "Minimalist"}
+    - [no logos]{"entity": "topic", "value": "Minimalist"}
+    - [no graphics]{"entity": "topic", "value": "Minimalist"}
+    - [no logo]{"entity": "topic", "value": "Minimalist"}
+    - [no graphic]{"entity": "topic", "value": "Minimalist"}
+    - [understated style]{"entity": "topic", "value": "Clean Design"}
+
+- intent: provide_price
+  examples: |
+    - the price I want is [100]{"entity": "price"}$
+    - I think I can only afford for the price [90]{"entity": "price"} $
+    - the price range I want is [from]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - [within]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [200]{"entity": "price"} $
+    - [below]{"entity": "price_description", "value": "Under"} [50]{"entity": "price"} dollars
+    - [under]{"entity": "price_description", "value": "Under"} [100]{"entity": "price"} $
+    - [cheaper]{"entity": "price_description", "value": "Under"} than [200]{"entity": "price"} dollar
+    - [less expensive]{"entity": "price_description", "value": "Under"} than [45]{"entity": "price"} bucks
+    - the price should be in the [range]{"entity": "price_description", "value": "Between"} [between]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - I want the price to be [less]{"entity": "price_description", "value": "Under"} than [50]{"entity": "price"} dollars
+    - [from]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - [minimum]{"entity": "price_description", "value": "Between"} price is [50]{"entity": "price"} and the [maximum]{"entity": "price_description", "value": "Between"} price is [150]{"entity": "price"} dollars
+    - the price [range]{"entity": "price_description", "value": "Between"} should be [between]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [90]{"entity": "price"}
+    - [from]{"entity": "price_description", "value": "Between"} [50]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [100]{"entity": "price"}
+    - in the [range]{"entity": "price_description", "value": "Between"} of [45]{"entity": "price"} [to]{"entity": "price_description", "value": "Between"} [200]{"entity": "price"}
+    - [below]{"entity": "price_description", "value": "Under"} [200]{"entity": "price"} dollars
+    - [under]{"entity": "price_description", "value": "Under"} [97]{"entity": "price"} bucks
+    - [lower]{"entity": "price_description", "value": "Under"} than [45]{"entity": "price"} dollar
+    - [cheaper]{"entity": "price_description", "value": "Under"} than [78]{"entity": "price"} buck
+    - [less expensive]{"entity": "price_description", "value": "Under"} than [150]{"entity": "price"}
+    - [less]{"entity": "price_description", "value": "Under"} than [1000]{"entity": "price"}
+    - [above]{"entity": "price_description", "value": "Above"} [1000]{"entity": "price"} 
+    - [higher]{"entity": "price_description", "value": "Above"} than [150]{"entity": "price"}
+    - [more expensive]{"entity": "price_description", "value": "Above"} than [450]{"entity": "price"}
+    - [45]{"entity": "price"}  - [56]{"entity": "price"}
+    - [15]{"entity": "price"}  - [150]{"entity": "price"} 
+    - [01]{"entity": "price"}  - [200]{"entity": "price"}
+    - [up to]{"entity": "price_description", "value": "Under"} [53]{"entity": "price"}
+    - [around]{"entity": "price_description", "value": "Under"} [60]{"entity": "price"}
+    
+
+#- intent: provide_noun
+#  examples: |
+#    - [accessorizing]{"entity": "noun"}
+#    - [advantage]{"entity": "noun"}
+#    - [adventure]{"entity": "noun"}
+#    - [adventures]{"entity": "noun"}
+#    - [aesthetic]{"entity": "noun"}
+#    - [air-sole]{"entity": "noun"}
+#    - [appeal]{"entity": "noun"}
+#    - [approach]{"entity": "noun"}
+#    - [attitude]{"entity": "noun"}
+#    - [base]{"entity": "noun"}
+#    - [beach]{"entity": "noun"}
+#    - [blend]{"entity": "noun"}
+#    - [body]{"entity": "noun"}
+#    - [boost]{"entity": "noun"}
+#    - [branding]{"entity": "noun"}
+#    - [build]{"entity": "noun"}
+#    - [bulk]{"entity": "noun"}
+#    - [centerpiece]{"entity": "noun"}
+#    - [challenge]{"entity": "noun"}
+#    - [character]{"entity": "noun"}
+#    - [charm]{"entity": "noun"}
+#    - [choice]{"entity": "noun"}
+#    - [city]{"entity": "noun"}
+#    - [climate]{"entity": "noun"}
+#    - [closure]{"entity": "noun"}
+#    - [collection]{"entity": "noun"}
+#    - [color-blocking]{"entity": "noun"}
+#    - [comfort]{"entity": "noun"}
+#    - [companion]{"entity": "noun"}
+#    - [conscience]{"entity": "noun"}
+#    - [construction]{"entity": "noun"}
+#    - [core]{"entity": "noun"}
+#    - [cornerstone]{"entity": "noun"}
+#    - [coverage]{"entity": "noun"}
+#    - [craftsmanship]{"entity": "noun"}
+#    - [creator]{"entity": "noun"}
+#    - [crest]{"entity": "noun"}
+#    - [cuff]{"entity": "noun"}
+#    - [cushioning]{"entity": "noun"}
+#    - [day]{"entity": "noun"}
+#    - [days]{"entity": "noun"}
+#    - [detail]{"entity": "noun"}
+#    - [detailing]{"entity": "noun"}
+#    - [drape]{"entity": "noun"}
+#    - [durability]{"entity": "noun"}
+#    - [ease]{"entity": "noun"}
+#    - [edge]{"entity": "noun"}
+#    - [effect]{"entity": "noun"}
+#    - [elegance]{"entity": "noun"}
+#    - [element]{"entity": "noun"}
+#    - [emblem]{"entity": "noun"}
+#    - [energy]{"entity": "noun"}
+#    - [ensemble]{"entity": "noun"}
+#    - [epitome]{"entity": "noun"}
+#    - [errand]{"entity": "noun"}
+#    - [essential]{"entity": "noun"}
+#    - [essentials]{"entity": "noun"}
+#    - [event]{"entity": "noun"}
+#    - [face]{"entity": "noun"}
+#    - [family]{"entity": "noun"}
+#    - [fashion]{"entity": "noun"}
+#    - [feel]{"entity": "noun"}
+#    - [feet]{"entity": "noun"}
+#    - [fit]{"entity": "noun"}
+#    - [flexibility]{"entity": "noun"}
+#    - [focus]{"entity": "noun"}
+#    - [footprint]{"entity": "noun"}
+#    - [foundation]{"entity": "noun"}
+#    - [founder]{"entity": "noun"}
+#    - [frame]{"entity": "noun"}
+#    - [freedom]{"entity": "noun"}
+#    - [front]{"entity": "noun"}
+#    - [fun]{"entity": "noun"}
+#    - [functionality]{"entity": "noun"}
+#    - [fusion]{"entity": "noun"}
+#    - [future]{"entity": "noun"}
+#    - [gap]{"entity": "noun"}
+#    - [game]{"entity": "noun"}
+#    - [gathering]{"entity": "noun"}
+#    - [gg]{"entity": "noun"}
+#    - [girl]{"entity": "noun"}
+#    - [golf]{"entity": "noun"}
+#    - [hardware]{"entity": "noun"}
+#    - [heart]{"entity": "noun"}
+#    - [heat]{"entity": "noun"}
+#    - [henley]{"entity": "noun"}
+#    - [hike]{"entity": "noun"}
+#    - [hit]{"entity": "noun"}
+#    - [home]{"entity": "noun"}
+#    - [hour]{"entity": "noun"}
+#    - [house]{"entity": "noun"}
+#    - [impact]{"entity": "noun"}
+#    - [inspiration]{"entity": "noun"}
+#    - [insulation]{"entity": "noun"}
+#    - [lapel]{"entity": "noun"}
+#    - [layer]{"entity": "noun"}
+#    - [legend]{"entity": "noun"}
+#    - [leisure]{"entity": "noun"}
+#    - [length]{"entity": "noun"}
+#    - [level]{"entity": "noun"}
+#    - [life]{"entity": "noun"}
+#    - [limit]{"entity": "noun"}
+#    - [logo]{"entity": "noun"}
+#    - [loungewear]{"entity": "noun"}
+#    - [love]{"entity": "noun"}
+#    - [button]{"entity": "noun"}
+#    - [mile]{"entity": "noun"}
+#    - [mission]{"entity": "noun"}
+#    - [mission]{"entity": "noun"}
+#    - [mix]{"entity": "noun"}
+#    - [moisture]{"entity": "noun"}
+#    - [moment]{"entity": "noun"}
+#    - [monogram]{"entity": "noun"}
+#    - [month]{"entity": "noun"}
+#    - [months]{"entity": "noun"}
+#    - [mood]{"entity": "noun"}
+#    - [motion]{"entity": "noun"}
+#    - [motif]{"entity": "noun"}
+#    - [movement]{"entity": "noun"}
+#    - [must-have]{"entity": "noun"}
+#    - [nature]{"entity": "noun"}
+#    - [need]{"entity": "noun"}
+#    - [nod]{"entity": "noun"}
+#    - [occasion]{"entity": "noun"}
+#    - [occasions]{"entity": "noun"}
+#    - [office]{"entity": "noun"}
+#    - [one]{"entity": "noun"}
+#    - [option]{"entity": "noun"}
+#    - [origin]{"entity": "noun"}
+#    - [outing]{"entity": "noun"}
+#    - [outings]{"entity": "noun"}
+#    - [overlay]{"entity": "noun"}
+#    - [owner]{"entity": "noun"}
+#    - [p.e]{"entity": "noun"}
+#    - [pack]{"entity": "noun"}
+#    - [pair]{"entity": "noun"}
+#    - [parent]{"entity": "noun"}
+#    - [park]{"entity": "noun"}
+#    - [partner]{"entity": "noun"}
+#    - [party]{"entity": "noun"}
+#    - [past]{"entity": "noun"}
+#    - [patch]{"entity": "noun"}
+#    - [pattern]{"entity": "noun"}
+#    - [performance]{"entity": "noun"}
+#    - [personality]{"entity": "noun"}
+#    - [picture]{"entity": "noun"}
+#    - [pinnacle]{"entity": "noun"}
+#    - [planet]{"entity": "noun"}
+#    - [placket]{"entity": "noun"}
+#    - [play]{"entity": "noun"}
+#    - [playdate]{"entity": "noun"}
+#    - [playtime]{"entity": "noun"}
+#    - [pocket]{"entity": "noun"}
+#    - [pool]{"entity": "noun"}
+#    - [potential]{"entity": "noun"}
+#    - [power]{"entity": "noun"}
+#    - [practicality]{"entity": "noun"}
+#    - [print]{"entity": "noun"}
+#    - [protection]{"entity": "noun"}
+#    - [punch]{"entity": "noun"}
+#    - [purpose]{"entity": "noun"}
+#    - [quality]{"entity": "noun"}
+#    - [quarter-zip]{"entity": "noun"}
+#    - [range]{"entity": "noun"}
+#    - [ray]{"entity": "noun"}
+#    - [recovery]{"entity": "noun"}
+#    - [relaxation]{"entity": "noun"}
+#    - [return]{"entity": "noun"}
+#    - [ride]{"entity": "noun"}
+#    - [romance]{"entity": "noun"}
+#    - [run]{"entity": "noun"}
+#    - [sand]{"entity": "noun"}
+#    - [school]{"entity": "noun"}
+#    - [seam]{"entity": "noun"}
+#    - [season]{"entity": "noun"}
+#    - [seasons]{"entity": "noun"}
+#    - [second-skin]{"entity": "noun"}
+#    - [self]{"entity": "noun"}
+#    - [sense]{"entity": "noun"}
+#    - [series]{"entity": "noun"}
+#    - [setting]{"entity": "noun"}
+#    - [shade]{"entity": "noun"}
+#    - [shape]{"entity": "noun"}
+#    - [shore]{"entity": "noun"}
+#    - [shoulder]{"entity": "noun"}
+#    - [simplicity]{"entity": "noun"}
+#    - [skin]{"entity": "noun"}
+#    - [sky]{"entity": "noun"}
+#    - [sleeve]{"entity": "noun"}
+#    - [slouch]{"entity": "noun"}
+#    - [smile]{"entity": "noun"}
+#    - [sole]{"entity": "noun"}
+#    - [solution]{"entity": "noun"}
+#    - [space]{"entity": "noun"}
+#    - [speed]{"entity": "noun"}
+#    - [spirit]{"entity": "noun"}
+#    - [splash]{"entity": "noun"}
+#    - [sport]{"entity": "noun"}
+#    - [sportswear]{"entity": "noun"}
+#    - [staple]{"entity": "noun"}
+#    - [steel]{"entity": "noun"}
+#    - [step]{"entity": "noun"}
+#    - [stitch]{"entity": "noun"}
+#    - [stitching]{"entity": "noun"}
+#    - [storage]{"entity": "noun"}
+#    - [storm]{"entity": "noun"}
+#    - [story]{"entity": "noun"}
+#    - [street]{"entity": "noun"}
+#    - [streets]{"entity": "noun"}
+#    - [strength]{"entity": "noun"}
+#    - [stretch]{"entity": "noun"}
+#    - [stride]{"entity": "noun"}
+#    - [structure]{"entity": "noun"}
+#    - [student]{"entity": "noun"}
+#    - [stuff]{"entity": "noun"}
+#    - [summer]{"entity": "noun"}
+#    - [sun]{"entity": "noun"}
+#    - [sunbathing]{"entity": "noun"}
+#    - [support]{"entity": "noun"}
+#    - [surface]{"entity": "noun"}
+#    - [sustainability]{"entity": "noun"}
+#    - [swim]{"entity": "noun"}
+#    - [swing]{"entity": "noun"}
+#    - [switch]{"entity": "noun"}
+#    - [system]{"entity": "noun"}
+#    - [take]{"entity": "noun"}
+#    - [tailoring]{"entity": "noun"}
+#    - [tee]{"entity": "noun"}
+#    - [temperature]{"entity": "noun"}
+#    - [testament]{"entity": "noun"}
+#    - [texture]{"entity": "noun"}
+#    - [thing]{"entity": "noun"}
+#    - [throw]{"entity": "noun"}
+#    - [tie]{"entity": "noun"}
+#    - [time]{"entity": "noun"}
+#    - [today]{"entity": "noun"}
+#    - [toe]{"entity": "noun"}
+#    - [tongue]{"entity": "noun"}
+#    - [tool]{"entity": "noun"}
+#    - [touch]{"entity": "noun"}
+#    - [towel]{"entity": "noun"}
+#    - [trail]{"entity": "noun"}
+#    - [training]{"entity": "noun"}
+#    - [transition]{"entity": "noun"}
+#    - [treat]{"entity": "noun"}
+#    - [treatment]{"entity": "noun"}
+#    - [tree]{"entity": "noun"}
+#    - [trend]{"entity": "noun"}
+#    - [trendsetter]{"entity": "noun"}
+#    - [trip]{"entity": "noun"}
+#    - [twist]{"entity": "noun"}
+#    - [twill]{"entity": "noun"}
+#    - [upgrade]{"entity": "noun"}
+#    - [upper]{"entity": "noun"}
+#    - [use]{"entity": "noun"}
+#    - [utility]{"entity": "noun"}
+#    - [vacation]{"entity": "noun"}
+#    - [version]{"entity": "noun"}
+#    - [vibe]{"entity": "noun"}
+#    - [victory]{"entity": "noun"}
+#    - [view]{"entity": "noun"}
+#    - [waist]{"entity": "noun"}
+#    - [waistband]{"entity": "noun"}
+#    - [wardrobe]{"entity": "noun"}
+#    - [warmth]{"entity": "noun"}
+#    - [wash]{"entity": "noun"}
+#    - [water]{"entity": "noun"}
+#    - [wear]{"entity": "noun"}
+#    - [weather]{"entity": "noun"}
+#    - [weekend]{"entity": "noun"}
+#    - [weekends]{"entity": "noun"}
+#    - [weight]{"entity": "noun"}
+#    - [wind]{"entity": "noun"}
+#    - [word]{"entity": "noun"}
+#    - [work]{"entity": "noun"}
+#    - [workout]{"entity": "noun"}
+#    - [workouts]{"entity": "noun"}
+#    - [world]{"entity": "noun"}
+#    - [year]{"entity": "noun"}
+#    - [yoga]{"entity": "noun"}
+#    - [zipper]{"entity": "noun"}
+#
+#- intent: provide_adjective
+#  examples: |
+#    - [active]{"entity": "adjective"}
+#    - [adorable]{"entity": "adjective"}
+#    - [airy]{"entity": "adjective"}
+#    - [all-day]{"entity": "adjective"}
+#    - [allover]{"entity": "adjective"}
+#    - [ample]{"entity": "adjective"}
+#    - [athletic]{"entity": "adjective"}
+#    - [authentic]{"entity": "adjective"}
+#    - [basic]{"entity": "adjective"}
+#    - [batwing]{"entity": "adjective"}
+#    - [beautiful]{"entity": "adjective"}
+#    - [bold]{"entity": "adjective"}
+#    - [breathtaking]{"entity": "adjective"}
+#    - [breathable]{"entity": "adjective"}
+#    - [breezy]{"entity": "adjective"}
+#    - [bright]{"entity": "adjective"}
+#    - [built-to]{"entity": "adjective"}
+#    - [chic]{"entity": "adjective"}
+#    - [classic]{"entity": "adjective"}
+#    - [clean]{"entity": "adjective"}
+#    - [clear]{"entity": "adjective"}
+#    - [close]{"entity": "adjective"}
+#    - [coastal]{"entity": "adjective"}
+#    - [cold-weather]{"entity": "adjective"}
+#    - [comfy]{"entity": "adjective"}
+#    - [comfortable]{"entity": "adjective"}
+#    - [complete]{"entity": "adjective"}
+#    - [confident]{"entity": "adjective"}
+#    - [conscious]{"entity": "adjective"}
+#    - [convenient]{"entity": "adjective"}
+#    - [cool]{"entity": "adjective"}
+#    - [cozy]{"entity": "adjective"}
+#    - [crafted]{"entity": "adjective"}
+#    - [crisp]{"entity": "adjective"}
+#    - [cropped]{"entity": "adjective"}
+#    - [cushioned]{"entity": "adjective"}
+#    - [cute]{"entity": "adjective"}
+#    - [daily]{"entity": "adjective"}
+#    - [dazzling]{"entity": "adjective"}
+#    - [delicate]{"entity": "adjective"}
+#    - [dependable]{"entity": "adjective"}
+#    - [discerning]{"entity": "adjective"}
+#    - [durable]{"entity": "adjective"}
+#    - [eco-conscious]{"entity": "adjective"}
+#    - [effortless]{"entity": "adjective"}
+#    - [elastic]{"entity": "adjective"}
+#    - [elegant]{"entity": "adjective"}
+#    - [embroidered]{"entity": "adjective"}
+#    - [endless]{"entity": "adjective"}
+#    - [everyday]{"entity": "adjective"}
+#    - [excellent]{"entity": "adjective"}
+#    - [exclusive]{"entity": "adjective"}
+#    - [exquisite]{"entity": "adjective"}
+#    - [eye-catching]{"entity": "adjective"}
+#    - [faded]{"entity": "adjective"}
+#    - [fashion-forward]{"entity": "adjective"}
+#    - [fashionable]{"entity": "adjective"}
+#    - [favorite]{"entity": "adjective"}
+#    - [feminine]{"entity": "adjective"}
+#    - [festive]{"entity": "adjective"}
+#    - [fine]{"entity": "adjective"}
+#    - [firm]{"entity": "adjective"}
+#    - [first]{"entity": "adjective"}
+#    - [fit-and-flare]{"entity": "adjective"}
+#    - [five-pocket]{"entity": "adjective"}
+#    - [flared]{"entity": "adjective"}
+#    - [flattering]{"entity": "adjective"}
+#    - [flexible]{"entity": "adjective"}
+#    - [flirty]{"entity": "adjective"}
+#    - [flowing]{"entity": "adjective"}
+#    - [fluid]{"entity": "adjective"}
+#    - [focused]{"entity": "adjective"}
+#    - [formal]{"entity": "adjective"}
+#    - [four-way]{"entity": "adjective"}
+#    - [fresh]{"entity": "adjective"}
+#    - [full]{"entity": "adjective"}
+#    - [fun-filled]{"entity": "adjective"}
+#    - [functional]{"entity": "adjective"}
+#    - [gentle]{"entity": "adjective"}
+#    - [go-to]{"entity": "adjective"}
+#    - [good]{"entity": "adjective"}
+#    - [graceful]{"entity": "adjective"}
+#    - [happy]{"entity": "adjective"}
+#    - [heavy-duty]{"entity": "adjective"}
+#    - [high]{"entity": "adjective"}
+#    - [high-end]{"entity": "adjective"}
+#    - [high-fashion]{"entity": "adjective"}
+#    - [high-performance]{"entity": "adjective"}
+#    - [high-waisted]{"entity": "adjective"}
+#    - [hot]{"entity": "adjective"}
+#    - [iconic]{"entity": "adjective"}
+#    - [ideal]{"entity": "adjective"}
+#    - [impeccable]{"entity": "adjective"}
+#    - [incredible]{"entity": "adjective"}
+#    - [incredibly]{"entity": "adjective"}
+#    - [instant]{"entity": "adjective"}
+#    - [intense]{"entity": "adjective"}
+#    - [intricate]{"entity": "adjective"}
+#    - [irresistible]{"entity": "adjective"}
+#    - [key]{"entity": "adjective"}
+#    - [kind]{"entity": "adjective"}
+#    - [lap]{"entity": "adjective"}
+#    - [largest-ever]{"entity": "adjective"}
+#    - [lasting]{"entity": "adjective"}
+#    - [left]{"entity": "adjective"}
+#    - [leg-lengthening]{"entity": "adjective"}
+#    - [light]{"entity": "adjective"}
+#    - [light-wash]{"entity": "adjective"}
+#    - [little]{"entity": "adjective"}
+#    - [long]{"entity": "adjective"}
+#    - [loose]{"entity": "adjective"}
+#    - [low]{"entity": "adjective"}
+#    - [low-profile]{"entity": "adjective"}
+#    - [low-top]{"entity": "adjective"}
+#    - [luxurious]{"entity": "adjective"}
+#    - [main]{"entity": "adjective"}
+#    - [maximum]{"entity": "adjective"}
+#    - [metal]{"entity": "adjective"}
+#    - [mild]{"entity": "adjective"}
+#    - [modern]{"entity": "adjective"}
+#    - [moisture-wicking]{"entity": "adjective"}
+#    - [multi-sport]{"entity": "adjective"}
+#    - [natural]{"entity": "adjective"}
+#    - [neon]{"entity": "adjective"}
+#    - [new]{"entity": "adjective"}
+#    - [next]{"entity": "adjective"}
+#    - [next-level]{"entity": "adjective"}
+#    - [non-slip]{"entity": "adjective"}
+#    - [numerous]{"entity": "adjective"}
+#    - [official]{"entity": "adjective"}
+#    - [off-duty]{"entity": "adjective"}
+#    - [on-point]{"entity": "adjective"}
+#    - [on-trend]{"entity": "adjective"}
+#    - [one-piece]{"entity": "adjective"}
+#    - [open]{"entity": "adjective"}
+#    - [optimal]{"entity": "adjective"}
+#    - [organic]{"entity": "adjective"}
+#    - [original]{"entity": "adjective"}
+#    - [outdoor]{"entity": "adjective"}
+#    - [outer]{"entity": "adjective"}
+#    - [oversized]{"entity": "adjective"}
+#    - [padded]{"entity": "adjective"}
+#    - [pinstriped]{"entity": "adjective"}
+#    - [plaid]{"entity": "adjective"}
+#    - [playful]{"entity": "adjective"}
+#    - [polished]{"entity": "adjective"}
+#    - [pop]{"entity": "adjective"}
+#    - [positive]{"entity": "adjective"}
+#    - [post-workout]{"entity": "adjective"}
+#    - [practical]{"entity": "adjective"}
+#    - [premium]{"entity": "adjective"}
+#    - [previous]{"entity": "adjective"}
+#    - [primeblue]{"entity": "adjective"}
+#    - [printed]{"entity": "adjective"}
+#    - [professional]{"entity": "adjective"}
+#    - [proud]{"entity": "adjective"}
+#    - [puff]{"entity": "adjective"}
+#    - [pull-on]{"entity": "adjective"}
+#    - [pure]{"entity": "adjective"}
+#    - [quick-drying]{"entity": "adjective"}
+#    - [quilted]{"entity": "adjective"}
+#    - [rain-ready]{"entity": "adjective"}
+#    - [rainy]{"entity": "adjective"}
+#    - [ready]{"entity": "adjective"}
+#    - [recycled]{"entity": "adjective"}
+#    - [refined]{"entity": "adjective"}
+#    - [regular]{"entity": "adjective"}
+#    - [relaxed]{"entity": "adjective"}
+#    - [relaxed-fit]{"entity": "adjective"}
+#    - [reliable]{"entity": "adjective"}
+#    - [renowned]{"entity": "adjective"}
+#    - [resistant]{"entity": "adjective"}
+#    - [responsive]{"entity": "adjective"}
+#    - [retro-inspired]{"entity": "adjective"}
+#    - [rich]{"entity": "adjective"}
+#    - [right]{"entity": "adjective"}
+#    - [rocky]{"entity": "adjective"}
+#    - [romantic]{"entity": "adjective"}
+#    - [roomy]{"entity": "adjective"}
+#    - [rugged]{"entity": "adjective"}
+#    - [safe]{"entity": "adjective"}
+#    - [same]{"entity": "adjective"}
+#    - [seamless]{"entity": "adjective"}
+#    - [seasonal]{"entity": "adjective"}
+#    - [secure]{"entity": "adjective"}
+#    - [sensitive]{"entity": "adjective"}
+#    - [separate]{"entity": "adjective"}
+#    - [sharp]{"entity": "adjective"}
+#    - [sheer]{"entity": "adjective"}
+#    - [signature]{"entity": "adjective"}
+#    - [simple]{"entity": "adjective"}
+#    - [single]{"entity": "adjective"}
+#    - [skate]{"entity": "adjective"}
+#    - [sleek]{"entity": "adjective"}
+#    - [slim]{"entity": "adjective"}
+#    - [slim-fit]{"entity": "adjective"}
+#    - [slip-on]{"entity": "adjective"}
+#    - [small]{"entity": "adjective"}
+#    - [smart]{"entity": "adjective"}
+#    - [smart-casual]{"entity": "adjective"}
+#    - [smooth]{"entity": "adjective"}
+#    - [snug]{"entity": "adjective"}
+#    - [soft]{"entity": "adjective"}
+#    - [softshell]{"entity": "adjective"}
+#    - [solid]{"entity": "adjective"}
+#    - [solo]{"entity": "adjective"}
+#    - [sophisticated]{"entity": "adjective"}
+#    - [special]{"entity": "adjective"}
+#    - [sporty]{"entity": "adjective"}
+#    - [stainless]{"entity": "adjective"}
+#    - [standard]{"entity": "adjective"}
+#    - [statement-making]{"entity": "adjective"}
+#    - [straight]{"entity": "adjective"}
+#    - [straight-leg]{"entity": "adjective"}
+#    - [street-ready]{"entity": "adjective"}
+#    - [stretchy]{"entity": "adjective"}
+#    - [striped]{"entity": "adjective"}
+#    - [strong]{"entity": "adjective"}
+#    - [stunning]{"entity": "adjective"}
+#    - [stylish]{"entity": "adjective"}
+#    - [subtle]{"entity": "adjective"}
+#    - [sun-drenched]{"entity": "adjective"}
+#    - [sunny]{"entity": "adjective"}
+#    - [super]{"entity": "adjective"}
+#    - [super-soft]{"entity": "adjective"}
+#    - [supportive]{"entity": "adjective"}
+#    - [sweat-wicking]{"entity": "adjective"}
+#    - [sweet]{"entity": "adjective"}
+#    - [tailored]{"entity": "adjective"}
+#    - [taped]{"entity": "adjective"}
+#    - [tapered]{"entity": "adjective"}
+#    - [technical]{"entity": "adjective"}
+#    - [thermal]{"entity": "adjective"}
+#    - [thin]{"entity": "adjective"}
+#    - [thoughtful]{"entity": "adjective"}
+#    - [timeless]{"entity": "adjective"}
+#    - [top]{"entity": "adjective"}
+#    - [total]{"entity": "adjective"}
+#    - [tough]{"entity": "adjective"}
+#    - [traditional]{"entity": "adjective"}
+#    - [transitional]{"entity": "adjective"}
+#    - [transparent]{"entity": "adjective"}
+#    - [travel-ready]{"entity": "adjective"}
+#    - [trendy]{"entity": "adjective"}
+#    - [true]{"entity": "adjective"}
+#    - [true-blue]{"entity": "adjective"}
+#    - [ultimate]{"entity": "adjective"}
+#    - [ultra-cozy]{"entity": "adjective"}
+#    - [ultra-soft]{"entity": "adjective"}
+#    - [unparalleled]{"entity": "adjective"}
+#    - [unexpected]{"entity": "adjective"}
+#    - [unique]{"entity": "adjective"}
+#    - [urban]{"entity": "adjective"}
+#    - [urban-inspired]{"entity": "adjective"}
+#    - [useful]{"entity": "adjective"}
+#    - [utilitarian]{"entity": "adjective"}
+#    - [versatile]{"entity": "adjective"}
+#    - [vibrant]{"entity": "adjective"}
+#    - [vintage-inspired]{"entity": "adjective"}
+#    - [vintage-style]{"entity": "adjective"}
+#    - [virtual]{"entity": "adjective"}
+#    - [visible]{"entity": "adjective"}
+#    - [warm]{"entity": "adjective"}
+#    - [warm-weather]{"entity": "adjective"}
+#    - [water-repellent]{"entity": "adjective"}
+#    - [water-resistant]{"entity": "adjective"}
+#    - [waterproof]{"entity": "adjective"}
+#    - [wet]{"entity": "adjective"}
+#    - [wide]{"entity": "adjective"}
+#    - [wide-leg]{"entity": "adjective"}
+#    - [wind-resistant]{"entity": "adjective"}
+#    - [worn-in]{"entity": "adjective"}
+#    - [woven]{"entity": "adjective"}
+#    - [zip]{"entity": "adjective"}
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - of course
+    - that sounds good
+    - correct
+    - I know
+    - I know my size
+    - yes I know
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't know
+    - I'm not sure
+    - I don't know my size
+    - first time buying
+    - never bought from this brand
+    - not sure about the size
+    - not sure about the length
+    - don't know how to measure
+    - please help me
+    - I have not
+
+- intent: provide_number
+  examples: |
+    - [175]{"entity":"number"}
+    - [70]{"entity":"number"}
+    - [42]{"entity":"number"}
+    - [25]{"entity":"number"}
+    - [165]{"entity":"number"}
+    - [55]{"entity":"number"}
+    - [41]{"entity":"number"}
+    - [23]{"entity":"number"}
+    - [180]{"entity":"number"}
+    - [9.5]{"entity":"number"}
+    - [1.75]{"entity":"number"}
+    - [68]{"entity":"number"}
+
+#- intent: need_help_shoes_size
+#  examples: |
+#    - I don't know the length of my foot
+#    - can you show me how I can measure my foot?
+#    - I do not know how to measure my foot
+#    - help measuring foot length
+#    - how to measure foot length?
+
+- regex: pattern for affirm
+  examples: |
+    - \b[yY]*[eE]*[sS]*\b
+    - \b[aA]gr[e]{1,2}\b
+    - \b[iI]nd[e]{1,2}d\b
+
+- regex: pattern for deny
+  examples: |
+    - \b[nN]*[oO]*\b
+    - \b[dD]isagr[e]{1,2}\b
+    - \b[nN]*[oO]*[tT]*\b
+
+- regex: pattern for asking open time
+  examples: |
+    - \b[oO]pen([s]+|ing)\s*(time){0,1}\b
+
+- regex: pattern for asking close time
+  examples: |
+    - \b[cC]lose([s]+|ing)\s*(time){0,1}\b
+
+- regex: pattern for asking size
+  examples: |
+    - \b[sS]iz(e|ing)\b
+
+- regex: pattern for individual type
+  examples: |
+    - \b[mM][ae]n[s]?[']?[s]?\s*([fF]ashion|[wW]ear[s]?)?\b
+    - \b[wW]o[mM][ae]n[s]?[']?[s]?\s*([fF]ashion|[wW]ear[s]?)?\b
+    - \b([cC]hild(ren)?|[kK]id)[s]?[']?[s]?\s*([fF]ashion|[wW]ear[s]?)?\b
+
+- regex: brand_name
+  examples: |
+    - \b(brand[s])?.*([hH]\s*(&|and)\s*[mM]|[zZ]ara|[gG]u[c]{1,2}i|[aA][d]{1,2}idas|[nN]ike|[bB]iti[']?s|[bB]l[o]{1,2}m|[cC]ool[mM]ate[s]?|[eE]verest[s]?|[pP]uma|[rR]outine[s]?|[uU]niq(ue)?lo).*(brand[s]?)?\b
+
+- regex: category
+  examples: |
+    - \b[sS]hirt\b
+    - \b[pP]ants\b
+    - \b[sS]hoes\b
+
+- regex: height
+  examples: |
+    - \d{2,3} cm
+    - \d{2,3} Cm
+    - \d{2,3} cM
+    - \d{2,3} CM
+    - \d{2,3} centimeters
+    - \d{2,3} centimeter
+
+- regex: weight
+  examples: |
+    - \d{1,3} kg
+    - \d{1,3} Kg
+    - \d{1,3} kG
+    - \d{1,3} KG
+    - \d{1,3} kilogram
+    - \d{1,3} Kilogram
+    - \d{1,3} kilos
+    - \d{1,3} Kilos
+
+- regex: pattern for promotions
+  examples: |
+    - \b([aA]ll|[bB]oth)?\s*(type[sS]?)?\s*(of)?\s*([cC]oupon[s]?|[dD]iscount[s]?|[pP]romotion[s]?|[dD]eal[s]?)\s*(type[sS]?)?\b
+    - \b[sS]hip([p]?ing|ment)?\b
+    - \b[oO]rder[s]?\b
+
+#- regex: pattern for amount
+#  examples: |
+#    - \b[bB]oth\b
+#    - \b[aA]ll\b
+
+- regex: pattern for order status tracking
+  examples: |
+    - \b([sS]tatus|[cC]heck(ing)?|[tT]rack(ing)?)\b
+    - \b([cC]heck|[tT]rack)\s*[oO]rder[s]?\b
+    
+- regex: pattern for refund
+  examples: |
+    - \b([rR]efund[s]?|[rR]eturn[s]?|[cC]ompensate[s])\b
+    - \b([rR]eimbursement|[rR]epayment|[rR]ebate|[cC]ompensation)\b
+
+- regex: pattern for asking product recommendation
+  examples: |
+    - \b(product[s]?)?\s*(recommendation|suggestion[s]?)\b
+    - \b(recommend(ation[s]?)?|suggest(ion[s]?)?).*(product[s]?)?\b
+
+- regex: pattern for providing type
+  examples: |
+    - \b[tT]ype\b
+
+- regex: pattern for providing topic
+  examples: |
+    - \b[tT]opic[s]?\b
+
+- regex: pattern for providing price
+  examples: |
+    - \b(dollar[s]?|buck[s]?|[uU][sS][dD])\b
+    - \$
+
+- synonym: Men's Fashion
+  examples: |
+    - men
+    - man
+    - fashion for men
+    - fashion for man
+    - man fashion
+    - man's fashion
+    - men fashion
+    - men's wear
+    - men wear
+    - man's wear
+    - man wear
+    - menswear
+    - manswear
+
+- synonym: Women's Fashion
+  examples: |
+    - women
+    - woman
+    - fashion for women
+    - fashion for woman
+    - woman fashion
+    - woman's fashion
+    - women fashion
+    - women's wear
+    - women wear
+    - woman's wear
+    - woman wear
+    - womenswear
+    - womanswear
+
+- synonym: Kid's Fashion
+  examples: |
+    - kids' fashion
+    - children
+    - child
+    - kid
+    - kids
+    - fashion for kids
+    - fashion for kid
+    - fashion for children
+    - kids fashion
+    - kid fashion
+    - children fashion
+    - child fashion
+    - fashion for child
+    - children's wear
+    - child's wear
+    - kids' wear
+    - kid's wear
+    - children wear
+    - child wear
+    - kids wear
+    - kid wear
+    - childrenswear
+    - kidswear
+
+- synonym: Shirts
+  examples: |
+    - shirts
+    - shirt
+    - Shirt
+
+- synonym: Pants
+  examples: |
+    - pant
+    - Pant
+    - pants
+    - Trouser
+    - trouser
+    - Trousers
+    - trousers
+
+- synonym: H&M
+  examples: |
+    - HandM
+    - H and M
+    - h and M
+    - H and m
+    - h and m
+    - h&m
+    - H&m
+    - h&M
+    - h & m
+    - H & m
+    - h & M
+    - H & M
+    - h& m
+    - H& m
+    - h& M
+    - H& M
+    - h &m
+    - H &m
+    - h &M
+    - H &M
+
+- synonym: Zara
+  examples: |
+    - zara
+
+- synonym: Gucci
+  examples: |
+    - gucci
+
+- synonym: Nike
+  examples: |
+    - nike
+    - Nikke
+    - nikke
+
+- synonym: Adidas
+  examples: |
+    - adidas
+
+- synonym: cm
+  examples: |
+    - CM
+    - Cm
+    - cM
+    - centimeters
+    - centimeter
+
+- synonym: kg
+  examples: |
+    - KG
+    - Kg
+    - kG
+    - Kilograms
+    - Kilogram
+    - kilograms
+    - kilogram
+
+- synonym: S
+  examples: |
+    - s
+
+- synonym: M
+  examples: |
+    - m
+
+- synonym: L
+  examples: |
+    - l
+
+- synonym: XL
+  examples: |
+    - xl
+
+- synonym: Order
+  examples: |
+    - order
+    
+
+- synonym: Delivery
+  examples: |
+    - shipping
+    - ship
+    - shipment
+
+#    - coupons of shipping
+#    - discounts of shipping
+#    - promotions of shipping
+#    - coupons of shipment
+#    - discounts of shipment
+#    - promotions of shipment
+#    - coupons of ship
+#    - discounts of ship
+#    - promotions of ship
+
+#- synonym: All Promotions
+#  examples: |
+#    - all promotions
+#    - all coupons
+#    - shipping and order
+#    - order and shipping
+#    - ship and order
+#    - order and ship
+#    - shipment and order
+#    - order and shipment
+#    - all discounts
+#    - all discount
+
+- lookup: material
+  examples: |
+    - AIRism
+    - Canvas
+    - Corduroy
+    - Cotton
+    - Chiffon
+    - Denim
+    - Fleece
+    - Leather
+    - Linen
+    - Cotton
+    - Mesh
+    - Rubber
+    - Organic Cotton
+    - Polyester
+    - Recycled Cotton
+    - Recycled Nylon
+    - Recycled Polyester
+    - Recycled Rubber
+    - Recycled Wool
+    - Rubber
+    - Silk
+    - Spandex
+    - Viscose
+    - Wool
+    - Wool Blend

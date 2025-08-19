@@ -1,0 +1,174 @@
+{
+  "category": {
+    "precision": 0.8592592592592593,
+    "recall": 0.928,
+    "f1-score": 0.8923076923076924,
+    "support": 250.0,
+    "confused_with": {
+      "type": 9,
+      "noun": 5
+    }
+  },
+  "height": {
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1-score": 0.8333333333333334,
+    "support": 10.0,
+    "confused_with": {}
+  },
+  "price": {
+    "precision": 0.9484536082474226,
+    "recall": 0.989247311827957,
+    "f1-score": 0.968421052631579,
+    "support": 93.0,
+    "confused_with": {
+      "height": 1
+    }
+  },
+  "weight": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1-score": 0.8571428571428571,
+    "support": 8.0,
+    "confused_with": {
+      "height": 2
+    }
+  },
+  "foot_length": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4.0,
+    "confused_with": {}
+  },
+  "brand_name": {
+    "precision": 0.9344978165938864,
+    "recall": 0.9385964912280702,
+    "f1-score": 0.936542669584245,
+    "support": 228.0,
+    "confused_with": {
+      "adjective": 2
+    }
+  },
+  "material": {
+    "precision": 0.949685534591195,
+    "recall": 0.967948717948718,
+    "f1-score": 0.9587301587301588,
+    "support": 156.0,
+    "confused_with": {
+      "type": 3
+    }
+  },
+  "adjective": {
+    "precision": 0.5938697318007663,
+    "recall": 0.5236486486486487,
+    "f1-score": 0.5565529622980251,
+    "support": 296.0,
+    "confused_with": {
+      "topic": 31
+    }
+  },
+  "clothes_size": {
+    "precision": 0.7777777777777778,
+    "recall": 0.875,
+    "f1-score": 0.8235294117647058,
+    "support": 16.0,
+    "confused_with": {
+      "brand_name": 1
+    }
+  },
+  "group_category_name": {
+    "precision": 0.9017094017094017,
+    "recall": 0.9547511312217195,
+    "f1-score": 0.9274725274725275,
+    "support": 221.0,
+    "confused_with": {
+      "noun": 3
+    }
+  },
+  "promotion_type": {
+    "precision": 0.9625,
+    "recall": 1.0,
+    "f1-score": 0.9808917197452229,
+    "support": 77.0,
+    "confused_with": {}
+  },
+  "number": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12.0,
+    "confused_with": {}
+  },
+  "price_description": {
+    "precision": 0.8674698795180723,
+    "recall": 0.9,
+    "f1-score": 0.8834355828220859,
+    "support": 80.0,
+    "confused_with": {
+      "topic": 1
+    }
+  },
+  "promotion_type_amount": {
+    "precision": 0.9259259259259259,
+    "recall": 1.0,
+    "f1-score": 0.9615384615384616,
+    "support": 50.0,
+    "confused_with": {}
+  },
+  "Price": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2.0,
+    "confused_with": {
+      "price": 2
+    }
+  },
+  "noun": {
+    "precision": 0.676056338028169,
+    "recall": 0.5975103734439834,
+    "f1-score": 0.6343612334801763,
+    "support": 241.0,
+    "confused_with": {
+      "adjective": 25
+    }
+  },
+  "type": {
+    "precision": 0.8721311475409836,
+    "recall": 0.9466192170818505,
+    "f1-score": 0.9078498293515358,
+    "support": 562.0,
+    "confused_with": {
+      "category": 8
+    }
+  },
+  "topic": {
+    "precision": 0.7126436781609196,
+    "recall": 0.6919642857142857,
+    "f1-score": 0.7021517553793885,
+    "support": 448.0,
+    "confused_with": {
+      "adjective": 31
+    }
+  },
+  "micro avg": {
+    "precision": 0.8225980568549838,
+    "recall": 0.8300653594771242,
+    "f1-score": 0.8263148382432677,
+    "support": 2754.0
+  },
+  "macro avg": {
+    "precision": 0.8164592118577496,
+    "recall": 0.8368492320619575,
+    "f1-score": 0.8235700693101108,
+    "support": 2754.0
+  },
+  "weighted avg": {
+    "precision": 0.8151873648497528,
+    "recall": 0.8300653594771242,
+    "f1-score": 0.8214411207285591,
+    "support": 2754.0
+  },
+  "accuracy": 0.8990568818155025
+}

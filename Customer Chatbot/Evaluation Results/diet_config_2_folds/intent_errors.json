@@ -1,0 +1,2850 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_brand_name",
+      "confidence": 0.1486549824476242
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.7140536308288574
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_clothes_size",
+      "confidence": 0.24968118965625763
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.291636198759079
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.37013185024261475
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.969931960105896
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9997486472129822
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.7956335544586182
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6872581839561462
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.41669633984565735
+    }
+  },
+  {
+    "text": "am I talking to a bot?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "start over",
+    "intent": "reset_form",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9403471946716309
+    }
+  },
+  {
+    "text": "begin again",
+    "intent": "reset_form",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9959249496459961
+    }
+  },
+  {
+    "text": "reset",
+    "intent": "reset_form",
+    "intent_prediction": {
+      "name": "ask_refund_products",
+      "confidence": 0.3617090880870819
+    }
+  },
+  {
+    "text": "any free shipping right now?",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.6609135270118713
+    }
+  },
+  {
+    "text": "give me all of them",
+    "intent": "provide_amount",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9932137727737427
+    }
+  },
+  {
+    "text": "can you guide me to choose size for woman",
+    "intent": "request_help_size_general",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.8576582670211792
+    }
+  },
+  {
+    "text": "I need to find size for kid's fashion specifically shirts of H & m",
+    "intent": "request_help_size_general",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999734163284302
+    }
+  },
+  {
+    "text": "what size of nike shoes should I wear ?",
+    "intent": "request_help_size_general",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.591881275177002
+    }
+  },
+  {
+    "text": "I am 80 kg, I don't know how to choose size",
+    "intent": "request_help_size_general",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.905532717704773
+    }
+  },
+  {
+    "text": "I need help with choosing size",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.9640317559242249
+    }
+  },
+  {
+    "text": "I am between sizes, what should I do?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.8517634868621826
+    }
+  },
+  {
+    "text": "do these clothes run big or small?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "can I get help finding the right fit?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.998920202255249
+    }
+  },
+  {
+    "text": "I am trying to find womenswear",
+    "intent": "provide_group_category_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999167919158936
+    }
+  },
+  {
+    "text": "child",
+    "intent": "provide_group_category_name",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9176824688911438
+    }
+  },
+  {
+    "text": "I want shirt",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.8192471265792847
+    }
+  },
+  {
+    "text": "shirts",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "accessories",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "accessory",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "dresses",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "outerwear",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "looking for Gucci brand",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.7459059953689575
+    }
+  },
+  {
+    "text": "I am interested in nikke brand",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "brand guci",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.848125696182251
+    }
+  },
+  {
+    "text": "gucci",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.38560423254966736
+    }
+  },
+  {
+    "text": "everest",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "puma",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9994508624076843
+    }
+  },
+  {
+    "text": "uniqlo",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "uniquelo",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "size M",
+    "intent": "provide_clothes_size",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.6542133092880249
+    }
+  },
+  {
+    "text": "my size is l",
+    "intent": "provide_clothes_size",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.44870853424072266
+    }
+  },
+  {
+    "text": "I wear m",
+    "intent": "provide_clothes_size",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12292270362377167
+    }
+  },
+  {
+    "text": "wearing s size",
+    "intent": "provide_clothes_size",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.5679615139961243
+    }
+  },
+  {
+    "text": "the height of mine is 165 centimeters",
+    "intent": "provide_height",
+    "intent_prediction": {
+      "name": "ask_refund_products",
+      "confidence": 0.25658532977104187
+    }
+  },
+  {
+    "text": "I usually wear size 40",
+    "intent": "provide_shoes_size",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.3692178726196289
+    }
+  },
+  {
+    "text": "I want repayment",
+    "intent": "ask_refund_products",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.17596451938152313
+    }
+  },
+  {
+    "text": "I don't know what to buy can you recommend for me some products?",
+    "intent": "request_product_recommendation",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "can you suggest for me some products?",
+    "intent": "request_product_recommendation",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "suggest vintage products for women of gucci with price within 50 to 70",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.7178848385810852
+    }
+  },
+  {
+    "text": "show me products in the range of 50 to 100",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.9663081765174866
+    }
+  },
+  {
+    "text": "base",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.566200315952301
+    }
+  },
+  {
+    "text": "blend",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.9411339163780212
+    }
+  },
+  {
+    "text": "centerpiece",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9940856695175171
+    }
+  },
+  {
+    "text": "conscience",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.6175602674484253
+    }
+  },
+  {
+    "text": "core",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9981402158737183
+    }
+  },
+  {
+    "text": "cornerstone",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.8854035139083862
+    }
+  },
+  {
+    "text": "element",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9503610730171204
+    }
+  },
+  {
+    "text": "emblem",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.37106043100357056
+    }
+  },
+  {
+    "text": "ensemble",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9372838735580444
+    }
+  },
+  {
+    "text": "focus",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_amount",
+      "confidence": 0.20585598051548004
+    }
+  },
+  {
+    "text": "girl",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.23460254073143005
+    }
+  },
+  {
+    "text": "level",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8645590543746948
+    }
+  },
+  {
+    "text": "does your shop has p.e pants",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.8462991714477539
+    }
+  },
+  {
+    "text": "seam",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2259354144334793
+    }
+  },
+  {
+    "text": "sense",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9547117352485657
+    }
+  },
+  {
+    "text": "step",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.37706321477890015
+    }
+  },
+  {
+    "text": "strength",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8386932015419006
+    }
+  },
+  {
+    "text": "swimwear for sunbathing",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.5580466389656067
+    }
+  },
+  {
+    "text": "I am searching for tee on special occasions",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.3808622658252716
+    }
+  },
+  {
+    "text": "testament",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "reset_form",
+      "confidence": 0.2164272964000702
+    }
+  },
+  {
+    "text": "tie",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.13702313601970673
+    }
+  },
+  {
+    "text": "workout pants",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.8757942914962769
+    }
+  },
+  {
+    "text": "clear",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.5791119337081909
+    }
+  },
+  {
+    "text": "excellent",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9396467208862305
+    }
+  },
+  {
+    "text": "five-pocket pants",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9936375617980957
+    }
+  },
+  {
+    "text": "go-to",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8585790991783142
+    }
+  },
+  {
+    "text": "ideal",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.30163002014160156
+    }
+  },
+  {
+    "text": "low",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.1543499231338501
+    }
+  },
+  {
+    "text": "low-top",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9229612350463867
+    }
+  },
+  {
+    "text": "maximum",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.918213427066803
+    }
+  },
+  {
+    "text": "numerous",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.6736671924591064
+    }
+  },
+  {
+    "text": "oversized sport-jacket",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9988717436790466
+    }
+  },
+  {
+    "text": "proud",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.3362596929073334
+    }
+  },
+  {
+    "text": "rich rash-guard",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9994706511497498
+    }
+  },
+  {
+    "text": "rocky rashguard",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999591112136841
+    }
+  },
+  {
+    "text": "I am looking for maxi dress for romantic occasion 10 - 100",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.6734448075294495
+    }
+  },
+  {
+    "text": "roomy parka in the range of 65 to 200",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.9743632674217224
+    }
+  },
+  {
+    "text": "safe raincoat between 50 and 100 bucks",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.913802981376648
+    }
+  },
+  {
+    "text": "separate overall",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9998656511306763
+    }
+  },
+  {
+    "text": "a single overshirt higher6 than 89",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.8684574961662292
+    }
+  },
+  {
+    "text": "skate",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.3863711357116699
+    }
+  },
+  {
+    "text": "do you have any slim leggings ?",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9989725351333618
+    }
+  },
+  {
+    "text": "slip-on loafers",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9997383952140808
+    }
+  },
+  {
+    "text": "standard flipflop for summer",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9969767332077026
+    }
+  },
+  {
+    "text": "street-ready flip-flops",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9886360168457031
+    }
+  },
+  {
+    "text": "sun-drenched",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9732428789138794
+    }
+  },
+  {
+    "text": "super overalls",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9985307455062866
+    }
+  },
+  {
+    "text": "kid everyday and technical rain coat",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9919205904006958
+    }
+  },
+  {
+    "text": "top over shirt and the topic is streetwear",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9553406238555908
+    }
+  },
+  {
+    "text": "total over-shirt",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9998579025268555
+    }
+  },
+  {
+    "text": "button-up shirt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.7908231019973755
+    }
+  },
+  {
+    "text": "cover-up",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.808365523815155
+    }
+  },
+  {
+    "text": "croptop",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "flannel shirt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "hoodie",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "hodie",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "puffer jacket",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "sneakers",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "sneaker",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "sweater",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.7355583906173706
+    }
+  },
+  {
+    "text": "swimsuit",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "swim suit",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9978269934654236
+    }
+  },
+  {
+    "text": "swim-suit",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9630137085914612
+    }
+  },
+  {
+    "text": "t-shirt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.999427080154419
+    }
+  },
+  {
+    "text": "vest",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "water shoes",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.637927234172821
+    }
+  },
+  {
+    "text": "windbreaker",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9996826648712158
+    }
+  },
+  {
+    "text": "wind-breaker",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "wind breaker",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "lether",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.4368652105331421
+    }
+  },
+  {
+    "text": "polyester",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.7630712389945984
+    }
+  },
+  {
+    "text": "silk",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "spandex",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999294281005859
+    }
+  },
+  {
+    "text": "business-casual",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2265177220106125
+    }
+  },
+  {
+    "text": "modern workwear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "modern-workwear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "modern work wear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999997615814209
+    }
+  },
+  {
+    "text": "informal",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "cultural",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9981116056442261
+    }
+  },
+  {
+    "text": "eco-friendly",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "eco friendly",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "ecofriendly",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "environmentally friendly",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "environmentally-friendly",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "conscious choice",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "minimalist",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "weather-ready",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.7788599133491516
+    }
+  },
+  {
+    "text": "urban essential",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "urban-essential",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "running errands and grabbing coffee",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "gym workouts",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "office outfits",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "office",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "high-fashion",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9969655871391296
+    }
+  },
+  {
+    "text": "high-fashion clothing",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9474800825119019
+    }
+  },
+  {
+    "text": "luxurious",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.8831647634506226
+    }
+  },
+  {
+    "text": "90s fashion",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.5442284345626831
+    }
+  },
+  {
+    "text": "80s fashion",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.5442284345626831
+    }
+  },
+  {
+    "text": "throwback feel",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.5925562381744385
+    }
+  },
+  {
+    "text": "traditional-looking",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "the fall",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_clothes_size",
+      "confidence": 0.15779940783977509
+    }
+  },
+  {
+    "text": "in spring",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "rainy days",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "windy",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "holiday",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999992847442627
+    }
+  },
+  {
+    "text": "basic fashion",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.942478358745575
+    }
+  },
+  {
+    "text": "all-purpose",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.10414009541273117
+    }
+  },
+  {
+    "text": "don't have to think about",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9985342025756836
+    }
+  },
+  {
+    "text": "no logos or graphics",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.27491649985313416
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.32671505212783813
+    }
+  },
+  {
+    "text": "I know",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6220864057540894
+    }
+  },
+  {
+    "text": "I know my size",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.7131372690200806
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.3841058015823364
+    }
+  },
+  {
+    "text": "I don't know my size",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.6124365925788879
+    }
+  },
+  {
+    "text": "first time buying",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.4813680648803711
+    }
+  },
+  {
+    "text": "not sure about the size",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.4541993737220764
+    }
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.35410258173942566
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.38968798518180847
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3650692403316498
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.14706002175807953
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8083124756813049
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9997795224189758
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.45984870195388794
+    }
+  },
+  {
+    "text": "are you a bot?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7830634117126465
+    }
+  },
+  {
+    "text": "are you a human?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6071418523788452
+    }
+  },
+  {
+    "text": "any discounts that your shop offering?",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.6597272753715515
+    }
+  },
+  {
+    "text": "are there any special offers?",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9887804985046387
+    }
+  },
+  {
+    "text": "order around 60",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.9717158079147339
+    }
+  },
+  {
+    "text": "orders up to 175",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.41066041588783264
+    }
+  },
+  {
+    "text": "order deals for price from 100 to 250",
+    "intent": "request_promotions",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.45822635293006897
+    }
+  },
+  {
+    "text": "I want both",
+    "intent": "provide_amount",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.2191878706216812
+    }
+  },
+  {
+    "text": "both",
+    "intent": "provide_amount",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.13589665293693542
+    }
+  },
+  {
+    "text": "what size do you recommend for me?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "request_product_recommendation",
+      "confidence": 0.38079872727394104
+    }
+  },
+  {
+    "text": "what size do you suggest for me?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "request_product_recommendation",
+      "confidence": 0.4848604202270508
+    }
+  },
+  {
+    "text": "can you tell me which size would be good for me?",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.670158863067627
+    }
+  },
+  {
+    "text": "is there a size guide I can follow",
+    "intent": "help_size",
+    "intent_prediction": {
+      "name": "request_help_size_general",
+      "confidence": 0.23088039457798004
+    }
+  },
+  {
+    "text": "I am searching for womanswear",
+    "intent": "provide_group_category_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9996260404586792
+    }
+  },
+  {
+    "text": "I am looking for pants",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "pant",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999819993972778
+    }
+  },
+  {
+    "text": "pants",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9997268319129944
+    }
+  },
+  {
+    "text": "shoes",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9871152639389038
+    }
+  },
+  {
+    "text": "trouser",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9952450394630432
+    }
+  },
+  {
+    "text": "trousers",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999164342880249
+    }
+  },
+  {
+    "text": "swim-wear",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9986293315887451
+    }
+  },
+  {
+    "text": "swim wear",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.5612977147102356
+    }
+  },
+  {
+    "text": "HandM",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "bitis",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999967813491821
+    }
+  },
+  {
+    "text": "bitis's",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9929909706115723
+    }
+  },
+  {
+    "text": "blom",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "bloom",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "routines",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "routine",
+    "intent": "provide_brand_name",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "I feel comfortable when wearing size L",
+    "intent": "provide_clothes_size",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.6431588530540466
+    }
+  },
+  {
+    "text": "160 cm",
+    "intent": "provide_height",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.5397156476974487
+    }
+  },
+  {
+    "text": "I tall 175 CM",
+    "intent": "provide_height",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.3391155004501343
+    }
+  },
+  {
+    "text": "track orders",
+    "intent": "ask_tracking_order_status",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.6595528721809387
+    }
+  },
+  {
+    "text": "I want the shop to compensate for products that are not as expected",
+    "intent": "ask_refund_products",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999942779541016
+    }
+  },
+  {
+    "text": "I want to restore money",
+    "intent": "ask_refund_products",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "I am looking men clothes",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.9650371670722961
+    }
+  },
+  {
+    "text": "I want to see chino",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2618294954299927
+    }
+  },
+  {
+    "text": "accessorizing",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.7401385307312012
+    }
+  },
+  {
+    "text": "creator",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9276178479194641
+    }
+  },
+  {
+    "text": "crest",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.4433392286300659
+    }
+  },
+  {
+    "text": "edge",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.19091463088989258
+    }
+  },
+  {
+    "text": "I am looking for some essential of brand zara",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_brand_name",
+      "confidence": 0.9748596549034119
+    }
+  },
+  {
+    "text": "face",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.36554038524627686
+    }
+  },
+  {
+    "text": "fashion",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.7742227911949158
+    }
+  },
+  {
+    "text": "fit",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.6874842047691345
+    }
+  },
+  {
+    "text": "footprint",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.591842532157898
+    }
+  },
+  {
+    "text": "shoes with heart",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_shoes_size",
+      "confidence": 0.17755554616451263
+    }
+  },
+  {
+    "text": "heat",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.23119981586933136
+    }
+  },
+  {
+    "text": "hit",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.32987990975379944
+    }
+  },
+  {
+    "text": "lapel",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.10236883163452148
+    }
+  },
+  {
+    "text": "limit",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9944431185722351
+    }
+  },
+  {
+    "text": "need",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.15533119440078735
+    }
+  },
+  {
+    "text": "nod",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.25084319710731506
+    }
+  },
+  {
+    "text": "owner",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.5889371037483215
+    }
+  },
+  {
+    "text": "shoulder",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.15045219659805298
+    }
+  },
+  {
+    "text": "shoes to wear on street",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8109784126281738
+    }
+  },
+  {
+    "text": "pants to swim",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9911003708839417
+    }
+  },
+  {
+    "text": "throw",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8783825039863586
+    }
+  },
+  {
+    "text": "treat",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7933844923973083
+    }
+  },
+  {
+    "text": "twist",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8967369198799133
+    }
+  },
+  {
+    "text": "twill",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_amount",
+      "confidence": 0.22901985049247742
+    }
+  },
+  {
+    "text": "any dreesses vacation",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.5520115494728088
+    }
+  },
+  {
+    "text": "wash",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.40082070231437683
+    }
+  },
+  {
+    "text": "wear",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.2242804616689682
+    }
+  },
+  {
+    "text": "allover",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_amount",
+      "confidence": 0.5854108929634094
+    }
+  },
+  {
+    "text": "basic shirt",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.7467543482780457
+    }
+  },
+  {
+    "text": "the weather is breezy now, can you suggest for me some outerwears",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "request_product_recommendation",
+      "confidence": 0.9090734720230103
+    }
+  },
+  {
+    "text": "bright",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5080084204673767
+    }
+  },
+  {
+    "text": "chic",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.22960294783115387
+    }
+  },
+  {
+    "text": "close",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.4244024157524109
+    }
+  },
+  {
+    "text": "I want to be cool so can you suggest for me some products of shirts",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "request_product_recommendation",
+      "confidence": 0.877604603767395
+    }
+  },
+  {
+    "text": "discerning",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.8158438801765442
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.2428703010082245
+    }
+  },
+  {
+    "text": "flowing",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9508357048034668
+    }
+  },
+  {
+    "text": "fluid",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.12196004390716553
+    }
+  },
+  {
+    "text": "four-way shirts",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.8898328542709351
+    }
+  },
+  {
+    "text": "key",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_clothes_size",
+      "confidence": 0.17714878916740417
+    }
+  },
+  {
+    "text": "kind",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.22386178374290466
+    }
+  },
+  {
+    "text": "lap",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.999508261680603
+    }
+  },
+  {
+    "text": "largest-ever",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.7419812679290771
+    }
+  },
+  {
+    "text": "left",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.41264161467552185
+    }
+  },
+  {
+    "text": "leg-lengthening",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9719576835632324
+    }
+  },
+  {
+    "text": "main",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.21875129640102386
+    }
+  },
+  {
+    "text": "metal accessories",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.8842868804931641
+    }
+  },
+  {
+    "text": "moisture-wicking",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.5363447666168213
+    }
+  },
+  {
+    "text": "official",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.9998251795768738
+    }
+  },
+  {
+    "text": "open",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.1352832168340683
+    }
+  },
+  {
+    "text": "plaid track trouser",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.999968409538269
+    }
+  },
+  {
+    "text": "quilted slimfit trousers",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999887943267822
+    }
+  },
+  {
+    "text": "secure and core essential legging less expensive 150",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.9847825169563293
+    }
+  },
+  {
+    "text": "shorts of sheer silk above 45 dollars",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.9775256514549255
+    }
+  },
+  {
+    "text": "soft and environmentally-friendly flip flop for a child",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8721572160720825
+    }
+  },
+  {
+    "text": "solid flipflops",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999873638153076
+    }
+  },
+  {
+    "text": "solo and eco-friendly polo shirt",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.7864687442779541
+    }
+  },
+  {
+    "text": "sporty and street wear hoodie",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.8255512714385986
+    }
+  },
+  {
+    "text": "dress trousers with stretchy material",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.4037127196788788
+    }
+  },
+  {
+    "text": "tailored flannel shirt",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999840259552002
+    }
+  },
+  {
+    "text": "My wardrobe feels so dark. I want to buy some bright t-shirt for the summer",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.6735556125640869
+    }
+  },
+  {
+    "text": "I really need a UPF 50+ coat{\"entity\": \"type\", \"value\": \"Coat\"} from coolMate{\"entity\": \"brand_name\", \"value\": \"CoolMate\"} for women",
+    "intent": "provide_multiple_recommendation_information",
+    "intent_prediction": {
+      "name": "provide_brand_name",
+      "confidence": 0.3081537187099457
+    }
+  },
+  {
+    "text": "the product type I am looking for is jeans",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999964237213135
+    }
+  },
+  {
+    "text": "belt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "reset_form",
+      "confidence": 0.2282439023256302
+    }
+  },
+  {
+    "text": "blouse",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "cardigan",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "culottes",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "culotte",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "denim shirt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_material",
+      "confidence": 0.5419086813926697
+    }
+  },
+  {
+    "text": "flip-flops",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "jeans",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9781050086021423
+    }
+  },
+  {
+    "text": "knitwear",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9759209156036377
+    }
+  },
+  {
+    "text": "knit wear",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2966700494289398
+    }
+  },
+  {
+    "text": "knit-wear",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "overalls",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "overall",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "overshirt",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "parka",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "rashguard",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "scarf",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.8692147135734558
+    }
+  },
+  {
+    "text": "tunic",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.32004809379577637
+    }
+  },
+  {
+    "text": "trench coat",
+    "intent": "provide_type",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999896287918091
+    }
+  },
+  {
+    "text": "airism",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999977350234985
+    }
+  },
+  {
+    "text": "corduroy",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9999667406082153
+    }
+  },
+  {
+    "text": "leather",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9654754996299744
+    }
+  },
+  {
+    "text": "linen",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.38497230410575867
+    }
+  },
+  {
+    "text": "linene",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.569189727306366
+    }
+  },
+  {
+    "text": "mesh",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999195337295532
+    }
+  },
+  {
+    "text": "organic cotton",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "viscose",
+    "intent": "provide_material",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.39003026485443115
+    }
+  },
+  {
+    "text": "the topic I am looking for is seasonal",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "searching for casual topic",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "athleisure",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999998807907104
+    }
+  },
+  {
+    "text": "performance",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.749896764755249
+    }
+  },
+  {
+    "text": "festive wear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "statement piece",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "clean design",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "seasonal",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "sustainable",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "vintage",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "retro",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9742045998573303
+    }
+  },
+  {
+    "text": "heritage style",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "hanging out on the weekend",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9973268508911133
+    }
+  },
+  {
+    "text": "wear for a casual day in the city",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9997653365135193
+    }
+  },
+  {
+    "text": "long-distance training",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.981971800327301
+    }
+  },
+  {
+    "text": "morning runs",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6609870195388794
+    }
+  },
+  {
+    "text": "intense outdoor sports",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "something for my 9 to 5 job",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_price",
+      "confidence": 0.5761117339134216
+    }
+  },
+  {
+    "text": "work presentations",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "request_promotions",
+      "confidence": 0.5620957016944885
+    }
+  },
+  {
+    "text": "corporate environment",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9997634291648865
+    }
+  },
+  {
+    "text": "high-end options",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9813598394393921
+    }
+  },
+  {
+    "text": "special occasion",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "exclusive items",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "ask_refund_products",
+      "confidence": 0.46747609972953796
+    }
+  },
+  {
+    "text": "celebrity would wear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.6240339279174805
+    }
+  },
+  {
+    "text": "vintage-style",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "retro look",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.4963204562664032
+    }
+  },
+  {
+    "text": "70s aesthetic",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "city look",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "on trend",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "good windbreaker",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9990729093551636
+    }
+  },
+  {
+    "text": "waterproof",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_type",
+      "confidence": 0.9903528094291687
+    }
+  },
+  {
+    "text": "unpredictable weather",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "beach",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999890327453613
+    }
+  },
+  {
+    "text": "hot weather",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.207991823554039
+    }
+  },
+  {
+    "text": "breezy sundress",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.8750065565109253
+    }
+  },
+  {
+    "text": "pool",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999599456787109
+    }
+  },
+  {
+    "text": "sun protection",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "UPF 50+",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.5638879537582397
+    }
+  },
+  {
+    "text": "quick-drying",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999978542327881
+    }
+  },
+  {
+    "text": "easy-to-wear",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "daily life",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.999976634979248
+    }
+  },
+  {
+    "text": "my kids",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.5200062394142151
+    }
+  },
+  {
+    "text": "my child",
+    "intent": "provide_topic",
+    "intent_prediction": {
+      "name": "provide_group_category_name",
+      "confidence": 0.9941138625144958
+    }
+  },
+  {
+    "text": "less expensive than 45 bucks",
+    "intent": "provide_price",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9487789273262024
+    }
+  },
+  {
+    "text": "under 97 bucks",
+    "intent": "provide_price",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999425411224365
+    }
+  },
+  {
+    "text": "yeah",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.11666584014892578
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_multiple_recommendation_information",
+      "confidence": 0.9999891519546509
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7410581707954407
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_topic",
+      "confidence": 0.832486093044281
+    }
+  },
+  {
+    "text": "never bought from this brand",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_brand_name",
+      "confidence": 0.9406239986419678
+    }
+  },
+  {
+    "text": "please help me",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "help_size",
+      "confidence": 0.328743577003479
+    }
+  }
+]
