@@ -1,0 +1,578 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.620549201965332
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "request_help",
+      "confidence": 0.15861517190933228
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.46628060936927795
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6688312888145447
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.537640392780304
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3155122995376587
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.3830603063106537
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.5666478276252747
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_end_date",
+      "confidence": 0.3628905415534973
+    }
+  },
+  {
+    "text": "no way",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_end_date",
+      "confidence": 0.2236230969429016
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8146272897720337
+    }
+  },
+  {
+    "text": "I don't want",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.37156134843826294
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.3710858225822449
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.8282943964004517
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.8523111343383789
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3842754364013672
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "provide_end_date",
+      "confidence": 0.27505579590797424
+    }
+  },
+  {
+    "text": "assist me",
+    "intent": "request_help",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.4299966096878052
+    }
+  },
+  {
+    "text": "I am John Doe",
+    "intent": "introduce_self",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.24543756246566772
+    }
+  },
+  {
+    "text": "product with most attention",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.5609074234962463
+    }
+  },
+  {
+    "text": "hot item",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "provide_filter_value",
+      "confidence": 0.517684280872345
+    }
+  },
+  {
+    "text": "hot product",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "provide_filter_value",
+      "confidence": 0.26698729395866394
+    }
+  },
+  {
+    "text": "2025.05.31",
+    "intent": "provide_date",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.5965577960014343
+    }
+  },
+  {
+    "text": "today",
+    "intent": "provide_date",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.25780826807022095
+    }
+  },
+  {
+    "text": "now",
+    "intent": "provide_date",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.3391838073730469
+    }
+  },
+  {
+    "text": "tomorrow",
+    "intent": "provide_date",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.2622792720794678
+    }
+  },
+  {
+    "text": "outerwear",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9836114048957825
+    }
+  },
+  {
+    "text": "category",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.8375530242919922
+    }
+  },
+  {
+    "text": "one category",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_category",
+      "confidence": 0.7666168212890625
+    }
+  },
+  {
+    "text": "products",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_report_amount",
+      "confidence": 0.5910693407058716
+    }
+  },
+  {
+    "text": "start over",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "provide_start_date",
+      "confidence": 0.9495924711227417
+    }
+  },
+  {
+    "text": "begin again",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "provide_start_date",
+      "confidence": 0.971065878868103
+    }
+  },
+  {
+    "text": "start fresh",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "provide_start_date",
+      "confidence": 0.9732610583305359
+    }
+  },
+  {
+    "text": "new trend analysis",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9868578910827637
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.11019393801689148
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.33574676513671875
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.8530663251876831
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.34120723605155945
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_report_amount",
+      "confidence": 0.2069065272808075
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3958021104335785
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4839153587818146
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_report_amount",
+      "confidence": 0.5956575870513916
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.5014604330062866
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.1443004608154297
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.4605282247066498
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.489346981048584
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.539827287197113
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7128551602363586
+    }
+  },
+  {
+    "text": "I need help",
+    "intent": "request_help",
+    "intent_prediction": {
+      "name": "provide_report_amount",
+      "confidence": 0.6507344841957092
+    }
+  },
+  {
+    "text": "help",
+    "intent": "request_help",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.309933602809906
+    }
+  },
+  {
+    "text": "tell me the lowest demand product last week",
+    "intent": "request_trend",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.7498083114624023
+    }
+  },
+  {
+    "text": "give me the most poor-performing product in terms of view",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9991680383682251
+    }
+  },
+  {
+    "text": "starting 15 March 2024",
+    "intent": "provide_start_date",
+    "intent_prediction": {
+      "name": "provide_date",
+      "confidence": 0.9856517314910889
+    }
+  },
+  {
+    "text": "to Aug 2nd, 2024",
+    "intent": "provide_end_date",
+    "intent_prediction": {
+      "name": "provide_date",
+      "confidence": 0.6435734033584595
+    }
+  },
+  {
+    "text": "to 31 Aug 2024",
+    "intent": "provide_end_date",
+    "intent_prediction": {
+      "name": "provide_date",
+      "confidence": 0.9289531111717224
+    }
+  },
+  {
+    "text": "to 1st Aug 2024",
+    "intent": "provide_end_date",
+    "intent_prediction": {
+      "name": "provide_date",
+      "confidence": 0.9990646243095398
+    }
+  },
+  {
+    "text": "shoe category",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_filter_value",
+      "confidence": 0.39392954111099243
+    }
+  },
+  {
+    "text": "need shoe",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "provide_report_amount",
+      "confidence": 0.4081425666809082
+    }
+  },
+  {
+    "text": "accessories",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9999974966049194
+    }
+  },
+  {
+    "text": "accessory",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9998241066932678
+    }
+  },
+  {
+    "text": "I want turnover from 01/01/2025 to 31/12/2025",
+    "intent": "request_profit_revenue",
+    "intent_prediction": {
+      "name": "provide_end_date",
+      "confidence": 0.4545705318450928
+    }
+  },
+  {
+    "text": "I want all products",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9739171862602234
+    }
+  },
+  {
+    "text": "All products",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9888572096824646
+    }
+  },
+  {
+    "text": "report all",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9999152421951294
+    }
+  },
+  {
+    "text": "one is enough",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.22840051352977753
+    }
+  },
+  {
+    "text": "all products",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.98277747631073
+    }
+  },
+  {
+    "text": "product",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.7314360737800598
+    }
+  },
+  {
+    "text": "item",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.9843958616256714
+    }
+  },
+  {
+    "text": "items",
+    "intent": "provide_filter_value",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.9053858518600464
+    }
+  },
+  {
+    "text": "new analysis",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.8422075510025024
+    }
+  },
+  {
+    "text": "restart analysis",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9955624341964722
+    }
+  },
+  {
+    "text": "reset analysis",
+    "intent": "restart_analysis",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9975311160087585
+    }
+  }
+]

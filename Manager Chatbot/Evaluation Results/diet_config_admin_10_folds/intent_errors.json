@@ -1,0 +1,226 @@
+[
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.260759174823761
+    }
+  },
+  {
+    "text": "give me the underperforming item at present?",
+    "intent": "request_trend",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.6753168106079102
+    }
+  },
+  {
+    "text": "give me the most poor-performing product in terms of view",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "2025.05.31",
+    "intent": "provide_date",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.9633442163467407
+    }
+  },
+  {
+    "text": "one is enough",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "provide_end_date",
+      "confidence": 0.7247228026390076
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.48653659224510193
+    }
+  },
+  {
+    "text": "I am looking for pants",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.865789532661438
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6120454668998718
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.9899312257766724
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7361212372779846
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.28168755769729614
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.49827268719673157
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9077393412590027
+    }
+  },
+  {
+    "text": "tell me the lowest demand product last week",
+    "intent": "request_trend",
+    "intent_prediction": {
+      "name": "provide_trend_analysis_type",
+      "confidence": 0.9205181002616882
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.48734942078590393
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.3372887670993805
+    }
+  },
+  {
+    "text": "report all",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9999411106109619
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6923169493675232
+    }
+  },
+  {
+    "text": "I want to see the least viewed product",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.999052107334137
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_start_date",
+      "confidence": 0.6838670969009399
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5083813071250916
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "provide_step",
+      "confidence": 0.7691594958305359
+    }
+  },
+  {
+    "text": "looking for trousers category",
+    "intent": "provide_category",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.9353300929069519
+    }
+  },
+  {
+    "text": "I need product that got viewed most",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.6287760138511658
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "provide_number",
+      "confidence": 0.6423289775848389
+    }
+  },
+  {
+    "text": "product with most attention",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "least attention",
+    "intent": "provide_trend_analysis_type",
+    "intent_prediction": {
+      "name": "request_trend",
+      "confidence": 0.999882698059082
+    }
+  },
+  {
+    "text": "report for me only one",
+    "intent": "provide_report_amount",
+    "intent_prediction": {
+      "name": "request_profit_revenue",
+      "confidence": 0.9591445326805115
+    }
+  }
+]

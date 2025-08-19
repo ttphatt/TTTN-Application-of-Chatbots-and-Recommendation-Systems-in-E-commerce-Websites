@@ -1,0 +1,4708 @@
+[
+  {
+    "text": "Please show me the information of the buying trends between 2024-01-01 and 2024-12-31 about pant",
+    "entities": [
+      {
+        "start": 38,
+        "end": 51,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 60,
+        "end": 70,
+        "value": "2024-01-01",
+        "entity": "start_date"
+      },
+      {
+        "start": 75,
+        "end": 85,
+        "value": "2024-12-31",
+        "entity": "end_date"
+      },
+      {
+        "start": 92,
+        "end": 96,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 31,
+        "end": 33,
+        "confidence_entity": 0.6222606301307678,
+        "value": "of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "analysis_type",
+        "start": 38,
+        "end": 51,
+        "confidence_entity": 0.8797501921653748,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 60,
+        "end": 70,
+        "confidence_entity": 0.5223486423492432,
+        "value": "2024-01-01",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 75,
+        "end": 85,
+        "confidence_entity": 0.8015509247779846,
+        "value": "2024-12-31",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 92,
+        "end": 96,
+        "confidence_entity": 0.9995818734169006,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to see trend of buying start 2024-01-01 end 2024-12-31 of trousers",
+    "entities": [
+      {
+        "start": 14,
+        "end": 29,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 36,
+        "end": 46,
+        "value": "2024-01-01",
+        "entity": "start_date"
+      },
+      {
+        "start": 51,
+        "end": 61,
+        "value": "2024-12-31",
+        "entity": "end_date"
+      },
+      {
+        "start": 65,
+        "end": 73,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 14,
+        "end": 29,
+        "confidence_entity": 0.8888559937477112,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 36,
+        "end": 46,
+        "confidence_entity": 0.9487206339836121,
+        "value": "2024-01-01",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 51,
+        "end": 61,
+        "confidence_entity": 0.6119574308395386,
+        "value": "2024-12-31",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 65,
+        "end": 73,
+        "confidence_entity": 0.99989914894104,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "shopping trends analysis of shirt from 01/01/2025 to [31/12/2025]",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 28,
+        "end": 33,
+        "value": "Shirts",
+        "entity": "category"
+      },
+      {
+        "start": 39,
+        "end": 49,
+        "value": "01/01/2025",
+        "entity": "start_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 0,
+        "end": 15,
+        "confidence_entity": 0.8903349041938782,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.9997367262840271,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 39,
+        "end": 49,
+        "confidence_entity": 0.7859297394752502,
+        "value": "01/01/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show trends of buying about type trousers starting from 01-01-2025 ending on 12-31-2025",
+    "entities": [
+      {
+        "start": 5,
+        "end": 21,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 56,
+        "end": 66,
+        "value": "01-01-2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 77,
+        "end": 87,
+        "value": "12-31-2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 5,
+        "end": 21,
+        "confidence_entity": 0.9273268580436707,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 33,
+        "end": 41,
+        "confidence_entity": 0.9998810291290283,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 56,
+        "end": 66,
+        "confidence_entity": 0.6886039972305298,
+        "value": "01-01-2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 77,
+        "end": 87,
+        "confidence_entity": 0.9960216879844666,
+        "value": "12-31-2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show me fashion data regarding product type pant from 1 Jan 2024 to 31 Dec 2024",
+    "entities": [
+      {
+        "start": 8,
+        "end": 15,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 44,
+        "end": 48,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 54,
+        "end": 64,
+        "value": "1 Jan 2024",
+        "entity": "start_date"
+      },
+      {
+        "start": 68,
+        "end": 79,
+        "value": "31 Dec 2024",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.9985094666481018,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 44,
+        "end": 48,
+        "confidence_entity": 0.9997395873069763,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 54,
+        "end": 64,
+        "confidence_entity": 0.7964428663253784,
+        "value": "1 Jan 2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 68,
+        "end": 79,
+        "confidence_entity": 0.9787063002586365,
+        "value": "31 Dec 2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to know the lowest selling item of outter wear the last 2 months",
+    "entities": [
+      {
+        "start": 19,
+        "end": 38,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 42,
+        "end": 53,
+        "value": "Outerwear",
+        "entity": "category"
+      },
+      {
+        "start": 54,
+        "end": 71,
+        "value": "the last 2 months",
+        "entity": "date_period"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 19,
+        "end": 38,
+        "confidence_entity": 0.9979760050773621,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 42,
+        "end": 53,
+        "confidence_entity": 0.999439537525177,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 58,
+        "end": 71,
+        "confidence_entity": 0.9991843104362488,
+        "value": "last 2 months",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which one is your least popular product right now?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 39,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 40,
+        "end": 49,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 39,
+        "confidence_entity": 0.9953463673591614,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which one is the least popular item of 2 weeks ago for outer-wear",
+    "entities": [
+      {
+        "start": 17,
+        "end": 35,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 39,
+        "end": 46,
+        "value": "2 weeks",
+        "entity": "date_period"
+      },
+      {
+        "start": 55,
+        "end": 65,
+        "value": "Outerwear",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 17,
+        "end": 35,
+        "confidence_entity": 0.9987887740135193,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 39,
+        "end": 50,
+        "confidence_entity": 0.9987536668777466,
+        "value": "2 weeks ago",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 55,
+        "end": 65,
+        "confidence_entity": 0.9998345375061035,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need you to generate for me a report about earning of the store starting from 01-30-2025 till 10-28-2025",
+    "entities": [
+      {
+        "start": 45,
+        "end": 52,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 80,
+        "end": 90,
+        "value": "01-30-2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 96,
+        "end": 106,
+        "value": "10-28-2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 45,
+        "end": 52,
+        "confidence_entity": 0.9979435801506042,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 80,
+        "end": 90,
+        "confidence_entity": 0.6375612020492554,
+        "value": "01-30-2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 96,
+        "end": 106,
+        "confidence_entity": 0.9828910827636719,
+        "value": "10-28-2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "analyzing for me the revenues for product's id 1 starting on Aug 19 2025 ending on Sept 19 2025 of one category",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 47,
+        "end": 48,
+        "value": "1",
+        "entity": "product_id"
+      },
+      {
+        "start": 61,
+        "end": 72,
+        "value": "Aug 19 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 83,
+        "end": 95,
+        "value": "Sept 19 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 99,
+        "end": 111,
+        "value": "Category",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.9998759031295776,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_id",
+        "start": 47,
+        "end": 48,
+        "confidence_entity": 0.9742735028266907,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 61,
+        "end": 72,
+        "confidence_entity": 0.8,
+        "value": "Aug 19 2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 83,
+        "end": 95,
+        "confidence_entity": 0.5273582339286804,
+        "value": "Sept 19 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 99,
+        "end": 102,
+        "confidence_entity": 0.9028656482696533,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 103,
+        "end": 111,
+        "confidence_entity": 0.7690852284431458,
+        "value": "Category",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "all of them please",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "All",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_amount",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.5825537443161011,
+        "value": "all of them please",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want the step to be one week",
+    "entities": [
+      {
+        "start": 22,
+        "end": 30,
+        "value": "7",
+        "entity": "step"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 19,
+        "end": 21,
+        "confidence_entity": 0.8861383199691772,
+        "value": "be",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "step",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9533857107162476,
+        "value": "7",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Generate for me the buying trends report from May 10 2025 to Aug 18 2025 of outter wear",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 46,
+        "end": 57,
+        "value": "May 10 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 61,
+        "end": 72,
+        "value": "Aug 18 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 76,
+        "end": 87,
+        "value": "Outerwear",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.6154123544692993,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 46,
+        "end": 57,
+        "confidence_entity": 0.8095643520355225,
+        "value": "May 10 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 61,
+        "end": 75,
+        "confidence_entity": 0.4875921905040741,
+        "value": "Aug 18 2025 of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 76,
+        "end": 87,
+        "confidence_entity": 0.9966397285461426,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "generate for me an analysis for shopping trends from 01.01.2024 until 31.12.2024 for pant",
+    "entities": [
+      {
+        "start": 32,
+        "end": 47,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 53,
+        "end": 63,
+        "value": "01.01.2024",
+        "entity": "start_date"
+      },
+      {
+        "start": 70,
+        "end": 80,
+        "value": "31.12.2024",
+        "entity": "end_date"
+      },
+      {
+        "start": 85,
+        "end": 89,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 32,
+        "end": 47,
+        "confidence_entity": 0.9133601188659668,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 53,
+        "end": 63,
+        "confidence_entity": 0.9591348767280579,
+        "value": "01.01.2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 70,
+        "end": 80,
+        "confidence_entity": 0.9095726013183594,
+        "value": "31.12.2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 85,
+        "end": 89,
+        "confidence_entity": 0.9997386336326599,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "trend of buying of shirt between 10 12 2025 and 10 30 2025",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "value": "Shirts",
+        "entity": "category"
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "value": "10 12 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 48,
+        "end": 58,
+        "value": "10 30 2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.9220502972602844,
+        "value": "trend of buying of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 19,
+        "end": 24,
+        "confidence_entity": 0.9997543692588806,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 33,
+        "end": 35,
+        "confidence_entity": 0.9953075051307678,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 36,
+        "end": 43,
+        "confidence_entity": 0.7438498139381409,
+        "value": "12 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 48,
+        "end": 50,
+        "confidence_entity": 0.9909539818763733,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 51,
+        "end": 58,
+        "confidence_entity": 0.5919283628463745,
+        "value": "30 2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to see the bottom-ranked item last [year] of trouser",
+    "entities": [
+      {
+        "start": 24,
+        "end": 42,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 58,
+        "end": 65,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 24,
+        "end": 42,
+        "confidence_entity": 0.5117483139038086,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 43,
+        "end": 47,
+        "confidence_entity": 0.9996304512023926,
+        "value": "last",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_period",
+        "start": 49,
+        "end": 53,
+        "confidence_entity": 0.9939151406288147,
+        "value": "year",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 58,
+        "end": 65,
+        "confidence_entity": 0.9998077750205994,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me the underperforming item at present?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 32,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 36,
+        "end": 43,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 32,
+        "confidence_entity": 0.9997960925102234,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 33,
+        "end": 35,
+        "confidence_entity": 0.9779914021492004,
+        "value": "at",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 36,
+        "end": 43,
+        "confidence_entity": 0.5267776846885681,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is our lowest demand item at the moment for accessory?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 30,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 31,
+        "end": 44,
+        "value": "Now",
+        "entity": "end_date"
+      },
+      {
+        "start": 49,
+        "end": 58,
+        "value": "Accessories",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 30,
+        "confidence_entity": 0.9930481910705566,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 31,
+        "end": 33,
+        "confidence_entity": 0.9944013953208923,
+        "value": "at",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.6368882060050964,
+        "value": "moment",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 49,
+        "end": 58,
+        "confidence_entity": 0.9999496936798096,
+        "value": "Accessories",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "2025.05.31",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "2025.05.31",
+        "entity": "date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.5943103432655334,
+        "value": "2025.05.31",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "give me the profits report of a single product with id 10",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 32,
+        "end": 38,
+        "value": "One",
+        "entity": "report_amount"
+      },
+      {
+        "start": 55,
+        "end": 57,
+        "value": "10",
+        "entity": "product_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.9999172687530518,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 30,
+        "end": 31,
+        "confidence_entity": 0.8497930765151978,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 32,
+        "end": 38,
+        "confidence_entity": 0.9942646622657776,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_id",
+        "start": 55,
+        "end": 57,
+        "confidence_entity": 0.9968857169151306,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "turnovers report begins from January 1 2025 for a single product",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 29,
+        "end": 43,
+        "value": "January 1 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 50,
+        "end": 56,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9992020726203918,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 29,
+        "end": 43,
+        "confidence_entity": 0.5963665843009949,
+        "value": "January 1 2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 48,
+        "end": 49,
+        "confidence_entity": 0.609676718711853,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 50,
+        "end": 56,
+        "confidence_entity": 0.9275528192520142,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "with start date is 01 01 2025 and end date is 31 12 2025 I need you to generate for me the profit report of all products",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "01 01 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 46,
+        "end": 56,
+        "value": "31 12 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 91,
+        "end": 97,
+        "value": "profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 108,
+        "end": 111,
+        "value": "All",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 19,
+        "end": 21,
+        "confidence_entity": 0.9955553412437439,
+        "value": "01",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.7085655927658081,
+        "value": "01 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 46,
+        "end": 51,
+        "confidence_entity": 0.6158550381660461,
+        "value": "31 12",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 52,
+        "end": 56,
+        "confidence_entity": 0.8815107345581055,
+        "value": "2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_type",
+        "start": 91,
+        "end": 97,
+        "confidence_entity": 0.9992989301681519,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 108,
+        "end": 111,
+        "confidence_entity": 0.793306827545166,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "one is enough",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.6344140768051147,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show me the trends of buying report for pants from 01/01/2025 until 31/12/2025",
+    "entities": [
+      {
+        "start": 12,
+        "end": 28,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 51,
+        "end": 61,
+        "value": "01/01/2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 68,
+        "end": 78,
+        "value": "31/12/2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 12,
+        "end": 28,
+        "confidence_entity": 0.7168945074081421,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.9999436140060425,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 51,
+        "end": 61,
+        "confidence_entity": 0.7998099327087402,
+        "value": "01/01/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 68,
+        "end": 78,
+        "confidence_entity": 0.9933480620384216,
+        "value": "31/12/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can you point out the product that’s been a poor performer in sales lately for dress?",
+    "entities": [
+      {
+        "start": 44,
+        "end": 58,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 79,
+        "end": 84,
+        "value": "Dresses",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 44,
+        "end": 67,
+        "confidence_entity": 0.8433592915534973,
+        "value": "poor performer in sales",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_period",
+        "start": 68,
+        "end": 74,
+        "confidence_entity": 0.5237336754798889,
+        "value": "lately",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.9999274015426636,
+        "value": "Dresses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "looking for least attention of acessories from 10 09 until tomorrow",
+    "entities": [
+      {
+        "start": 12,
+        "end": 27,
+        "value": "Least View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "value": "Accessories",
+        "entity": "category"
+      },
+      {
+        "start": 47,
+        "end": 52,
+        "value": "10 09",
+        "entity": "start_date"
+      },
+      {
+        "start": 53,
+        "end": 67,
+        "value": "Tomorrow",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 27,
+        "confidence_entity": 0.9932502508163452,
+        "value": "Least View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 31,
+        "end": 41,
+        "confidence_entity": 0.9999150037765503,
+        "value": "Accessories",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 42,
+        "end": 46,
+        "confidence_entity": 0.9429602026939392,
+        "value": "from",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.8858880996704102,
+        "value": "10 09",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 53,
+        "end": 67,
+        "confidence_entity": 0.9969223141670227,
+        "value": "Tomorrow",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I only need one",
+    "entities": [
+      {
+        "start": 12,
+        "end": 15,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_amount",
+        "start": 2,
+        "end": 6,
+        "confidence_entity": 0.9978680610656738,
+        "value": "only",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.925341784954071,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "provide every thing",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "All",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.2723626494407654,
+        "value": "provide",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9967988729476929,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "twelve months",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "365",
+        "entity": "step"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.9949171543121338,
+        "value": "months",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "have a nice day",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 5,
+        "end": 6,
+        "confidence_entity": 0.9896441698074341,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "step",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9950887560844421,
+        "value": "day",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the trend of shopping of accessory begins from 10/02/2025 to 10/30/2025?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 29,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 33,
+        "end": 42,
+        "value": "Accessories",
+        "entity": "category"
+      },
+      {
+        "start": 55,
+        "end": 65,
+        "value": "10/02/2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 69,
+        "end": 79,
+        "value": "10/30/2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 12,
+        "end": 32,
+        "confidence_entity": 0.7321064472198486,
+        "value": "trend of shopping of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 33,
+        "end": 42,
+        "confidence_entity": 0.9999130964279175,
+        "value": "Accessories",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 55,
+        "end": 65,
+        "confidence_entity": 0.8800142407417297,
+        "value": "10/02/2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 69,
+        "end": 79,
+        "confidence_entity": 0.8778490424156189,
+        "value": "10/30/2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want you to show me the trends of buying starting from 20-01-2025 and ending on 15-03-2025 for outer wear",
+    "entities": [
+      {
+        "start": 26,
+        "end": 42,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "20-01-2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 82,
+        "end": 92,
+        "value": "15-03-2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 97,
+        "end": 107,
+        "value": "Outerwear",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 26,
+        "end": 42,
+        "confidence_entity": 0.7395826578140259,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 57,
+        "end": 67,
+        "confidence_entity": 0.9516077637672424,
+        "value": "20-01-2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 82,
+        "end": 92,
+        "confidence_entity": 0.9056586623191833,
+        "value": "15-03-2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 97,
+        "end": 107,
+        "confidence_entity": 0.9991828799247742,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "display trends from 2025/01/01 to 2025/12/31 for product type shirt",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 20,
+        "end": 30,
+        "value": "2025/01/01",
+        "entity": "start_date"
+      },
+      {
+        "start": 34,
+        "end": 44,
+        "value": "2025/12/31",
+        "entity": "end_date"
+      },
+      {
+        "start": 62,
+        "end": 67,
+        "value": "Shirts",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.9964763522148132,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 20,
+        "end": 30,
+        "confidence_entity": 0.774010419845581,
+        "value": "2025/01/01",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 34,
+        "end": 44,
+        "confidence_entity": 0.7718494534492493,
+        "value": "2025/12/31",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.9999376535415649,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me the underperforming product currently?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 35,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 36,
+        "end": 45,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 45,
+        "confidence_entity": 0.9623879194259644,
+        "value": "underperforming product currently",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to see the under-performing item of outer-wear from today until today",
+    "entities": [
+      {
+        "start": 18,
+        "end": 39,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 43,
+        "end": 53,
+        "value": "Outerwear",
+        "entity": "category"
+      },
+      {
+        "start": 54,
+        "end": 64,
+        "value": "Now",
+        "entity": "start_date"
+      },
+      {
+        "start": 65,
+        "end": 76,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 7,
+        "end": 9,
+        "confidence_entity": 0.8818333148956299,
+        "value": "to",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 39,
+        "confidence_entity": 0.9981011748313904,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 43,
+        "end": 53,
+        "confidence_entity": 0.999811589717865,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 54,
+        "end": 64,
+        "confidence_entity": 0.9926577210426331,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 65,
+        "end": 76,
+        "confidence_entity": 0.9975428581237793,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I know the information for the most amount of view product of outerwear of last 4 month",
+    "entities": [
+      {
+        "start": 35,
+        "end": 54,
+        "value": "Most View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 66,
+        "end": 75,
+        "value": "outerwear",
+        "entity": "category"
+      },
+      {
+        "start": 79,
+        "end": 91,
+        "value": "last 4 month",
+        "entity": "date_period"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 35,
+        "end": 54,
+        "confidence_entity": 0.9979416728019714,
+        "value": "Most View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 66,
+        "end": 78,
+        "confidence_entity": 0.7215383052825928,
+        "value": "outerwear of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_period",
+        "start": 79,
+        "end": 91,
+        "confidence_entity": 0.9936762452125549,
+        "value": "last 4 month",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "only one is all I need",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_amount",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9895311594009399,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9909737706184387,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "let's go",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.660056471824646,
+        "value": "let",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "cu",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "number",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.5205205082893372,
+        "value": "cu",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "show me trends of shopping from 01/01/2024 to 12/31/2024 regarding shirts",
+    "entities": [
+      {
+        "start": 8,
+        "end": 26,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 32,
+        "end": 42,
+        "value": "01/01/2024",
+        "entity": "start_date"
+      },
+      {
+        "start": 46,
+        "end": 56,
+        "value": "12/31/2024",
+        "entity": "end_date"
+      },
+      {
+        "start": 67,
+        "end": 73,
+        "value": "Shirts",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 8,
+        "end": 26,
+        "confidence_entity": 0.6401645541191101,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 32,
+        "end": 42,
+        "confidence_entity": 0.9688374996185303,
+        "value": "01/01/2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 46,
+        "end": 56,
+        "confidence_entity": 0.8615397810935974,
+        "value": "12/31/2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 67,
+        "end": 73,
+        "confidence_entity": 0.9999346733093262,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "display buying trends from 15-01-2024 until 31-12-2024 for shirt",
+    "entities": [
+      {
+        "start": 8,
+        "end": 21,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 27,
+        "end": 37,
+        "value": "15-01-2024",
+        "entity": "start_date"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "value": "31-12-2024",
+        "entity": "end_date"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "Shirts",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 8,
+        "end": 21,
+        "confidence_entity": 0.8879553079605103,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.9400989413261414,
+        "value": "15-01-2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 44,
+        "end": 54,
+        "confidence_entity": 0.9152570366859436,
+        "value": "31-12-2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.9998797178268433,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "of all products give me the most poor-performing product in terms of view for trouser from today til today",
+    "entities": [
+      {
+        "start": 3,
+        "end": 15,
+        "value": "Product",
+        "entity": "filter_value"
+      },
+      {
+        "start": 28,
+        "end": 73,
+        "value": "Least View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 78,
+        "end": 85,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 86,
+        "end": 96,
+        "value": "Now",
+        "entity": "start_date"
+      },
+      {
+        "start": 97,
+        "end": 106,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_amount",
+        "start": 3,
+        "end": 6,
+        "confidence_entity": 0.9441912770271301,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.8095065355300903,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 28,
+        "end": 65,
+        "confidence_entity": 0.5773316621780396,
+        "value": "most poor-performing product in terms",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 69,
+        "end": 73,
+        "confidence_entity": 0.9716576337814331,
+        "value": "view",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 78,
+        "end": 85,
+        "confidence_entity": 0.9996917247772217,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 86,
+        "end": 96,
+        "confidence_entity": 0.66,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 97,
+        "end": 106,
+        "confidence_entity": 0.9989805817604065,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "product with most viewed from yesterday till today",
+    "entities": [
+      {
+        "start": 13,
+        "end": 24,
+        "value": "Most View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "Yesterday",
+        "entity": "start_date"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.6334854960441589,
+        "value": "most",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9240267872810364,
+        "value": "viewed",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 25,
+        "end": 39,
+        "confidence_entity": 0.9883314967155457,
+        "value": "Yesterday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.9956268072128296,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Turnovers report from [January-1st-2025] till [September-10th-2025] for just one product",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 72,
+        "end": 80,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9998120665550232,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 23,
+        "end": 39,
+        "confidence_entity": 0.9477028846740723,
+        "value": "January-1st-2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 47,
+        "end": 66,
+        "confidence_entity": 0.3934399485588074,
+        "value": "September-10th-2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 72,
+        "end": 80,
+        "confidence_entity": 0.9800149202346802,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need report about profits with product id 4 starting from today of all products",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 44,
+        "end": 45,
+        "value": "4",
+        "entity": "product_id"
+      },
+      {
+        "start": 55,
+        "end": 65,
+        "value": "Now",
+        "entity": "start_date"
+      },
+      {
+        "start": 69,
+        "end": 81,
+        "value": "Product",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.9994661211967468,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_id",
+        "start": 44,
+        "end": 45,
+        "confidence_entity": 0.5199346542358398,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 60,
+        "end": 65,
+        "confidence_entity": 0.9345057606697083,
+        "value": "today",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 69,
+        "end": 81,
+        "confidence_entity": 0.5070282220840454,
+        "value": "Product",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tradings analysis of all products begin yesterday till now in a single category",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 21,
+        "end": 24,
+        "value": "All",
+        "entity": "report_amount"
+      },
+      {
+        "start": 34,
+        "end": 49,
+        "value": "Yesterday",
+        "entity": "start_date"
+      },
+      {
+        "start": 50,
+        "end": 58,
+        "value": "Now",
+        "entity": "end_date"
+      },
+      {
+        "start": 71,
+        "end": 79,
+        "value": "Category",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9998438358306885,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.9995193481445312,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 34,
+        "end": 49,
+        "confidence_entity": 0.9990009665489197,
+        "value": "Yesterday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 50,
+        "end": 58,
+        "confidence_entity": 0.9996004700660706,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 62,
+        "end": 63,
+        "confidence_entity": 0.9879574179649353,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 64,
+        "end": 79,
+        "confidence_entity": 0.9170787930488586,
+        "value": "single category",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "shopping analysis starting from 01/01/2025 until 12/31/2025 of type pants",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 32,
+        "end": 42,
+        "value": "01/01/2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 49,
+        "end": 59,
+        "value": "12/31/2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 68,
+        "end": 73,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 32,
+        "end": 42,
+        "confidence_entity": 0.8469672799110413,
+        "value": "01/01/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 49,
+        "end": 59,
+        "confidence_entity": 0.7723991870880127,
+        "value": "12/31/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 68,
+        "end": 73,
+        "confidence_entity": 0.9999550580978394,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "trends from 28th Jan 2025 to 30th May 2025 for product type shirt",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "value": "28th Jan 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 29,
+        "end": 42,
+        "value": "30th May 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 60,
+        "end": 65,
+        "value": "Shirts",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9907515048980713,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 12,
+        "end": 25,
+        "confidence_entity": 0.8779187202453613,
+        "value": "28th Jan 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 29,
+        "end": 42,
+        "confidence_entity": 0.5776055455207825,
+        "value": "30th May 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 60,
+        "end": 65,
+        "confidence_entity": 0.9998101592063904,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can you show me the best seller product of our shop",
+    "entities": [
+      {
+        "start": 20,
+        "end": 31,
+        "value": "Best Seller",
+        "entity": "trend_analysis_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 20,
+        "end": 31,
+        "confidence_entity": 0.9902210235595703,
+        "value": "Best Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.3214890658855438,
+        "value": "shop",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "product with most attention from 17 09 till 20 10 for cate gory",
+    "entities": [
+      {
+        "start": 13,
+        "end": 27,
+        "value": "Most View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 33,
+        "end": 38,
+        "value": "17 09",
+        "entity": "start_date"
+      },
+      {
+        "start": 44,
+        "end": 49,
+        "value": "20 10",
+        "entity": "end_date"
+      },
+      {
+        "start": 54,
+        "end": 63,
+        "value": "Category",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 13,
+        "end": 27,
+        "confidence_entity": 0.999119222164154,
+        "value": "Most View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 33,
+        "end": 38,
+        "confidence_entity": 0.9694729447364807,
+        "value": "17 09",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 44,
+        "end": 49,
+        "confidence_entity": 0.9823310375213623,
+        "value": "20 10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "filter_value",
+        "start": 54,
+        "end": 58,
+        "confidence_entity": 0.6282042860984802,
+        "value": "cate",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can I ask for the least amount of view product of outerwear of last 2 months",
+    "entities": [
+      {
+        "start": 18,
+        "end": 38,
+        "value": "Least View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 50,
+        "end": 59,
+        "value": "outerwear",
+        "entity": "category"
+      },
+      {
+        "start": 63,
+        "end": 76,
+        "value": "last 2 months",
+        "entity": "date_period"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 38,
+        "confidence_entity": 0.9992775321006775,
+        "value": "Least View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 47,
+        "end": 49,
+        "confidence_entity": 0.9917640089988708,
+        "value": "of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 50,
+        "end": 59,
+        "confidence_entity": 0.9999018907546997,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 63,
+        "end": 76,
+        "confidence_entity": 0.9920654892921448,
+        "value": "last 2 months",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "profits of every thing with start date [1st December 2025]",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 11,
+        "end": 22,
+        "value": "All",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9997352957725525,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 11,
+        "end": 22,
+        "confidence_entity": 0.8541020750999451,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 44,
+        "end": 57,
+        "confidence_entity": 0.9649044275283813,
+        "value": "December 2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Profits from 3 Jan until 14 Febr for only one product",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 13,
+        "end": 18,
+        "value": "3 Jan",
+        "entity": "start_date"
+      },
+      {
+        "start": 25,
+        "end": 32,
+        "value": "14 Febr",
+        "entity": "end_date"
+      },
+      {
+        "start": 37,
+        "end": 45,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.999690055847168,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.7129508256912231,
+        "value": "3 Jan",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 25,
+        "end": 32,
+        "confidence_entity": 0.8390018939971924,
+        "value": "14 Febr",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 37,
+        "end": 45,
+        "confidence_entity": 0.9366523623466492,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Help me with the trend of buying between 01 10 2025 and 03 30 2025 for outerwear",
+    "entities": [
+      {
+        "start": 17,
+        "end": 32,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 41,
+        "end": 51,
+        "value": "01 10 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 56,
+        "end": 66,
+        "value": "03 30 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "value": "Outerwear",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 17,
+        "end": 32,
+        "confidence_entity": 0.8286962509155273,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 41,
+        "end": 51,
+        "confidence_entity": 0.8912107944488525,
+        "value": "01 10 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 56,
+        "end": 66,
+        "confidence_entity": 0.5674488544464111,
+        "value": "03 30 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 71,
+        "end": 80,
+        "confidence_entity": 0.9987577199935913,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "looking for the bottom-ranked product of trousers of 2 years ago",
+    "entities": [
+      {
+        "start": 16,
+        "end": 37,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 41,
+        "end": 49,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 53,
+        "end": 64,
+        "value": "2 years ago",
+        "entity": "date_period"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 16,
+        "end": 29,
+        "confidence_entity": 0.5666072368621826,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 41,
+        "end": 49,
+        "confidence_entity": 0.9998946189880371,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 53,
+        "end": 64,
+        "confidence_entity": 0.9959220886230469,
+        "value": "2 years ago",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to see the least viewed product of swim-wear from 20 01 2025 to now",
+    "entities": [
+      {
+        "start": 18,
+        "end": 30,
+        "value": "Least View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 42,
+        "end": 51,
+        "value": "Swimwear",
+        "entity": "category"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "20 01 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 68,
+        "end": 74,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 30,
+        "confidence_entity": 0.9132147431373596,
+        "value": "Least View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 42,
+        "end": 51,
+        "confidence_entity": 0.9998161196708679,
+        "value": "Swimwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 57,
+        "end": 67,
+        "confidence_entity": 0.76,
+        "value": "20 01 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 68,
+        "end": 74,
+        "confidence_entity": 0.4482240080833435,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "revenue analyzing for just one product start from 11-07-2025 end one 30-07-2025",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "value": "One",
+        "entity": "report_amount"
+      },
+      {
+        "start": 50,
+        "end": 60,
+        "value": "11-07-2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 69,
+        "end": 79,
+        "value": "30-07-2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9999567270278931,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9949291944503784,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 50,
+        "end": 60,
+        "confidence_entity": 0.9095288515090942,
+        "value": "11-07-2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "filter_value",
+        "start": 65,
+        "end": 68,
+        "confidence_entity": 0.449771910905838,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 69,
+        "end": 79,
+        "confidence_entity": 0.9752970337867737,
+        "value": "30-07-2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "one day step",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "1",
+        "entity": "step"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9744986295700073,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "step",
+        "start": 4,
+        "end": 12,
+        "confidence_entity": 0.5269502997398376,
+        "value": "day step",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "my day was horrible",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.5979365110397339,
+        "value": "my day",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.4176000952720642,
+        "value": "horrible",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which one is your leading products for outerwear right now ?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 34,
+        "value": "Best Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 39,
+        "end": 48,
+        "value": "Outerwear",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 18,
+        "end": 34,
+        "confidence_entity": 0.9974735379219055,
+        "value": "Best Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 39,
+        "end": 48,
+        "confidence_entity": 0.9998623132705688,
+        "value": "Outerwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 49,
+        "end": 54,
+        "confidence_entity": 0.9899493455886841,
+        "value": "right",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What's the hot product of all time for dresses ?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 22,
+        "value": "Best Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 39,
+        "end": 46,
+        "value": "Dresses",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.9997065663337708,
+        "value": "hot",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 26,
+        "end": 29,
+        "confidence_entity": 0.7422721982002258,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 39,
+        "end": 46,
+        "confidence_entity": 0.9999105930328369,
+        "value": "Dresses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me the product that had poor performance in sale one year ago",
+    "entities": [
+      {
+        "start": 29,
+        "end": 53,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 54,
+        "end": 66,
+        "value": "one year ago",
+        "entity": "date_period"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.49355819821357727,
+        "value": "Product",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 29,
+        "end": 53,
+        "confidence_entity": 0.9932021498680115,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 54,
+        "end": 66,
+        "confidence_entity": 0.9933962821960449,
+        "value": "one year ago",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'd like to know the weakest in sale item of this month for accessories",
+    "entities": [
+      {
+        "start": 21,
+        "end": 36,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 45,
+        "end": 55,
+        "value": "this month",
+        "entity": "date_period"
+      },
+      {
+        "start": 60,
+        "end": 71,
+        "value": "Accessories",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9997724890708923,
+        "value": "weakest",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 37,
+        "end": 41,
+        "confidence_entity": 0.9999313354492188,
+        "value": "Product",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_period",
+        "start": 45,
+        "end": 55,
+        "confidence_entity": 0.5454667806625366,
+        "value": "this month",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 60,
+        "end": 71,
+        "confidence_entity": 0.999852180480957,
+        "value": "Accessories",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which product is the under-performing product of swim wear from yesterday till today",
+    "entities": [
+      {
+        "start": 21,
+        "end": 45,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 49,
+        "end": 58,
+        "value": "Swimwear",
+        "entity": "category"
+      },
+      {
+        "start": 59,
+        "end": 73,
+        "value": "Yesterday",
+        "entity": "start_date"
+      },
+      {
+        "start": 74,
+        "end": 84,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.9927729964256287,
+        "value": "Product",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 21,
+        "end": 45,
+        "confidence_entity": 0.9929231405258179,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 49,
+        "end": 58,
+        "confidence_entity": 0.9987545013427734,
+        "value": "Swimwear",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 59,
+        "end": 73,
+        "confidence_entity": 0.9903766512870789,
+        "value": "Yesterday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 74,
+        "end": 84,
+        "confidence_entity": 0.996577799320221,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "looking for product with the least views till now",
+    "entities": [
+      {
+        "start": 25,
+        "end": 40,
+        "value": "Least View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 41,
+        "end": 49,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 29,
+        "end": 40,
+        "confidence_entity": 0.9879180788993835,
+        "value": "Least View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 41,
+        "end": 49,
+        "confidence_entity": 0.9996665716171265,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "April.3rd.2025",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "April.3rd.2025",
+        "entity": "date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.6909133791923523,
+        "value": "April.3rd.2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "looking for trousers category",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "Pants",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "category",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.9999204874038696,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.7416187524795532,
+        "value": "Category",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "starts from 01/30/2025 and ends on 09/22/2025 analyze for me the profits of just one product",
+    "entities": [
+      {
+        "start": 12,
+        "end": 22,
+        "value": "01/30/2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "09/22/2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 65,
+        "end": 72,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 76,
+        "end": 84,
+        "value": "One",
+        "entity": "report_amount"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 12,
+        "end": 22,
+        "confidence_entity": 0.9494352340698242,
+        "value": "01/30/2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.9471784234046936,
+        "value": "09/22/2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_type",
+        "start": 65,
+        "end": 72,
+        "confidence_entity": 0.9997395873069763,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 76,
+        "end": 84,
+        "confidence_entity": 0.9942492246627808,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Help me with the trends of shopping with start date is 12 01 2025  and end date is 31 01 2025 of dresses",
+    "entities": [
+      {
+        "start": 17,
+        "end": 35,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 55,
+        "end": 65,
+        "value": "12 01 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 83,
+        "end": 93,
+        "value": "31 01 2025",
+        "entity": "end_date"
+      },
+      {
+        "start": 97,
+        "end": 104,
+        "value": "Dresses",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 17,
+        "end": 35,
+        "confidence_entity": 0.8172805905342102,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 55,
+        "end": 65,
+        "confidence_entity": 0.7305158376693726,
+        "value": "12 01 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 83,
+        "end": 93,
+        "confidence_entity": 0.9278950095176697,
+        "value": "31 01 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 97,
+        "end": 104,
+        "confidence_entity": 0.9999538660049438,
+        "value": "Dresses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me the least purchased item at this time of pant for category",
+    "entities": [
+      {
+        "start": 12,
+        "end": 32,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "Now",
+        "entity": "end_date"
+      },
+      {
+        "start": 49,
+        "end": 53,
+        "value": "Pants",
+        "entity": "category"
+      },
+      {
+        "start": 58,
+        "end": 66,
+        "value": "Category",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 32,
+        "confidence_entity": 0.9985679388046265,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 33,
+        "end": 35,
+        "confidence_entity": 0.9823338985443115,
+        "value": "at",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_period",
+        "start": 36,
+        "end": 40,
+        "confidence_entity": 0.9684910178184509,
+        "value": "this",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "category",
+        "start": 49,
+        "end": 53,
+        "confidence_entity": 0.9999537467956543,
+        "value": "Pants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 58,
+        "end": 66,
+        "confidence_entity": 0.7039266228675842,
+        "value": "Category",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "report about earning for every{\"entity\": \"report_amount\"} product",
+    "entities": [
+      {
+        "start": 13,
+        "end": 20,
+        "value": "Profit",
+        "entity": "report_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.999782145023346,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 25,
+        "end": 30,
+        "confidence_entity": 0.9698469638824463,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "generate for me a revenue report for all the products begins on 1st January 2025 and ends on 31st December 2025",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 37,
+        "end": 40,
+        "value": "All",
+        "entity": "report_amount"
+      },
+      {
+        "start": 64,
+        "end": 80,
+        "value": "1st January 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 93,
+        "end": 111,
+        "value": "31st December 2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.9999102354049683,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 37,
+        "end": 40,
+        "confidence_entity": 0.9959035515785217,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 64,
+        "end": 67,
+        "confidence_entity": 0.9790788888931274,
+        "value": "1st",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 68,
+        "end": 80,
+        "confidence_entity": 0.36048147082328796,
+        "value": "January 2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 93,
+        "end": 111,
+        "confidence_entity": 0.8927209973335266,
+        "value": "31st December 2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "income report for everything start on 12-10-2025 and end on 12-30-2025",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 18,
+        "end": 28,
+        "value": "All",
+        "entity": "report_amount"
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "value": "12-10-2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 60,
+        "end": 70,
+        "value": "12-30-2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.7375079989433289,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.9994989633560181,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 38,
+        "end": 48,
+        "confidence_entity": 0.5874411463737488,
+        "value": "12-10-2025",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 60,
+        "end": 70,
+        "confidence_entity": 0.9973119497299194,
+        "value": "12-30-2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "generate for me a profit report for a product with id 1 from Jan 1st 2025 until Aug 20th 2025",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 36,
+        "end": 37,
+        "value": "One",
+        "entity": "report_amount"
+      },
+      {
+        "start": 54,
+        "end": 55,
+        "value": "1",
+        "entity": "product_id"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "Jan 1st 2025",
+        "entity": "start_date"
+      },
+      {
+        "start": 80,
+        "end": 93,
+        "value": "Aug 20th 2025",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9999384880065918,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_id",
+        "start": 54,
+        "end": 55,
+        "confidence_entity": 0.9292206168174744,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 61,
+        "end": 73,
+        "confidence_entity": 0.9365916848182678,
+        "value": "Jan 1st 2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 80,
+        "end": 93,
+        "confidence_entity": 0.79,
+        "value": "Aug 20th 2025",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "gain analysis of a product begin tomorrow until now based on all products",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "Profit",
+        "entity": "report_type"
+      },
+      {
+        "start": 17,
+        "end": 26,
+        "value": "One",
+        "entity": "report_amount"
+      },
+      {
+        "start": 27,
+        "end": 41,
+        "value": "Tomorrow",
+        "entity": "start_date"
+      },
+      {
+        "start": 42,
+        "end": 51,
+        "value": "Now",
+        "entity": "end_date"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "Product",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9997170567512512,
+        "value": "Profit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 17,
+        "end": 18,
+        "confidence_entity": 0.6696248054504395,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 27,
+        "end": 41,
+        "confidence_entity": 0.67,
+        "value": "Tomorrow",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 42,
+        "end": 51,
+        "confidence_entity": 0.9994935989379883,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "filter_value",
+        "start": 61,
+        "end": 73,
+        "confidence_entity": 0.9958977103233337,
+        "value": "Product",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "unhappy",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "number",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9547229409217834,
+        "value": "unhappy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I need information of the shopping trends from 2024-01-01 to 2024-12-31 for shirt",
+    "entities": [
+      {
+        "start": 26,
+        "end": 41,
+        "value": "Shopping Trends",
+        "entity": "analysis_type"
+      },
+      {
+        "start": 47,
+        "end": 57,
+        "value": "2024-01-01",
+        "entity": "start_date"
+      },
+      {
+        "start": 61,
+        "end": 71,
+        "value": "2024-12-31",
+        "entity": "end_date"
+      },
+      {
+        "start": 76,
+        "end": 81,
+        "value": "Shirts",
+        "entity": "category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "analysis_type",
+        "start": 26,
+        "end": 41,
+        "confidence_entity": 0.7987445592880249,
+        "value": "Shopping Trends",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 47,
+        "end": 57,
+        "confidence_entity": 0.9379412531852722,
+        "value": "2024-01-01",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 61,
+        "end": 71,
+        "confidence_entity": 0.5407698750495911,
+        "value": "2024-12-31",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 76,
+        "end": 81,
+        "confidence_entity": 0.9998968839645386,
+        "value": "Shirts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is the bottom-ranked based on our sale data at this time?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 25,
+        "value": "Least Seller",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 49,
+        "end": 61,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 12,
+        "end": 25,
+        "confidence_entity": 0.9941083192825317,
+        "value": "Least Seller",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "trend_analysis_type",
+        "start": 39,
+        "end": 43,
+        "confidence_entity": 0.9999443292617798,
+        "value": "sale",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_period",
+        "start": 52,
+        "end": 61,
+        "confidence_entity": 0.66,
+        "value": "this time",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "most view product of accesories from 1st April until 31st July from all product",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Most View",
+        "entity": "trend_analysis_type"
+      },
+      {
+        "start": 21,
+        "end": 31,
+        "value": "Accessories",
+        "entity": "category"
+      },
+      {
+        "start": 37,
+        "end": 46,
+        "value": "1st April",
+        "entity": "start_date"
+      },
+      {
+        "start": 53,
+        "end": 62,
+        "value": "31st July",
+        "entity": "end_date"
+      },
+      {
+        "start": 68,
+        "end": 79,
+        "value": "Product",
+        "entity": "filter_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "trend_analysis_type",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9997063279151917,
+        "value": "Most View",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9999518394470215,
+        "value": "Accessories",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9956353306770325,
+        "value": "1st April",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 53,
+        "end": 62,
+        "confidence_entity": 0.7040126919746399,
+        "value": "31st July",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "report_amount",
+        "start": 68,
+        "end": 71,
+        "confidence_entity": 0.7817609906196594,
+        "value": "All",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "revenue analysis of one product begin yesterday till today",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Revenue",
+        "entity": "report_type"
+      },
+      {
+        "start": 20,
+        "end": 31,
+        "value": "One",
+        "entity": "report_amount"
+      },
+      {
+        "start": 32,
+        "end": 47,
+        "value": "Yesterday",
+        "entity": "start_date"
+      },
+      {
+        "start": 48,
+        "end": 58,
+        "value": "Now",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "report_type",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.999970555305481,
+        "value": "Revenue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "report_amount",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9804894924163818,
+        "value": "One",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_date",
+        "start": 32,
+        "end": 47,
+        "confidence_entity": 0.9939407110214233,
+        "value": "Yesterday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "end_date",
+        "start": 48,
+        "end": 58,
+        "confidence_entity": 0.9998569488525391,
+        "value": "Now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "seven days",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "7",
+        "entity": "step"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "step",
+        "start": 6,
+        "end": 10,
+        "confidence_entity": 0.9627721905708313,
+        "value": "days",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
